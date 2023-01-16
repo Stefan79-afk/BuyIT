@@ -1,37 +1,58 @@
-HELP.md
-.gradle
-build/
-!gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**/build/
-!**/src/test/**/build/
+BE/.gradle
+BE/build/
+BE/!gradle/wrapper/gradle-wrapper.jar
+BE/!**/src/main/**/build/
+BE/!**/src/test/**/build/
 
 ### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
+BE/.apt_generated
+BE/.classpath
+BE/.factorypath
+BE/.project
+BE/.settings
+BE/.springBeans
+BE/.sts4-cache
+BE/bin/
+BE/!**/src/main/**/bin/
+BE/!**/src/test/**/bin/
 
 ### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-out/
-!**/src/main/**/out/
-!**/src/test/**/out/
+BE/.idea
+BE/*.iws
+BE/*.iml
+BE/*.ipr
+BE/out/
+BE/!**/src/main/**/out/
+BE/!**/src/test/**/out/
 
 ### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+BE/nbproject/private/
+BE/nbbuild/
+BE/dist/
+BE/nbdist/
+BE/.nb-gradle/
+
+# dependencies
+FE/buy-it/node_modules
+FE/buy-it/.pnp
+FE/buy-it/.pnp.js
+
+# testing
+FE/buy-it/coverage
+
+# production
+FE/buy-it/build
+
+# misc
+FE/buy-it/.DS_Store
+FE/buy-it/.env.local
+FE/buy-it/.env.development.local
+FE/buy-it/.env.test.local
+FE/buy-it/.env.production.local
+
+FE/buy-it/npm-debug.log*
+FE/buy-it/yarn-debug.log*
+FE/buy-it/yarn-error.log*
 
 ### VS Code ###
 .vscode/
