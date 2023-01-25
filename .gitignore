@@ -17,7 +17,7 @@ BE/!**/src/main/**/bin/
 BE/!**/src/test/**/bin/
 
 ### IntelliJ IDEA ###
-BE/.idea
+/.idea
 BE/*.iws
 BE/*.iml
 BE/*.ipr
@@ -56,3 +56,4 @@ FE/buy-it/yarn-error.log*
 
 ### VS Code ###
 .vscode/
+
