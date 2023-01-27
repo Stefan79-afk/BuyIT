@@ -1,12 +1,13 @@
-import { useState } from 'react'
 import NavBar from './components/NavBar'
+import "../index.css"
 
 
 function HomePage() {
-  const [count, setCount] = useState(0)
-
   return (
-    <NavBar />
+    <>
+      <NavBar />
+      
+    </>
   )
 }
 
