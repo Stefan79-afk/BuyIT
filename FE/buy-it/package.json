@@ -17,10 +17,12 @@
     "@material-ui/icons": "^4.11.3",
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.6",
+    "@types/react-flag-icon-css": "^1.0.5",
     "@types/tailwindcss": "^3.1.0",
     "material-ui-flags": "^1.2.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-flag-icon-css": "^1.0.25"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",

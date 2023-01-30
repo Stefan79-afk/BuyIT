@@ -4,7 +4,7 @@ import Search from "@mui/icons-material/Search";
 import Quiz from "@mui/icons-material/Quiz";
 import Person from "@mui/icons-material/Person";
 import ShoppingCart from "@mui/icons-material/ShoppingCart";
-import IconFlagUS from "material-ui-flags/lib/Icon_Flag_US"
+import Flag from "./FlagIcon";
 
 interface IconProps {
     type: string,
@@ -24,7 +24,7 @@ const icons: IconType[] = [
     {type: "quiz", component: Quiz},
     {type: "user", component: Person},
     {type: "cart", component: ShoppingCart},
-    {type: "flag", component: IconFlagUS}
+    {type: "flag", component: Flag}
 ]
 
 function Icon(props: IconProps) : JSX.Element | null {
@@ -32,6 +32,10 @@ function Icon(props: IconProps) : JSX.Element | null {
 
     if(!icon) {
         return null;
+    }
+
+    if(icon.type === "flag") {
+        return <Flag size="lg" code={"us"} className={props.className} styleName={JSON.stringify(props.style)}/>
     }
 
     return (
