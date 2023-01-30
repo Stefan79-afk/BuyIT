@@ -1,5 +1,5 @@
 import Icon from "./Icon";
-import { ExpandMore } from "@mui/icons-material";
+import ExpandMore from "@mui/icons-material/ExpandMore";
 
 interface ExpandIconProps {
     type: string,

@@ -1,6 +1,9 @@
-import { Menu, Brightness4, Search, Quiz, Person, ShoppingCart} from "@mui/icons-material";
-import { OverridableComponent } from "@mui/material/OverridableComponent";
-import { SvgIconTypeMap } from "@mui/material";
+import Menu from "@mui/icons-material/Menu";
+import Brightness4 from "@mui/icons-material/Brightness4";
+import Search from "@mui/icons-material/Search";
+import Quiz from "@mui/icons-material/Quiz";
+import Person from "@mui/icons-material/Person";
+import ShoppingCart from "@mui/icons-material/ShoppingCart";
 
 interface IconProps {
     type: string,
@@ -10,7 +13,7 @@ interface IconProps {
 
 interface IconType {
     type: string,
-    component: OverridableComponent<SvgIconTypeMap<{}, "svg">>
+    component: any
 }
 
 const icons: IconType[] = [
