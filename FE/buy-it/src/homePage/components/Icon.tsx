@@ -5,9 +5,11 @@ import Quiz from "@mui/icons-material/Quiz";
 import Person from "@mui/icons-material/Person";
 import ShoppingCart from "@mui/icons-material/ShoppingCart";
 import Flag from "./FlagIcon";
+import { FlagIconSize } from "react-flag-icon-css";
 
 interface IconProps {
     type: string,
+    size?: FlagIconSize | string ,
     className?: string
     style?: React.CSSProperties
 }
@@ -35,11 +37,11 @@ function Icon(props: IconProps) : JSX.Element | null {
     }
 
     if(icon.type === "flag") {
-        return <Flag size="lg" code={"us"} className={props.className} styleName={JSON.stringify(props.style)}/>
+        return <Flag size={props.size} code={"us"} className={props.className} styleName={JSON.stringify(props.style)}/>
     }
 
     return (
-        <icon.component className={props.className} style={props.style} />
+        <icon.component fontSize={props.size} className={props.className} style={props.style} />
     )
 }
 
