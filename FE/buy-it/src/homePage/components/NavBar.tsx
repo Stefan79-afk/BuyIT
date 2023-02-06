@@ -31,17 +31,17 @@ function NavBar() {
     return (
       <nav className=" text-white flex flex-row justify-between items-center h-auto md:p-0.5 md:gap-x-0" style={{backgroundColor: "#0B0B45", width: "100vw", height: "60px"}}>
         <ExpandIcon type="menu" iconSize={size} expandSize={window.innerWidth < 1000 ? "" : "small"} className=" flex flex-row items-end" expandClassName="md:-ml-1 lg:mb-0.5" iconClassName="" />
-        <h1 className="md:text-3xl lg:text-4xl"  style={{fontFamily: "Black Ops One", color: "#30D5C8"}} >
+        <h1 className="md:text-3xl lg:text-5xl"  style={{fontFamily: "Black Ops One", color: "#30D5C8"}} >
             BuyIT
         </h1>
-        <SearchBar searchIconSize={size} className="bg-gray-700 md:text-xs lg:text-base flex justify-between items-center md:p-1 md:w-2/6 rounded-md" inputClassName=" w-10/12 bg-gray-700  focus:outline-none" />
+        <SearchBar searchIconSize={size} className="bg-gray-700 md:text-xs lg:text-lg flex justify-between items-center md:p-1 md:w-2/6 rounded-md" inputClassName=" w-10/12 bg-gray-700  focus:outline-none" />
 
-        <div className="flex flex-row justify-between items-center" style={{width: "13%", maxWidth: "78px"}} >
+        <div className="flex flex-row justify-between items-center" style={window.innerWidth < 1000 ? {width: "13%", maxWidth: "78px"}: {width: "11.5%", maxWidth: "130px"}} >
             <Icon type="dark" size={window.innerWidth < 1000 ? "small" : size} className=" md:mr-1" />
-            <ExpandIcon type="flag" iconSize={window.innerWidth < 1000 ? "lg" : window.innerWidth >= 1000 && window.innerWidth < 1500 ? "2x" : "" } expandSize={window.innerWidth < 1000 ? "" : "small"} className="flex flex-row items-end" expandClassName="md:-ml-0.5 md:-mb-1 lg:-mb-1"/> 
+            <ExpandIcon type="flag" iconSize={window.innerWidth < 1000 ? "lg" : "2x"} expandSize={window.innerWidth < 1000 ? "" : "small"} className="flex flex-row items-end" expandClassName="md:-ml-0.5 md:-mb-1 lg:-mb-1"/> 
         </div>
 
-        <div className="flex flex-row justify-between items-center max-w-xs" style={{width: "20%", maxWidth: "127px"}}>
+        <div className="flex flex-row justify-between items-center max-w-xs" style={window.innerWidth < 1000 ? {width: "20%", maxWidth: "127px"} : {width: "15%", maxWidth: "173px"}}>
             <Icon type="quiz" size={size} />
             <ExpandIcon type="user" iconSize={size} className="flex flex-row items-end" expandSize={window.innerWidth < 1000 ? "" : "small"} expandClassName="md:-ml-1.5 md:-mb-0.5" />
             <ExpandIcon type="cart" iconSize={size} expandSize={window.innerWidth < 1000 ? "" : "small"} expandClassName="md:-ml-1.5 md:-mb-0.5 md:-mb-3" />
