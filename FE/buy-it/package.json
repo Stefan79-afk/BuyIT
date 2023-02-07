@@ -12,6 +12,7 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@fontsource/black-ops-one": "^4.5.9",
+    "@fontsource/chakra-petch": "^4.5.9",
     "@fontsource/roboto": "^4.5.8",
     "@material-ui/core": "^4.12.4",
     "@material-ui/icons": "^4.11.3",

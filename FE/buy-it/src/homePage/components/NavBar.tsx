@@ -6,7 +6,6 @@ import ExpandIcon from "./IconExpand"
 import SearchBar from "./SearchBar"
 
 
-
 function NavBar() {
 
     const [size, setSize] = useState("large");
@@ -29,7 +28,7 @@ function NavBar() {
     // TODO: For medium and higher screen widths, the following is returned.
     // For small widths, implement custom layout (different return)
     return (
-      <nav className=" text-white flex flex-row justify-between items-center h-auto md:p-0.5 md:gap-x-0" style={{backgroundColor: "#0B0B45", width: "100vw", height: "60px"}}>
+      <nav className=" text-white flex flex-row justify-between items-center h-auto md:p-0.5 md:gap-x-0 fixed -mt-12" style={{backgroundColor: "#0B0B45",width: "100%", height: "60px",}}>
         <ExpandIcon type="menu" iconSize={size} expandSize={window.innerWidth < 1000 ? "" : "small"} className=" flex flex-row items-end" expandClassName="md:-ml-1 lg:mb-0.5" iconClassName="" />
         <h1 className="md:text-3xl lg:text-5xl"  style={{fontFamily: "Black Ops One", color: "#30D5C8"}} >
             BuyIT
@@ -49,23 +48,4 @@ function NavBar() {
       </nav>
     )
 }
-/**
- * <nav className="text-white flex flex-row justify-between items-center sm:gap-x-0" style={{ backgroundColor: "#0B0B45", height: "50px", width: "100vw" }}>
-            <ExpandIcon className="flex flex-row items-end lg:scale-100 md:scale-90 sm:scale-75"  type="menu" expandSize="medium" expandClassName="scale-75 -ml-1.5" iconSize="large" />
-            <h1 style={{ fontFamily: "Black Ops One", color: "#30D5C8"}} className="text-4xl lg:scale-100 md:scale-90 sm:scale-75">
-                BuyIT
-            </h1>
-            <SearchBar className="bg-gray-700 flex justify-between items-center p-1 rounded-md w-4/12 lg:scale-100 md:scale-90 sm:scale-75" style={{minWidth: "200px"}} inputClassName="bg-gray-700 focus:outline-none w-11/12"/>
-            <div className="flex flex-row items-center justify-between lg:scale-100 md:scale-90 sm:scale-75" >
-                <Icon className="lg:scale-100 md:scale-90 sm:scale-75 mr-1" type="dark" size="large" />
-                <ExpandIcon className="flex flex-row items-end lg:scale-100 ml-1 md:scale-90 sm:scale-75" expandClassName="scale-75 -ml-0.5 -mb-1.5" iconClassName="bg-yellow-500" type="flag" iconSize="2x" />
-            </div>
-            <div className=" flex flex-row justify-between lg:scale-100 md:scale-90 sm:scale-75 items-center" >
-                <Icon className="flex flex-row items-end" type="quiz" size="large"/>
-                <ExpandIcon className="flex flex-row items-end" expandClassName="scale-75 -ml-2 -mb-1" iconSize="large" type="user" />
-                <ExpandIcon className="" expandClassName="scale-75 -ml-2 -mb-5" iconClassName="" iconSize="large" type="cart" />
-            </div>
-        </nav>
- */
-
 export default NavBar
