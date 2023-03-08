@@ -23,7 +23,8 @@
     "material-ui-flags": "^1.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-flag-icon-css": "^1.0.25"
+    "react-flag-icon-css": "^1.0.25",
+    "react-router": "^6.8.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",

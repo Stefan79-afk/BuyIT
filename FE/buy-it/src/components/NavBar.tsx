@@ -1,6 +1,6 @@
 import "@fontsource/black-ops-one"
 import { useState } from "react"
-import "../../index.css"
+import "../index.css"
 import Icon from "./Icon"
 import ExpandIcon from "./IconExpand"
 import SearchBar from "./SearchBar"
