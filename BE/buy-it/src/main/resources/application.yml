@@ -1,4 +1,0 @@
-spring.data.mongodb.uri=mongodb+srv://steve:4#8*2ky6@B@WF9@cluster0.lgffdbr.mongodb.net/buy_it?retryWrites=true&w=majority
-#logging.level.org.springframework=DEBUG
-
-
