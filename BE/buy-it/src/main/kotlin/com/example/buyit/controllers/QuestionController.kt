@@ -2,6 +2,7 @@ package com.example.buyit.controllers
 
 import com.example.buyit.model.Question
 import com.example.buyit.service.QuestionService
+import org.apache.coyote.Response
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
@@ -17,13 +18,13 @@ import java.util.*
 class QuestionController(private val questionService: QuestionService) {
 
     @GetMapping("Questions({questionId})")
-    fun getQuestionById(@PathVariable("questionId") questionId: Int): Question {
+    fun getQuestionById(@PathVariable("questionId") questionId: Int): ResponseEntity<Question> {
         val queryResult: Optional<Question> = questionService.getQuestion(questionId);
 
         if (queryResult.isEmpty) {
-            throw ResponseStatusException(HttpStatus.NOT_FOUND, String.format("Question with id %s not found", questionId));
+            return ResponseEntity.notFound().build()
         }
 
-        return queryResult.get();
+        return ResponseEntity.ok(queryResult.get());
     }
 }
