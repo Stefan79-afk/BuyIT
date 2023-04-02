@@ -29,6 +29,7 @@ class QuizService(
         var budgetAllocation: MutableMap<String, Double>;
         when (filterObject.pcUseCase) {
             "work" -> budgetAllocation = divideBudgetWork(filterObject);
+            "gaming" -> budgetAllocation = divideBudgetGaming(filterObject);
         }
 
         return 1;
@@ -47,7 +48,7 @@ class QuizService(
                 "cpu_fan" to (filterObject.pcPrice * 0.05),
                 "fan" to (filterObject.pcPrice * 0.05),
                 "wifi_card" to (filterObject.pcPrice * 0.05),
-                "sound_card" to (filterObject.pcPrice * 0.05),
+                "sound_card" to (filterObject.pcPrice * 0.05)
             );
         }
 
@@ -99,9 +100,79 @@ class QuizService(
                 "wifi_card" to (filterObject.pcPrice * 0.05),
                 "sound_card" to (filterObject.pcPrice * 0.05),
                 "network_card" to (filterObject.pcPrice * 0.05),
-                "optical_drive" to (filterObject.pcPrice * 0.05),
+                "optical_drive" to (filterObject.pcPrice * 0.05)
             )
         }
 
+    }
+
+    private fun divideBudgetGaming(filterObject: PCRequest): MutableMap<String, Double> {
+        // The user does not need optional components
+        if (!filterObject.pcNeedOpticalDrive && !filterObject.pcNeedNetworkCard) {
+            return mutableMapOf(
+                "gpu" to (filterObject.pcPrice * 0.29),
+                "cpu" to (filterObject.pcPrice * 0.2),
+                "ram" to (filterObject.pcPrice * 0.1),
+                "internal_storage" to (filterObject.pcPrice * 0.15),
+                "motherboard" to (filterObject.pcPrice * 0.08),
+                "power_supply" to (filterObject.pcPrice * 0.07),
+                "case" to (filterObject.pcPrice * 0.03),
+                "cpu_fan" to (filterObject.pcPrice * 0.02),
+                "fan" to (filterObject.pcPrice * 0.02),
+                "wifi_card" to (filterObject.pcPrice * 0.02),
+                "sound_card" to (filterObject.pcPrice * 0.02)
+            );
+        }
+        else if(filterObject.pcNeedOpticalDrive && !filterObject.pcNeedNetworkCard) {
+            return mutableMapOf(
+                "gpu" to (filterObject.pcPrice * 0.28),
+                "cpu" to (filterObject.pcPrice * 0.19),
+                "ram" to (filterObject.pcPrice * 0.1),
+                "internal_storage" to (filterObject.pcPrice * 0.15),
+                "motherboard" to (filterObject.pcPrice * 0.08),
+                "power_supply" to (filterObject.pcPrice * 0.07),
+                "case" to (filterObject.pcPrice * 0.03),
+                "cpu_fan" to (filterObject.pcPrice * 0.02),
+                "fan" to (filterObject.pcPrice * 0.02),
+                "wifi_card" to (filterObject.pcPrice * 0.01),
+                "sound_card" to (filterObject.pcPrice * 0.02),
+                "optical_drive" to (filterObject.pcPrice * 0.02)
+            );
+        }
+
+        else if(!filterObject.pcNeedOpticalDrive && filterObject.pcNeedNetworkCard) {
+            return mutableMapOf(
+                "gpu" to (filterObject.pcPrice * 0.28),
+                "cpu" to (filterObject.pcPrice * 0.19),
+                "ram" to (filterObject.pcPrice * 0.1),
+                "internal_storage" to (filterObject.pcPrice * 0.15),
+                "motherboard" to (filterObject.pcPrice * 0.08),
+                "power_supply" to (filterObject.pcPrice * 0.07),
+                "case" to (filterObject.pcPrice * 0.03),
+                "cpu_fan" to (filterObject.pcPrice * 0.02),
+                "fan" to (filterObject.pcPrice * 0.02),
+                "wifi_card" to (filterObject.pcPrice * 0.02),
+                "sound_card" to (filterObject.pcPrice * 0.02),
+                "network_card" to (filterObject.pcPrice * 0.02)
+            );
+        }
+
+        else {
+            return mutableMapOf(
+                "gpu" to (filterObject.pcPrice * 0.27),
+                "cpu" to (filterObject.pcPrice * 0.18),
+                "ram" to (filterObject.pcPrice * 0.1),
+                "internal_storage" to (filterObject.pcPrice * 0.15),
+                "motherboard" to (filterObject.pcPrice * 0.08),
+                "power_supply" to (filterObject.pcPrice * 0.07),
+                "case" to (filterObject.pcPrice * 0.03),
+                "cpu_fan" to (filterObject.pcPrice * 0.02),
+                "fan" to (filterObject.pcPrice * 0.02),
+                "wifi_card" to (filterObject.pcPrice * 0.02),
+                "sound_card" to (filterObject.pcPrice * 0.02),
+                "network_card" to (filterObject.pcPrice * 0.02),
+                "optical_drive" to (filterObject.pcPrice * 0.02)
+            );
+        }
     }
 }

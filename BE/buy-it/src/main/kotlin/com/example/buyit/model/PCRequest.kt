@@ -11,7 +11,6 @@ data class PCRequest(
     val pcSoundChannel: String,
     val pcNeedNetworkCard: Boolean,
     val pcPowerEfficiency: Boolean?,
-    val pcNeedUPS: Boolean,
     val pcFanNoise: String?,
     val pcNeedOpticalDrive: Boolean,
     val pcWorkMultitask: Boolean?,
