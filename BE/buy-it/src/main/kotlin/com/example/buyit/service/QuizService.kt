@@ -30,6 +30,7 @@ class QuizService(
         when (filterObject.pcUseCase) {
             "work" -> budgetAllocation = divideBudgetWork(filterObject);
             "gaming" -> budgetAllocation = divideBudgetGaming(filterObject);
+            "studio" -> budgetAllocation = divideBudgetCreative(filterObject);
         }
 
         return 1;
@@ -173,6 +174,76 @@ class QuizService(
                 "network_card" to (filterObject.pcPrice * 0.02),
                 "optical_drive" to (filterObject.pcPrice * 0.02)
             );
+        }
+    }
+
+    private fun divideBudgetCreative(filterObject: PCRequest): MutableMap<String, Double> {
+        if (!filterObject.pcNeedOpticalDrive && !filterObject.pcNeedNetworkCard) {
+            return mutableMapOf(
+                "gpu" to (filterObject.pcPrice * 0.24),
+                "cpu" to (filterObject.pcPrice * 0.25),
+                "ram" to (filterObject.pcPrice * 0.13),
+                "internal_storage" to (filterObject.pcPrice * 0.12),
+                "motherboard" to (filterObject.pcPrice * 0.08),
+                "power_supply" to (filterObject.pcPrice * 0.07),
+                "case" to (filterObject.pcPrice * 0.03),
+                "cpu_fan" to (filterObject.pcPrice * 0.02),
+                "fan" to (filterObject.pcPrice * 0.02),
+                "wifi_card" to (filterObject.pcPrice * 0.02),
+                "sound_card" to (filterObject.pcPrice * 0.02)
+            );
+        }
+
+        else if (filterObject.pcNeedOpticalDrive && !filterObject.pcNeedNetworkCard) {
+            return mutableMapOf(
+                "gpu" to (filterObject.pcPrice * 0.23),
+                "cpu" to (filterObject.pcPrice * 0.24),
+                "ram" to (filterObject.pcPrice * 0.13),
+                "internal_storage" to (filterObject.pcPrice * 0.12),
+                "motherboard" to (filterObject.pcPrice * 0.08),
+                "power_supply" to (filterObject.pcPrice * 0.07),
+                "case" to (filterObject.pcPrice * 0.03),
+                "cpu_fan" to (filterObject.pcPrice * 0.02),
+                "fan" to (filterObject.pcPrice * 0.02),
+                "wifi_card" to (filterObject.pcPrice * 0.02),
+                "sound_card" to (filterObject.pcPrice * 0.02),
+                "optical_drive" to (filterObject.pcPrice * 0.02)
+            )
+        }
+
+        else if (!filterObject.pcNeedOpticalDrive && filterObject.pcNeedNetworkCard) {
+            return mutableMapOf(
+                "gpu" to (filterObject.pcPrice * 0.23),
+                "cpu" to (filterObject.pcPrice * 0.24),
+                "ram" to (filterObject.pcPrice * 0.13),
+                "internal_storage" to (filterObject.pcPrice * 0.12),
+                "motherboard" to (filterObject.pcPrice * 0.08),
+                "power_supply" to (filterObject.pcPrice * 0.07),
+                "case" to (filterObject.pcPrice * 0.03),
+                "cpu_fan" to (filterObject.pcPrice * 0.02),
+                "fan" to (filterObject.pcPrice * 0.02),
+                "wifi_card" to (filterObject.pcPrice * 0.02),
+                "sound_card" to (filterObject.pcPrice * 0.02),
+                "network_card" to (filterObject.pcPrice * 0.02)
+            )
+        }
+
+        else {
+            return mutableMapOf(
+                "gpu" to (filterObject.pcPrice * 0.22),
+                "cpu" to (filterObject.pcPrice * 0.23),
+                "ram" to (filterObject.pcPrice * 0.13),
+                "internal_storage" to (filterObject.pcPrice * 0.12),
+                "motherboard" to (filterObject.pcPrice * 0.08),
+                "power_supply" to (filterObject.pcPrice * 0.07),
+                "case" to (filterObject.pcPrice * 0.03),
+                "cpu_fan" to (filterObject.pcPrice * 0.02),
+                "fan" to (filterObject.pcPrice * 0.02),
+                "wifi_card" to (filterObject.pcPrice * 0.02),
+                "sound_card" to (filterObject.pcPrice * 0.02),
+                "network_card" to (filterObject.pcPrice * 0.02),
+                "optical_drive" to (filterObject.pcPrice * 0.02)
+            )
         }
     }
 }
