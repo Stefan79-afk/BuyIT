@@ -29,8 +29,9 @@ class QuizService(
         var budgetAllocation: MutableMap<String, Double>;
         when (filterObject.pcUseCase) {
             "work" -> budgetAllocation = divideBudgetWork(filterObject);
-            "gaming" -> budgetAllocation = divideBudgetGaming(filterObject);
+            "gaming" -> budgetAllocation = divideBudgetGamingAndPower(filterObject);
             "studio" -> budgetAllocation = divideBudgetCreative(filterObject);
+            "power" -> budgetAllocation = divideBudgetGamingAndPower(filterObject);
         }
 
         return 1;
@@ -107,7 +108,7 @@ class QuizService(
 
     }
 
-    private fun divideBudgetGaming(filterObject: PCRequest): MutableMap<String, Double> {
+    private fun divideBudgetGamingAndPower(filterObject: PCRequest): MutableMap<String, Double> {
         // The user does not need optional components
         if (!filterObject.pcNeedOpticalDrive && !filterObject.pcNeedNetworkCard) {
             return mutableMapOf(
@@ -246,4 +247,5 @@ class QuizService(
             )
         }
     }
+
 }
