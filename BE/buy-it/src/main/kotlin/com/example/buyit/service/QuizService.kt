@@ -26,7 +26,7 @@ class QuizService(
     companion object {
         val optionalComponents = arrayListOf<String>("optical_drive", "network_card")
     }
-    fun quiz(filterObject: PCRequest): List<CPU>? {
+    fun quiz(filterObject: PCRequest): List<Any>? {
         var budgetAllocation: MutableMap<String, Double>;
         when (filterObject.pcUseCase) {
             "work" -> budgetAllocation = divideBudgetWork(filterObject);
@@ -39,7 +39,7 @@ class QuizService(
         val cpuRecommendations =
             budgetAllocation.get("cpu")?.let { this.cpuService.getCPURecommendations(it, filterObject) };
 
-        return cpuRecommendations;
+        return cpuRecommendations
     }
 
     private fun divideBudgetWork(filterObject: PCRequest): MutableMap<String, Double> {

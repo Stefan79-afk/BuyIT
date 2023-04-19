@@ -17,7 +17,7 @@ class QuizController(private val quizService: QuizService) {
     public fun getRecommendations(@RequestBody quiz: PCRequest): ResponseEntity<Any> {
         val recommendations = quizService.quiz(quiz);
 
-        if(recommendations == null) {
+        if(recommendations.isNullOrEmpty()) {
             return ResponseEntity.notFound().build();
         }
 
