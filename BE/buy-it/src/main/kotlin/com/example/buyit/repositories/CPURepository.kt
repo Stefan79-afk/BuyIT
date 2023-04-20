@@ -6,12 +6,10 @@ import org.springframework.data.mongodb.repository.MongoRepository
 
 interface CPURepository: MongoRepository<CPU, String> {
 
-    fun findByCoreCountGreaterThanEqualAndCoreClockGreaterThanEqualAndBoostClockGreaterThanEqualAndSmtTrueAndPriceUSDLessThanEqualAndIntegratedGraphicsNotNull(
-        coreCount: String, coreClock: String, boostClock: String, priceUSD: Double, pageable: Pageable): List<CPU>
-    fun findByCoreCountGreaterThanEqualAndCoreClockGreaterThanEqualAndBoostClockGreaterThanEqualAndPriceUSDLessThanEqualAndIntegratedGraphicsNotNull(
-        coreCount: String, coreClock: String, boostClock: String,  priceUSD: Double, pageable: Pageable): List<CPU>
-
+    fun findByCoreCountGreaterThanEqualAndCoreClockGreaterThanEqualAndPriceUSDLessThanEqual(
+        coreCount: String, coreClock: String, priceUSD: Double, pageable: Pageable): List<CPU>
     fun findByCoreCountGreaterThanEqualAndCoreClockGreaterThanEqualAndPriceUSDLessThanEqualAndIntegratedGraphicsNotNull(
         coreCount: String, coreClock: String, priceUSD: Double, pageable: Pageable): List<CPU>
-
+    fun findByCoreCountGreaterThanEqualAndCoreClockGreaterThanEqualAndPriceUSDLessThanEqualAndNameContainingOrCoreCountGreaterThanEqualAndCoreClockGreaterThanEqualAndPriceUSDLessThanEqualAndNameContaining(
+        coreCount1: String, coreClock1: String, priceUSD1: Double, name1: String, coreCount2: String, coreClock2: String, priceUSD2: Double, name2: String, pageable: Pageable): List<CPU>
 }
