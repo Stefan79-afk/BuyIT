@@ -60,284 +60,38 @@ class CPUService(
         val cpuQueryObject = CPU();
 
         cpuQueryObject.priceUSD = cpuBudget
-        cpuQueryObject.coreCount = "4"
+        cpuQueryObject.coreCount = "2"
         cpuQueryObject.coreClock = "3.0 GHz"
-        cpuQueryObject.boostClock = "3.5 GHz"
+        cpuQueryObject.boostClock = "3.3 GHz"
 
-        /*when(filterObject.pcMonitorResolution) {
-            "1920x1080" -> {
-                cpuQueryObject.coreCount = "4"
-                cpuQueryObject.coreClock = "3.0 GHz"
-                cpuQueryObject.boostClock = "3.5 GHz"
-            }
-
-            "2560x1440" -> {
-                cpuQueryObject.coreCount = "6"
-                cpuQueryObject.coreClock = "3.5 GHz"
-                cpuQueryObject.boostClock = "4.0 GHz"
-            }
-
-            "3840x2160" -> {
-                cpuQueryObject.coreCount = "8"
-                cpuQueryObject.coreClock = "3.8 GHz"
-                cpuQueryObject.boostClock = "4.2 GHz"
-                cpuQueryObject.smt = true
-            }
-
-            else -> {
-                cpuQueryObject.coreCount = "4"
-                cpuQueryObject.coreClock = "2.5 GHz"
-                cpuQueryObject.boostClock = "3.5 GHz"
-
-            }
-        }*/
-
-        /*if(filterObject.pcGamingFastInternet == true) {
-            when(filterObject.pcMonitorResolution) {
-                "1920x1080" -> {
-                    cpuQueryObject.coreCount = "4"
-                    cpuQueryObject.coreClock = "3.2 GHz"
-                    cpuQueryObject.boostClock = "3.6 GHz"
-                }
-
-                "2560x1440" -> {
-                    cpuQueryObject.coreCount = "6"
-                    cpuQueryObject.coreClock = "3.5 GHz"
-                    cpuQueryObject.boostClock = "4.0 GHz"
-                }
-
-                "3840x2160" -> {
-                    cpuQueryObject.coreCount = "8"
-                    cpuQueryObject.coreClock = "3.8 GHz"
-                    cpuQueryObject.boostClock = "4.2 GHz"
-                    cpuQueryObject.smt = true
-                }
-
-                else -> {
-                    cpuQueryObject.coreCount = "4"
-                    cpuQueryObject.coreClock = "3.0 GHz"
-                    cpuQueryObject.boostClock = "3.5 GHz"
-
-                }
-            }
+        if(filterObject.pcGamingWantStreaming == true) {
+            cpuQueryObject.coreCount = "4"
+            cpuQueryObject.coreClock = "3.0 GHz"
+            cpuQueryObject.boostClock = "3.7 GHz"
         }
 
-        if(filterObject.pcGamingWantStreaming == true || filterObject.pcGamingRayTracingGPU == true) {
-            when(filterObject.pcMonitorResolution) {
-                "1920x1080" -> {
-                    cpuQueryObject.coreCount = "6"
-                    cpuQueryObject.coreClock = "3.5 GHz"
-                    cpuQueryObject.boostClock = "4.0 GHz"
-                    cpuQueryObject.smt = true
-                }
-
-                "2560x1440" -> {
-                    cpuQueryObject.coreCount = "8"
-                    cpuQueryObject.coreClock = "3.8 GHz"
-                    cpuQueryObject.boostClock = "4.2 GHz"
-                    cpuQueryObject.smt = true
-                }
-
-                "3840x2160" -> {
-                    cpuQueryObject.coreCount = "10"
-                    cpuQueryObject.coreClock = "4.0 GHz"
-                    cpuQueryObject.boostClock = "4.5 GHz"
-                    cpuQueryObject.smt = true
-                }
-
-                else -> {
-                    cpuQueryObject.coreCount = "6"
-                    cpuQueryObject.coreClock = "3.0 GHz"
-                    cpuQueryObject.boostClock = "4.0 GHz"
-                    cpuQueryObject.smt = true
-                }
-            }
+        if(filterObject.pcGamingRayTracingGPU == true) {
+            cpuQueryObject.coreCount = "6"
+            cpuQueryObject.coreClock = "3.5 GHz"
+            cpuQueryObject.boostClock = "4 GHz"
         }
 
-        when(filterObject.pcGamingGraphicsOrPerformance) {
-            "performance" -> {
-                if(filterObject.pcGamingWantStreaming == true) {
-                    when(filterObject.pcMonitorResolution) {
-                        "1920x1080" -> {
-                            cpuQueryObject.coreCount = "6"
-                            cpuQueryObject.coreClock = "3.5 GHz"
-                            cpuQueryObject.boostClock = "4.0 GHz"
-                            cpuQueryObject.smt = true
-                        }
-
-                        "2560x1440" -> {
-                            cpuQueryObject.coreCount = "8"
-                            cpuQueryObject.coreClock = "3.8 GHz"
-                            cpuQueryObject.boostClock = "4.2 GHz"
-                            cpuQueryObject.smt = true
-                        }
-
-                        "3840x2160" -> {
-                            cpuQueryObject.coreCount = "10"
-                            cpuQueryObject.coreClock = "4.0 GHz"
-                            cpuQueryObject.boostClock = "4.5 GHz"
-                            cpuQueryObject.smt = true
-                        }
-
-                        else -> {
-                            cpuQueryObject.coreCount = "6"
-                            cpuQueryObject.coreClock = "3.0 GHz"
-                            cpuQueryObject.boostClock = "4.0 GHz"
-                            cpuQueryObject.smt = true
-                        }
-                    }
-                } else {
-                    when(filterObject.pcMonitorResolution) {
-                        "1920x1080" -> {
-                            cpuQueryObject.coreCount = "4"
-                            cpuQueryObject.coreClock = "3.2 GHz"
-                            cpuQueryObject.boostClock = "3.6 GHz"
-                        }
-
-                        "2560x1440" -> {
-                            cpuQueryObject.coreCount = "6"
-                            cpuQueryObject.coreClock = "3.5 GHz"
-                            cpuQueryObject.boostClock = "4.0 GHz"
-                        }
-
-                        "3840x2160" -> {
-                            cpuQueryObject.coreCount = "8"
-                            cpuQueryObject.coreClock = "3.8 GHz"
-                            cpuQueryObject.boostClock = "4.2 GHz"
-                            cpuQueryObject.smt = true
-                        }
-
-                        else -> {
-                            cpuQueryObject.coreCount = "4"
-                            cpuQueryObject.coreClock = "3.0 GHz"
-                            cpuQueryObject.boostClock = "3.5 GHz"
-                        }
-                    }
-                }
-            }
-            "graphics" -> {
-                if(filterObject.pcGamingWantStreaming == true) {
-                    when(filterObject.pcMonitorResolution) {
-                        "1920x1080" -> {
-                            cpuQueryObject.coreCount = "8"
-                            cpuQueryObject.coreClock = "3.8 GHz"
-                            cpuQueryObject.boostClock = "4.2 GHz"
-                            cpuQueryObject.smt = true
-                        }
-
-                        "2560x1440" -> {
-                            cpuQueryObject.coreCount = "10"
-                            cpuQueryObject.coreClock = "4.0 GHz"
-                            cpuQueryObject.boostClock = "4.5 GHz"
-                            cpuQueryObject.smt = true
-                        }
-
-                        "3840x2160" -> {
-                            cpuQueryObject.coreCount = "12"
-                            cpuQueryObject.coreClock = "4.2 GHz"
-                            cpuQueryObject.boostClock = "4.7 GHz"
-                            cpuQueryObject.smt = true
-                        }
-
-                        else -> {
-                            cpuQueryObject.coreCount = "6"
-                            cpuQueryObject.coreClock = "3.2 GHz"
-                            cpuQueryObject.boostClock = "3.5 GHz"
-                            cpuQueryObject.smt = true
-                        }
-                    }
-                } else {
-                    when(filterObject.pcMonitorResolution) {
-                        "1920x1080" -> {
-                            cpuQueryObject.coreCount = "6"
-                            cpuQueryObject.coreClock = "3.5 GHz"
-                            cpuQueryObject.boostClock = "4.0 GHz"
-                        }
-
-                        "2560x1440" -> {
-                            cpuQueryObject.coreCount = "8"
-                            cpuQueryObject.coreClock = "3.8 GHz"
-                            cpuQueryObject.boostClock = "4.2 GHz"
-                        }
-
-                        "3840x2160" -> {
-                            cpuQueryObject.coreCount = "10"
-                            cpuQueryObject.coreClock = "4.0 GHz"
-                            cpuQueryObject.boostClock = "4.5 GHz"
-                            cpuQueryObject.smt = true
-                        }
-
-                        else -> {
-                            cpuQueryObject.coreCount = "6"
-                            cpuQueryObject.coreClock = "3.0 GHz"
-                            cpuQueryObject.boostClock = "3.5 GHz"
-                        }
-                    }
-                }
-            }
-            "both" -> {
-                if(filterObject.pcGamingWantStreaming == true) {
-                    when(filterObject.pcMonitorResolution) {
-                        "1920x1080" -> {
-                            cpuQueryObject.coreCount = "10"
-                            cpuQueryObject.coreClock = "4.0 GHz"
-                            cpuQueryObject.boostClock = "4.5 GHz"
-                            cpuQueryObject.smt = true
-                        }
-
-                        "2560x1440" -> {
-                            cpuQueryObject.coreCount = "12"
-                            cpuQueryObject.coreClock = "4.2 GHz"
-                            cpuQueryObject.boostClock = "4.7 GHz"
-                            cpuQueryObject.smt = true
-                        }
-
-                        "3840x2160" -> {
-                            cpuQueryObject.coreCount = "16"
-                            cpuQueryObject.coreClock = "4.5 GHz"
-                            cpuQueryObject.boostClock = "5.0 GHz"
-                            cpuQueryObject.smt = true
-                        }
-
-                        else -> {
-                            cpuQueryObject.coreCount = "8"
-                            cpuQueryObject.coreClock = "3.5 GHz"
-                            cpuQueryObject.boostClock = "4.0 GHz"
-                            cpuQueryObject.smt = true
-                        }
-                    }
-                } else {
-                    when(filterObject.pcMonitorResolution) {
-                        "1920x1080" -> {
-                            cpuQueryObject.coreCount = "8"
-                            cpuQueryObject.coreClock = "3.8 GHz"
-                            cpuQueryObject.boostClock = "4.2 GHz"
-                        }
-
-                        "2560x1440" -> {
-                            cpuQueryObject.coreCount = "10"
-                            cpuQueryObject.coreClock = "4.0 GHz"
-                            cpuQueryObject.boostClock = "4.2 GHz"
-                        }
-
-                        "3840x2160" -> {
-                            cpuQueryObject.coreCount = "12"
-                            cpuQueryObject.coreClock = "4.2 GHz"
-                            cpuQueryObject.boostClock = "4.7 GHz"
-                            cpuQueryObject.smt = true
-                        }
-
-                        else -> {
-                            cpuQueryObject.coreCount = "6"
-                            cpuQueryObject.coreClock = "3.0 GHz"
-                            cpuQueryObject.boostClock = "3.5 GHz"
-                        }
-                    }
-                }
-            }
+        if(filterObject.pcGamingGraphicsOrPerformance == "both") {
+            cpuQueryObject.coreCount = "8"
+            cpuQueryObject.coreClock = "3.5 GHz"
+            cpuQueryObject.boostClock = "4 GHz"
         }
-*/
-        return queryCPUCollection(cpuQueryObject, CPUQueryType.QUIZ_GAMING)
+
+       val queryResult =  queryCPUCollection(cpuQueryObject, CPUQueryType.QUIZ_GAMING)
+
+        if(queryResult.isNullOrEmpty()) {
+            cpuQueryObject.coreCount = "2"
+            cpuQueryObject.coreClock = "3.0 GHz"
+            cpuQueryObject.boostClock = "3.3 GHz"
+            return queryCPUCollection(cpuQueryObject, CPUQueryType.QUIZ_GAMING)
+        }
+
+        return queryResult
 
     }
 
