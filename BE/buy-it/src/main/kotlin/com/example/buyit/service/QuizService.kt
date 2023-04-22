@@ -26,20 +26,32 @@ class QuizService(
     companion object {
         val optionalComponents = arrayListOf<String>("optical_drive", "network_card")
     }
-    fun quiz(filterObject: PCRequest): List<Any>? {
-        var budgetAllocation: MutableMap<String, Double>;
+    fun quiz(filterObject: PCRequest): List<PCReccomendation> {
+        var budgetAllocation: MutableMap<String, Double>
         when (filterObject.pcUseCase) {
-            "work" -> budgetAllocation = divideBudgetWork(filterObject);
-            "gaming" -> budgetAllocation = divideBudgetGamingAndPower(filterObject);
-            "studio" -> budgetAllocation = divideBudgetCreative(filterObject);
-            "power" -> budgetAllocation = divideBudgetGamingAndPower(filterObject);
-            else -> budgetAllocation = mutableMapOf();
+            "work" -> budgetAllocation = divideBudgetWork(filterObject)
+            "gaming" -> budgetAllocation = divideBudgetGamingAndPower(filterObject)
+            "studio" -> budgetAllocation = divideBudgetCreative(filterObject)
+            "power" -> budgetAllocation = divideBudgetGamingAndPower(filterObject)
+            else -> budgetAllocation = mutableMapOf()
         }
 
         val cpuRecommendations =
-            budgetAllocation.get("cpu")?.let { this.cpuService.getCPURecommendations(it, filterObject) };
+            budgetAllocation.get("cpu")?.let { this.cpuService.getCPURecommendations(it, filterObject) }
 
-        return cpuRecommendations
+        val gpuRecommendations =
+            budgetAllocation.get("gpu")?.let { this.gpuService.getGPURecommendations(it,filterObject) }
+
+        val recommendations = mutableListOf<PCReccomendation>()
+
+        for(i in 0..4) {
+            val pcRecommendation: PCReccomendation? =
+                cpuRecommendations?.let { gpuRecommendations?.let { it1 -> PCReccomendation(it[i], it1[i]) } }
+            if (pcRecommendation != null) {
+                recommendations.add(pcRecommendation)
+            }
+        }
+        return recommendations
     }
 
     private fun divideBudgetWork(filterObject: PCRequest): MutableMap<String, Double> {

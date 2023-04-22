@@ -1,5 +1,6 @@
 package com.example.buyit.controllers
 
+import com.example.buyit.model.PCReccomendation
 import com.example.buyit.model.PCRequest
 import com.example.buyit.model.Recommendation
 import com.example.buyit.service.QuizService
@@ -15,12 +16,12 @@ class QuizController(private val quizService: QuizService) {
 
     @PostMapping("/quiz")
     public fun getRecommendations(@RequestBody quiz: PCRequest): ResponseEntity<Any> {
-        val recommendations = quizService.quiz(quiz);
+        val recommendations: List<PCReccomendation> = quizService.quiz(quiz);
 
-        if(recommendations.isNullOrEmpty()) {
+        if(recommendations.isEmpty()) {
             return ResponseEntity.notFound().build();
         }
 
-        return ResponseEntity.ok(recommendations.distinct());
+        return ResponseEntity.ok(recommendations);
     }
 }

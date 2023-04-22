@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service
 class CPUService(
     private val cpuRepository: CPURepository
 ) {
-    fun getCPURecommendations(cpuBudget: Double, filterObject: PCRequest): List<Any>? {
+    fun getCPURecommendations(cpuBudget: Double, filterObject: PCRequest): List<CPU> {
         when (filterObject.pcUseCase) {
             "work" -> return getCPURecommendationsWork(cpuBudget, filterObject)
             "gaming" -> return getCpuRecommendationsGaming(cpuBudget, filterObject)
@@ -133,7 +133,7 @@ class CPUService(
         }
 
         if(filterObject.pcIntensiveOverclock == true) {
-            cpuQueryObject.name = ""
+            cpuQueryObject.name = "overclock"
         }
 
         if(filterObject.pcIntensiveBestPerformance == true) {
@@ -188,7 +188,7 @@ class CPUService(
             CPUQueryType.QUIZ_POWER -> {
                 val pageRequest: PageRequest = PageRequest.of(0, 5, Sort.by(Sort.Direction.DESC, "price_usd"))
 
-                return if(cpuFilterObject.name == "") {
+                return if(cpuFilterObject.name == "overclock") {
                     this.cpuRepository.findByCoreCountGreaterThanEqualAndCoreClockGreaterThanEqualAndPriceUSDLessThanEqualAndNameContainingOrCoreCountGreaterThanEqualAndCoreClockGreaterThanEqualAndPriceUSDLessThanEqualAndNameContaining(
                         cpuFilterObject.coreCount, cpuFilterObject.coreClock, cpuFilterObject.priceUSD, "AMD", cpuFilterObject.coreCount, cpuFilterObject.coreClock, cpuFilterObject.priceUSD, "K", pageRequest
                     )
