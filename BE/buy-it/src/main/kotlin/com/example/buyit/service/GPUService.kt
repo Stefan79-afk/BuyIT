@@ -15,8 +15,8 @@ class GPUService (
     fun getGPURecommendations(gpuBudget: Double, filterObject: PCRequest): List<GPU> {
         when(filterObject.pcUseCase) {
             "gaming" -> return getGPURecommendationsGaming(gpuBudget, filterObject)
-           /* "studio" -> return getGPURecommendationsStudio(gpuBudget, filterObject)
-            "power" -> return getGPURecommendationsPower(gpuBudget, filterObject)*/
+            "studio" -> return getGPURecommendationsStudio(gpuBudget, filterObject)
+            //"power" -> return getGPURecommendationsPower(gpuBudget, filterObject)*/
         }
 
         return listOf()
@@ -64,6 +64,42 @@ class GPUService (
         return queryResult
     }
 
+    private fun getGPURecommendationsStudio(gpuBudget: Double, filterObject: PCRequest): List<GPU> {
+        val gpuQueryObject = GPU()
+
+        gpuQueryObject.priceUSD = gpuBudget
+        gpuQueryObject.memory = "2 GB"
+        gpuQueryObject.coreClock = "700 MHz"
+
+        when(filterObject.pcCreativeMostDemandingTask) {
+            "video" -> {
+                gpuQueryObject.memory = "4 GB"
+                gpuQueryObject.coreClock = "1000 MHz"
+            }
+
+            "3D" -> {
+                gpuQueryObject.memory = "6 GB"
+                gpuQueryObject.coreClock = "1500 MHz"
+            }
+        }
+
+        if(filterObject.pcCreativeNoLoadingTimes == true) {
+            gpuQueryObject.memory = "8 GB"
+            gpuQueryObject.coreClock = "1500 MHz"
+        }
+
+        val queryResult = this.queryGPUCollection(gpuQueryObject, GPUQueryType.QUIZ_STUDIO)
+
+        if(queryResult.isEmpty()) {
+            gpuQueryObject.memory = "2 GB"
+            gpuQueryObject.coreClock = "700 MHz"
+
+            return this.queryGPUCollection(gpuQueryObject, GPUQueryType.QUIZ_STUDIO)
+        }
+
+        return queryResult
+    }
+
     private fun queryGPUCollection(gpuFilterObject: GPU, gpuQueryType: GPUQueryType): List<GPU> {
         val pageRequestQuiz: PageRequest = PageRequest.of(0, 5, Sort.by(Sort.Direction.DESC, "memory"))
         when(gpuQueryType) {
@@ -78,6 +114,12 @@ class GPUService (
                         gpuFilterObject.memory, gpuFilterObject.coreClock, gpuFilterObject.priceUSD, pageRequestQuiz
                     )
                 }
+            }
+
+            GPUQueryType.QUIZ_STUDIO -> {
+                return this.gpuRepository.findByMemoryGreaterThanEqualAndCoreClockGreaterThanEqualAndPriceUSDLessThanEqual(
+                    gpuFilterObject.memory, gpuFilterObject.coreClock, gpuFilterObject.priceUSD, pageRequestQuiz
+                )
             }
 
             else -> {
