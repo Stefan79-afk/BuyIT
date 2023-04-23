@@ -65,17 +65,17 @@ class GPUService (
     }
 
     private fun queryGPUCollection(gpuFilterObject: GPU, gpuQueryType: GPUQueryType): List<GPU> {
+        val pageRequestQuiz: PageRequest = PageRequest.of(0, 5, Sort.by(Sort.Direction.DESC, "memory"))
         when(gpuQueryType) {
             GPUQueryType.QUIZ_GAMING -> {
-                val pageRequest: PageRequest = PageRequest.of(0, 5, Sort.by(Sort.Direction.DESC, "price_usd"))
-
+                
                 return if(gpuFilterObject.name == "RTX") {
                     this.gpuRepository.findByMemoryGreaterThanEqualAndCoreClockGreaterThanEqualAndNameContainingAndPriceUSDLessThanEqual(
-                        gpuFilterObject.memory, gpuFilterObject.coreClock, gpuFilterObject.name, gpuFilterObject.priceUSD, pageRequest
+                        gpuFilterObject.memory, gpuFilterObject.coreClock, gpuFilterObject.name, gpuFilterObject.priceUSD, pageRequestQuiz
                     )
                 } else {
                     this.gpuRepository.findByMemoryGreaterThanEqualAndCoreClockGreaterThanEqualAndPriceUSDLessThanEqual(
-                        gpuFilterObject.memory, gpuFilterObject.coreClock, gpuFilterObject.priceUSD, pageRequest
+                        gpuFilterObject.memory, gpuFilterObject.coreClock, gpuFilterObject.priceUSD, pageRequestQuiz
                     )
                 }
             }

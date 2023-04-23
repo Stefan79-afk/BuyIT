@@ -44,7 +44,17 @@ class QuizService(
 
         val recommendations = mutableListOf<PCReccomendation>()
 
-        for(i in 0..4) {
+        val lists = mutableListOf<List<Any>>()
+
+        if (cpuRecommendations != null) {
+            lists.add(cpuRecommendations)
+        }
+
+        if(gpuRecommendations != null) {
+            lists.add(gpuRecommendations)
+        }
+        val minimumRecommendationSize = getMinimumSize(lists)
+        for(i in 0..minimumRecommendationSize - 1) {
             val pcRecommendation: PCReccomendation? =
                 cpuRecommendations?.let { gpuRecommendations?.let { it1 -> PCReccomendation(it[i], it1[i]) } }
             if (pcRecommendation != null) {
@@ -265,4 +275,14 @@ class QuizService(
         }
     }
 
+    private fun getMinimumSize(lists: List<List<Any>>): Int {
+        var minimumSize = 100
+        for(list in lists) {
+            if(list.size < minimumSize) {
+                minimumSize = list.size
+            }
+        }
+
+        return minimumSize
+    }
 }

@@ -168,33 +168,32 @@ class CPUService(
     }
 
     private fun queryCPUCollection(cpuFilterObject: CPU, cpuQueryType: CPUQueryType): List<CPU> {
+        val pageRequestQuiz: PageRequest = PageRequest.of(0, 5, Sort.by(Sort.Direction.DESC, "core_count"))
         when(cpuQueryType) {
             CPUQueryType.QUIZ_WORK -> {
-                val pageRequest: PageRequest = PageRequest.of(0, 5, Sort.by(Sort.Direction.DESC, "price_usd"))
 
                 return this.cpuRepository.findByCoreCountGreaterThanEqualAndCoreClockGreaterThanEqualAndPriceUSDLessThanEqualAndIntegratedGraphicsNotNull(
-                    cpuFilterObject.coreCount, cpuFilterObject.coreClock, cpuFilterObject.priceUSD, pageRequest
+                    cpuFilterObject.coreCount, cpuFilterObject.coreClock, cpuFilterObject.priceUSD, pageRequestQuiz
                 )
             }
 
              CPUQueryType.QUIZ_GAMING, CPUQueryType.QUIZ_STUDIO -> {
-                val pageRequest: PageRequest = PageRequest.of(0, 5, Sort.by(Sort.Direction.DESC, "price_usd"))
+                
 
                 return this.cpuRepository.findByCoreCountGreaterThanEqualAndCoreClockGreaterThanEqualAndPriceUSDLessThanEqual(
-                    cpuFilterObject.coreCount, cpuFilterObject.coreClock,cpuFilterObject.priceUSD, pageRequest
+                    cpuFilterObject.coreCount, cpuFilterObject.coreClock,cpuFilterObject.priceUSD, pageRequestQuiz
                 )
             }
 
             CPUQueryType.QUIZ_POWER -> {
-                val pageRequest: PageRequest = PageRequest.of(0, 5, Sort.by(Sort.Direction.DESC, "price_usd"))
 
                 return if(cpuFilterObject.name == "overclock") {
                     this.cpuRepository.findByCoreCountGreaterThanEqualAndCoreClockGreaterThanEqualAndPriceUSDLessThanEqualAndNameContainingOrCoreCountGreaterThanEqualAndCoreClockGreaterThanEqualAndPriceUSDLessThanEqualAndNameContaining(
-                        cpuFilterObject.coreCount, cpuFilterObject.coreClock, cpuFilterObject.priceUSD, "AMD", cpuFilterObject.coreCount, cpuFilterObject.coreClock, cpuFilterObject.priceUSD, "K", pageRequest
+                        cpuFilterObject.coreCount, cpuFilterObject.coreClock, cpuFilterObject.priceUSD, "AMD", cpuFilterObject.coreCount, cpuFilterObject.coreClock, cpuFilterObject.priceUSD, "K", pageRequestQuiz
                     )
                 } else {
                     this.cpuRepository.findByCoreCountGreaterThanEqualAndCoreClockGreaterThanEqualAndPriceUSDLessThanEqual(
-                        cpuFilterObject.coreCount, cpuFilterObject.coreClock, cpuFilterObject.priceUSD, pageRequest
+                        cpuFilterObject.coreCount, cpuFilterObject.coreClock, cpuFilterObject.priceUSD, pageRequestQuiz
                     )
                 }
             }
