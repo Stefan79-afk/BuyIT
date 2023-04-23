@@ -26,36 +26,36 @@ class GPUService(
         val gpuQueryObject = GPU()
 
         gpuQueryObject.priceUSD = gpuBudget
-        gpuQueryObject.memory = "2 GB"
-        gpuQueryObject.coreClock = "1500 MHz"
+        gpuQueryObject.memory = 2
+        gpuQueryObject.coreClock = 1500
 
         if (filterObject.pcMonitorResolution == "1920x1080" || filterObject.pcGamingGraphicsOrPerformance == "performance") {
-            gpuQueryObject.memory = "4 GB"
-            gpuQueryObject.coreClock = "1500 MHz"
+            gpuQueryObject.memory = 4
+            gpuQueryObject.coreClock = 1500
         }
 
         if (filterObject.pcGamingWantStreaming == true || filterObject.pcGamingGraphicsOrPerformance == "graphics" || filterObject.pcGamingLatestGames == true || filterObject.pcMonitorResolution == "2560x1440") {
-            gpuQueryObject.memory = "6 GB"
-            gpuQueryObject.coreClock = "1500 MHz"
+            gpuQueryObject.memory = 6
+            gpuQueryObject.coreClock = 1500
         }
 
         if (filterObject.pcGamingRayTracingGPU == true) {
-            gpuQueryObject.memory = "6 GB"
-            gpuQueryObject.coreClock = "1500 MHz"
+            gpuQueryObject.memory = 6
+            gpuQueryObject.coreClock = 1500
             gpuQueryObject.name = "RTX"
         }
 
         if (filterObject.pcMonitorResolution == "3840x2160" || filterObject.pcGamingGraphicsOrPerformance == "both") {
-            gpuQueryObject.memory = "8 GB"
-            gpuQueryObject.coreClock = "1800 MHz"
+            gpuQueryObject.memory = 8
+            gpuQueryObject.coreClock = 1800
         }
 
 
         val queryResult: List<GPU> = this.queryGPUCollection(gpuQueryObject, GPUQueryType.QUIZ_GAMING)
 
         if (queryResult.isEmpty()) {
-            gpuQueryObject.memory = "2 GB"
-            gpuQueryObject.coreClock = "1500 MHz"
+            gpuQueryObject.memory = 2
+            gpuQueryObject.coreClock = 1500
             gpuQueryObject.name = ""
 
             return this.queryGPUCollection(gpuQueryObject, GPUQueryType.QUIZ_GAMING)
@@ -68,31 +68,31 @@ class GPUService(
         val gpuQueryObject = GPU()
 
         gpuQueryObject.priceUSD = gpuBudget
-        gpuQueryObject.memory = "2 GB"
-        gpuQueryObject.coreClock = "700 MHz"
+        gpuQueryObject.memory = 2
+        gpuQueryObject.coreClock = 700
 
         when (filterObject.pcCreativeMostDemandingTask) {
             "video" -> {
-                gpuQueryObject.memory = "4 GB"
-                gpuQueryObject.coreClock = "1000 MHz"
+                gpuQueryObject.memory = 4
+                gpuQueryObject.coreClock = 1000
             }
 
             "3D" -> {
-                gpuQueryObject.memory = "6 GB"
-                gpuQueryObject.coreClock = "1500 MHz"
+                gpuQueryObject.memory = 6
+                gpuQueryObject.coreClock = 1500
             }
         }
 
         if (filterObject.pcCreativeNoLoadingTimes == true) {
-            gpuQueryObject.memory = "8 GB"
-            gpuQueryObject.coreClock = "1500 MHz"
+            gpuQueryObject.memory = 8
+            gpuQueryObject.coreClock = 1500
         }
 
         val queryResult = this.queryGPUCollection(gpuQueryObject, GPUQueryType.QUIZ_STUDIO)
 
         if (queryResult.isEmpty()) {
-            gpuQueryObject.memory = "2 GB"
-            gpuQueryObject.coreClock = "700 MHz"
+            gpuQueryObject.memory = 2
+            gpuQueryObject.coreClock = 700
 
             return this.queryGPUCollection(gpuQueryObject, GPUQueryType.QUIZ_STUDIO)
         }
@@ -104,37 +104,37 @@ class GPUService(
         val gpuQueryObject = GPU()
 
         gpuQueryObject.priceUSD = gpuBudget
-        gpuQueryObject.memory = "2 GB"
-        gpuQueryObject.coreClock = "1000 MHz"
+        gpuQueryObject.memory = 2
+        gpuQueryObject.coreClock = 1000
 
 
         when (filterObject.pcIntensiveMostDemandingTask) {
             "crypto_mining" -> {
-                gpuQueryObject.memory = "4 GB"
-                gpuQueryObject.coreClock = "1000 MHz"
+                gpuQueryObject.memory = 4
+                gpuQueryObject.coreClock = 1000
             }
 
             "data" -> {
-                gpuQueryObject.memory = "6 GB"
-                gpuQueryObject.coreClock = "1500 MHz"
+                gpuQueryObject.memory = 6
+                gpuQueryObject.coreClock = 1500
             }
 
             "ai", "science" -> {
-                gpuQueryObject.memory = "8 GB"
-                gpuQueryObject.coreClock = "1500 MHz"
+                gpuQueryObject.memory = 8
+                gpuQueryObject.coreClock = 1500
             }
         }
 
         if (filterObject.pcIntensiveBestPerformance == true) {
-            gpuQueryObject.memory = "8 GB"
-            gpuQueryObject.coreClock = "1500 MHz"
+            gpuQueryObject.memory = 8
+            gpuQueryObject.coreClock = 1500
         }
 
         val queryResult = this.queryGPUCollection(gpuQueryObject, GPUQueryType.QUIZ_POWER)
 
         if(queryResult.isEmpty()) {
-            gpuQueryObject.memory = "2 GB"
-            gpuQueryObject.coreClock = "1000 MHz"
+            gpuQueryObject.memory = 2
+            gpuQueryObject.coreClock = 1000
 
             return this.queryGPUCollection(gpuQueryObject, GPUQueryType.QUIZ_POWER)
         }

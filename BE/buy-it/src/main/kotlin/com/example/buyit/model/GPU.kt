@@ -12,10 +12,10 @@ data class GPU(
     @Field("rating_count") val ratingCount: Int = 0,
     @Field("price_usd") var priceUSD: Double = 0.0,
     @Field("chipset") var chipset: String = "",
-    @Field("memory") var memory: String = "",
-    @Field("core_clock") var coreClock: String = "",
-    @Field("boost_clock") var boostClock: String? = null,
+    @Field("memory") var memory: Int = 0,
+    @Field("core_clock") var coreClock: Int = 0,
+    @Field("boost_clock") var boostClock: Int? = null,
     @Field("color") var color: String = "",
-    @Field("length") var length: String = ""
+    @Field("length") var length: Int = 0
 ) {
 }
