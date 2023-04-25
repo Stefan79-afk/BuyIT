@@ -11,10 +11,10 @@ data class InternalStorage(
     @Field("rating") val rating: Int,
     @Field("rating_count") val ratingCount: Int,
     @Field("price_usd") val priceUSD: Double?,
-    @Field("capacity") val capacity: String,
+    @Field("capacity") val capacity: Int,
     @Field("price_/_gb") val priceGB: String,
     @Field("type") val type: String,
-    @Field("cache") val cache: String?,
+    @Field("cache") val cache: Int?,
     @Field("form_factor") val formFactor: String,
     @Field("interface") val storageInterface: String
 ) {

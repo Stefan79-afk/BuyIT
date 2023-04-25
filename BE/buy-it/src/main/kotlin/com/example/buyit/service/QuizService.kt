@@ -15,11 +15,11 @@ class QuizService(
     private val internalStorageService: InternalStorageService,
     private val motherboardService: MotherboardService,
     private val networkCardService: NetworkCardService,
-    private val opticalDriveRepository: OpticalDriveRepository,
-    private val psuRepository: PSURepository,
-    private val ramRepository: RAMRepository,
-    private val soundCardRepository: SoundCardRepository,
-    private val wifiCardRepository: WifiCardRepository
+    private val opticalDriveService: OpticalDriveService,
+    private val psuService: PSUService,
+    private val ramService: RAMService,
+    private val soundCardService: SoundCardService,
+    private val wifiCardService: WifiCardService
 
 ) {
 
@@ -27,41 +27,48 @@ class QuizService(
         val optionalComponents = arrayListOf<String>("optical_drive", "network_card")
     }
     fun quiz(filterObject: PCRequest): List<PCReccomendation> {
-        var budgetAllocation: MutableMap<String, Double>
-        when (filterObject.pcUseCase) {
-            "work" -> budgetAllocation = divideBudgetWork(filterObject)
-            "gaming" -> budgetAllocation = divideBudgetGamingAndPower(filterObject)
-            "studio" -> budgetAllocation = divideBudgetCreative(filterObject)
-            "power" -> budgetAllocation = divideBudgetGamingAndPower(filterObject)
-            else -> budgetAllocation = mutableMapOf()
+        val budgetAllocation: MutableMap<String, Double> = when (filterObject.pcUseCase) {
+            "work" -> divideBudgetWork(filterObject)
+            "gaming" -> divideBudgetGamingAndPower(filterObject)
+            "studio" -> divideBudgetCreative(filterObject)
+            "power" -> divideBudgetGamingAndPower(filterObject)
+            else -> mutableMapOf()
         }
 
-        val cpuRecommendations =
-            budgetAllocation.get("cpu")?.let { this.cpuService.getCPURecommendations(it, filterObject) }
 
-        val gpuRecommendations =
-            budgetAllocation.get("gpu")?.let { this.gpuService.getGPURecommendations(it,filterObject) }
+            val cpuRecommendations =
+                this.cpuService.getCPURecommendations(budgetAllocation.getValue("cpu"), filterObject)
 
-        val recommendations = mutableListOf<PCReccomendation>()
+            val gpuRecommendations = if (filterObject.pcUseCase == "work") null else
+                this.gpuService.getGPURecommendations(budgetAllocation.getValue("gpu"), filterObject)
 
-        val lists = mutableListOf<List<Any>>()
+            val ramRecommendations =
+                this.ramService.getRamRecommendations(budgetAllocation.getValue("ram"), filterObject)
 
-        if (cpuRecommendations != null) {
+            val recommendations = mutableListOf<PCReccomendation>()
+
+            val lists = mutableListOf<List<Any>>()
+
             lists.add(cpuRecommendations)
-        }
+            lists.add(ramRecommendations)
 
-        if(gpuRecommendations != null) {
-            lists.add(gpuRecommendations)
-        }
-        val minimumRecommendationSize = getMinimumSize(lists)
-        for(i in 0..minimumRecommendationSize - 1) {
-            val pcRecommendation: PCReccomendation? =
-                cpuRecommendations?.let { gpuRecommendations?.let { it1 -> PCReccomendation(it[i], it1[i]) } }
-            if (pcRecommendation != null) {
-                recommendations.add(pcRecommendation)
+            if(gpuRecommendations != null) {
+                lists.add(gpuRecommendations)
             }
-        }
-        return recommendations
+
+            val minimumRecommendationSize = getMinimumSize(lists)
+            for(i in 0 until minimumRecommendationSize) {
+                if(gpuRecommendations.isNullOrEmpty()) {
+                    val pcReccomendation = PCReccomendation(cpuRecommendations[i], null, ramRecommendations[i])
+                    recommendations.add(pcReccomendation)
+                }
+
+                else {
+                    val pcReccomendation = PCReccomendation(cpuRecommendations[i], gpuRecommendations[i], ramRecommendations[i])
+                }
+            }
+            return recommendations
+
     }
 
     private fun divideBudgetWork(filterObject: PCRequest): MutableMap<String, Double> {
