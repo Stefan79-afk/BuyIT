@@ -65,6 +65,7 @@ class QuizService(
 
                 else {
                     val pcReccomendation = PCReccomendation(cpuRecommendations[i], gpuRecommendations[i], ramRecommendations[i])
+                    recommendations.add(pcReccomendation)
                 }
             }
             return recommendations

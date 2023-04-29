@@ -6,9 +6,4 @@ data class PCReccomendation (
     var ram: RAM
 ) {
 
-    fun PCReccomendation(cpu: CPU, gpu: GPU, ram: RAM) {
-        this.cpu = cpu
-        this.gpu = gpu
-        this.ram = ram
-    }
 }

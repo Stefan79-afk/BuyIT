@@ -9,4 +9,7 @@ interface RAMRepository: MongoRepository<RAM, String> {
     fun findByCapacityGreaterThanEqualAndTypeGreaterThanEqualAndFrequencyGreaterThanEqualAndModulesContainingAndPriceUSDLessThanEqual(
         capacity: Int, type: String, frequency: Int, modules: String, priceUSD: Double, pageable: Pageable): List<RAM>
 
+    fun findByCapacityGreaterThanEqualAndTypeGreaterThanEqualAndFrequencyGreaterThanEqualAndModulesGreaterThanEqualAndPriceUSDLessThanEqual(
+        capacity: Int, type: String, frequency: Int, modules: String, priceUSD: Double, pageable: Pageable): List<RAM>
+
 }

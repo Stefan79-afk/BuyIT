@@ -12,10 +12,14 @@ class RAMService (
     private val ramRepository: RAMRepository
 ) {
 
-    public fun getRamRecommendations(ramBudget: Double, filterObject: PCRequest): List<RAM> {
+    fun getRamRecommendations(ramBudget: Double, filterObject: PCRequest): List<RAM> {
         when (filterObject.pcUseCase) {
             "work" -> {
                 return getRamReccomendationsWork(ramBudget, filterObject)
+            }
+
+            "gaming" -> {
+                return getRAMReccomendationsGaming(ramBudget, filterObject)
             }
 
             else -> {
@@ -61,13 +65,57 @@ class RAMService (
         return queryResult
     }
 
+    private fun getRAMReccomendationsGaming(ramBudget: Double, filterObject: PCRequest): List<RAM> {
+        val ramQueryObject = RAM()
 
-    public fun queryRAMCollection(ramFilterObject: RAM, ramQueryType: RAMQueryType): List<RAM> {
+        ramQueryObject.priceUSD = ramBudget
+        ramQueryObject.capacity = 8
+        ramQueryObject.frequency = 2400
+        ramQueryObject.type = "DDR4"
+        ramQueryObject.modules = "2 x"
+
+        if(filterObject.pcMonitorResolution == "1920x1080" || filterObject.pcGamingGraphicsOrPerformance == "performance") {
+            ramQueryObject.capacity = 8
+            ramQueryObject.frequency = 2400
+            ramQueryObject.type = "DDR4"
+            ramQueryObject.modules = "2 x"
+        }
+
+        if(filterObject.pcGamingWantStreaming == true || filterObject.pcGamingGraphicsOrPerformance == "graphics" || filterObject.pcGamingLatestGames == true || filterObject.pcGamingRayTracingGPU == true || filterObject.pcMonitorResolution == "2560x1440") {
+            ramQueryObject.capacity = 16
+            ramQueryObject.frequency = 3000
+            ramQueryObject.type = "DDR4"
+            ramQueryObject.modules = "2 x"
+        }
+
+        if(filterObject.pcGamingGraphicsOrPerformance == "both" || filterObject.pcMonitorResolution == "3840x2160") {
+            ramQueryObject.capacity = 32
+            ramQueryObject.frequency = 3200
+            ramQueryObject.type = "DDR4"
+            ramQueryObject.modules = "2 x"
+        }
+
+        val queryResult = queryRAMCollection(ramQueryObject, RAMQueryType.QUIZ_GAMING)
+
+        if(queryResult.isEmpty()) {
+            ramQueryObject.capacity = 8
+            ramQueryObject.frequency = 2400
+            ramQueryObject.type = "DDR4"
+            ramQueryObject.modules = "2 x"
+
+            return queryRAMCollection(ramQueryObject, RAMQueryType.QUIZ_GAMING)
+        }
+
+        return queryResult
+    }
+
+
+     fun queryRAMCollection(ramFilterObject: RAM, ramQueryType: RAMQueryType): List<RAM> {
         val pageRequest: PageRequest = PageRequest.of(0, 5, Sort.by(Sort.Direction.DESC, "capacity"))
 
         when(ramQueryType) {
-            RAMQueryType.QUIZ_WORK -> {
-                return this.ramRepository.findByCapacityGreaterThanEqualAndTypeGreaterThanEqualAndFrequencyGreaterThanEqualAndModulesContainingAndPriceUSDLessThanEqual(
+            RAMQueryType.QUIZ_WORK, RAMQueryType.QUIZ_GAMING -> {
+                return this.ramRepository.findByCapacityGreaterThanEqualAndTypeGreaterThanEqualAndFrequencyGreaterThanEqualAndModulesGreaterThanEqualAndPriceUSDLessThanEqual(
                     ramFilterObject.capacity, ramFilterObject.type, ramFilterObject.frequency, ramFilterObject.modules, ramFilterObject.priceUSD, pageRequest
                 )
             }
