@@ -26,6 +26,10 @@ class RAMService (
                 return getRAMReccommendationsStudio(ramBudget, filterObject)
             }
 
+            "power" -> {
+                return  getRAMReccommendationsPower(ramBudget, filterObject)
+            }
+
             else -> {
                 return listOf()
             }
@@ -150,12 +154,51 @@ class RAMService (
         return queryResult
     }
 
+    private fun getRAMReccommendationsPower(ramBudget: Double, filterObject: PCRequest): List<RAM> {
+        val ramQueryObject = RAM()
+
+        ramQueryObject.priceUSD = ramBudget
+        ramQueryObject.capacity = 16
+        ramQueryObject.frequency = 3000
+        ramQueryObject.type = "DDR4"
+        ramQueryObject.modules = "2 x"
+
+        if(filterObject.pcIntensiveMostDemandingTask == "data" || filterObject.pcIntensiveMostDemandingTask == "ai" || filterObject.pcIntensiveMultitask == true) {
+            ramQueryObject.capacity = 32
+            ramQueryObject.frequency = 3200
+            ramQueryObject.type = "DDR4"
+            ramQueryObject.modules = "2 x"
+        }
+
+        if(filterObject.pcIntensiveMostDemandingTask == "science" || filterObject.pcIntensiveBestPerformance == true) {
+            ramQueryObject.capacity = 64
+            ramQueryObject.frequency = 3600
+            ramQueryObject.type = "DDR4"
+            ramQueryObject.modules = "4 x"
+        }
+
+        val queryResult = queryRAMCollection(ramQueryObject, RAMQueryType.QUIZ_POWER)
+
+        if(queryResult.isEmpty()) {
+            ramQueryObject.capacity = 16
+            ramQueryObject.frequency = 3000
+            ramQueryObject.type = "DDR4"
+            ramQueryObject.modules = "2 x"
+
+            return queryRAMCollection(ramQueryObject, RAMQueryType.QUIZ_POWER)
+        }
+
+        return queryResult
+
+
+    }
+
 
      fun queryRAMCollection(ramFilterObject: RAM, ramQueryType: RAMQueryType): List<RAM> {
         val pageRequest: PageRequest = PageRequest.of(0, 5, Sort.by(Sort.Direction.DESC, "capacity"))
 
         when(ramQueryType) {
-            RAMQueryType.QUIZ_WORK, RAMQueryType.QUIZ_GAMING, RAMQueryType.QUIZ_STUDIO -> {
+            RAMQueryType.QUIZ_WORK, RAMQueryType.QUIZ_GAMING, RAMQueryType.QUIZ_STUDIO, RAMQueryType.QUIZ_POWER -> {
                 return this.ramRepository.findByCapacityGreaterThanEqualAndTypeGreaterThanEqualAndFrequencyGreaterThanEqualAndModulesGreaterThanEqualAndPriceUSDLessThanEqual(
                     ramFilterObject.capacity, ramFilterObject.type, ramFilterObject.frequency, ramFilterObject.modules, ramFilterObject.priceUSD, pageRequest
                 )
