@@ -20,7 +20,7 @@ class InternalStorageService(
             "work" -> getInternalStorageRecommendationsWork(internalStorageBudget, filterObject)
             "gaming" -> getInternalStorageRecommendationsGaming(internalStorageBudget, filterObject)
             "studio" -> getInternalStorageRecommendationsStudio(internalStorageBudget, filterObject)
-            //"power" -> getInternalStorageRecommendationsPower(internalStorageBudget, filterObject)*/
+            "power" -> getInternalStorageRecommendationsPower(internalStorageBudget, filterObject)
             else -> listOf<InternalStorage>()
         }
     }
@@ -118,13 +118,46 @@ class InternalStorageService(
 
     }
 
+    private fun getInternalStorageRecommendationsPower(
+        internalStorageBudget: Double,
+        filterObject: PCRequest
+    ): List<InternalStorage> {
+
+        val internalStorageQueryObject = InternalStorage()
+
+        internalStorageQueryObject.priceUSD = internalStorageBudget
+
+        internalStorageQueryObject.capacity = 1000
+        internalStorageQueryObject.type = "SSD"
+
+        if(filterObject.pcIntensiveLargeStorage == true) {
+            internalStorageQueryObject.capacity = 2000
+        }
+
+        if(filterObject.pcIntensiveBestPerformance == true) {
+            internalStorageQueryObject.cache = 0
+        }
+
+        val queryResult = this.queryInternalStorageCollection(internalStorageQueryObject, InternalStorageQueryType.QUIZ_POWER)
+
+        if(queryResult.isEmpty()) {
+            internalStorageQueryObject.capacity = 1000
+            internalStorageQueryObject.type = "SSD"
+            internalStorageQueryObject.cache = null
+
+            return this.queryInternalStorageCollection(internalStorageQueryObject, InternalStorageQueryType.QUIZ_POWER)
+        }
+
+        return queryResult
+    }
+
     private fun queryInternalStorageCollection(
         internalStorageQueryObject: InternalStorage,
         internalStorageQueryType: InternalStorageQueryType
     ): List<InternalStorage> {
         val pageRequest: PageRequest = PageRequest.of(0, 5, Sort.by(Sort.Direction.DESC, "capacity"))
         return when (internalStorageQueryType) {
-            InternalStorageQueryType.QUIZ_WORK, InternalStorageQueryType.QUIZ_GAMING, InternalStorageQueryType.QUIZ_STUDIO -> {
+            InternalStorageQueryType.QUIZ_WORK, InternalStorageQueryType.QUIZ_GAMING, InternalStorageQueryType.QUIZ_STUDIO, InternalStorageQueryType.QUIZ_POWER -> {
                 if (internalStorageQueryObject.type == "")
                     this.internalStorageRepository.findByCapacityGreaterThanEqualAndPriceUSDLessThanEqual(
                         internalStorageQueryObject.capacity, internalStorageQueryObject.priceUSD, pageRequest
@@ -146,8 +179,6 @@ class InternalStorageService(
                 }
 
             }
-
-            else -> listOf()
         }
     }
 }
