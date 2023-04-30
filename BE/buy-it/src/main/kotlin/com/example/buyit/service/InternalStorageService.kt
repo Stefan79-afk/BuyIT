@@ -14,21 +14,21 @@ class InternalStorageService (
 
     fun getInternalStorageReccommendations(internalStorageBudget: Double, filterObject: PCRequest): List<InternalStorage> {
         return when (filterObject.pcUseCase) {
-            "work" -> getInternalStorageReccommendationsWork(internalStorageBudget, filterObject)
-            /*"gaming" -> getInternalStorageReccommendationsGaming(internalStorageBudget, filterObject)
-            "studio" -> getInternalStorageReccommendationsStudio(internalStorageBudget, filterObject)
-            "power" -> getInternalStorageReccommendationsPower(internalStorageBudget, filterObject)*/
+            "work" -> getInternalStorageRecommendationsWork(internalStorageBudget, filterObject)
+            "gaming" -> getInternalStorageRecommendationsGaming(internalStorageBudget, filterObject)
+            /*"studio" -> getInternalStorageRecommendationsStudio(internalStorageBudget, filterObject)
+            "power" -> getInternalStorageRecommendationsPower(internalStorageBudget, filterObject)*/
             else -> listOf<InternalStorage>()
         }
     }
 
-    private fun getInternalStorageReccommendationsWork(internalStorageBudget: Double, filterObject: PCRequest): List<InternalStorage> {
+    private fun getInternalStorageRecommendationsWork(internalStorageBudget: Double, filterObject: PCRequest): List<InternalStorage> {
         val internalStorage = InternalStorage()
 
         internalStorage.priceUSD = internalStorageBudget
 
         internalStorage.capacity = 240
-        internalStorage.type = ""
+        internalStorage.type = "SSD"
 
         if(filterObject.pcWorkLargeStorage == true) {
             internalStorage.capacity = 500
@@ -50,10 +50,34 @@ class InternalStorageService (
         return queryResult
     }
 
+    private fun getInternalStorageRecommendationsGaming(internalStorageBudget: Double, filterObject: PCRequest): List<InternalStorage> {
+        val internalStorageQueryObject = InternalStorage()
+
+        internalStorageQueryObject.priceUSD = internalStorageBudget
+
+        internalStorageQueryObject.capacity = 500
+        internalStorageQueryObject.type = "SSD"
+
+        if(filterObject.pcGamingLargeStorage == true) {
+            internalStorageQueryObject.capacity = 1000
+        }
+
+        val queryResult = this.queryInternalStorageCollection(internalStorageQueryObject, InternalStorageQueryType.QUIZ_GAMING)
+
+        if(queryResult.isEmpty()) {
+            internalStorageQueryObject.capacity = 500
+            internalStorageQueryObject.type = ""
+
+            return this.queryInternalStorageCollection(internalStorageQueryObject, InternalStorageQueryType.QUIZ_GAMING)
+        }
+
+        return queryResult
+    }
+
     private fun queryInternalStorageCollection(internalStorageQueryObject: InternalStorage, internalStorageQueryType: InternalStorageQueryType): List<InternalStorage> {
         val pageRequest: PageRequest = PageRequest.of(0, 5, Sort.by(Sort.Direction.DESC, "capacity"))
         return when(internalStorageQueryType) {
-            InternalStorageQueryType.QUIZ_WORK -> {
+            InternalStorageQueryType.QUIZ_WORK, InternalStorageQueryType.QUIZ_GAMING -> {
                 if(internalStorageQueryObject.type == "")
                     this.internalStorageRepository.findByCapacityGreaterThanEqualAndPriceUSDLessThanEqual(
                         internalStorageQueryObject.capacity, internalStorageQueryObject.priceUSD, pageRequest
