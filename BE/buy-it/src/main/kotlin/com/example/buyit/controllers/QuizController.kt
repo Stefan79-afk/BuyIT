@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController
 class QuizController(private val quizService: QuizService) {
 
     @PostMapping("/quiz")
-    public fun getRecommendations(@RequestBody quiz: PCRequest): ResponseEntity<Any> {
+    fun getRecommendations(@RequestBody quiz: PCRequest): ResponseEntity<Any> {
         val recommendations: List<PCReccomendation> = quizService.quiz(quiz);
 
         if(recommendations.isEmpty()) {

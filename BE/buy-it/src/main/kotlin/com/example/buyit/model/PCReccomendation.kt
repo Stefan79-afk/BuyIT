@@ -4,7 +4,8 @@ data class PCReccomendation (
     var cpu: CPU,
     var gpu: GPU?,
     var ram: RAM,
-    val internalStorage: InternalStorage
+    val internalStorage: InternalStorage,
+    val case: Case
 ) {
 
 }
