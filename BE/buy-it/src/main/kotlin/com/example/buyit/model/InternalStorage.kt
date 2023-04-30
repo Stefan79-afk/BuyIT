@@ -6,16 +6,16 @@ import org.springframework.data.mongodb.core.mapping.Field
 
 @Document("internal_storage")
 data class InternalStorage(
-    @Id val id: String,
-    @Field("name") val name: String,
-    @Field("rating") val rating: Int,
-    @Field("rating_count") val ratingCount: Int,
-    @Field("price_usd") val priceUSD: Double?,
-    @Field("capacity") val capacity: Int,
-    @Field("price_/_gb") val priceGB: String,
-    @Field("type") val type: String,
-    @Field("cache") val cache: Int?,
-    @Field("form_factor") val formFactor: String,
-    @Field("interface") val storageInterface: String
+    @Id var id: String = "",
+    @Field("name") var name: String = "",
+    @Field("rating") var rating: Int = 0,
+    @Field("rating_count") var ratingCount: Int = 0,
+    @Field("price_usd") var priceUSD: Double = 0.0,
+    @Field("capacity") var capacity: Int = 0,
+    @Field("price_/_gb") var priceGB: String = "",
+    @Field("type") var type: String = "",
+    @Field("cache") var cache: Int? = null,
+    @Field("form_factor") var formFactor: String = "",
+    @Field("interface") var storageInterface: String = ""
 ) {
 }

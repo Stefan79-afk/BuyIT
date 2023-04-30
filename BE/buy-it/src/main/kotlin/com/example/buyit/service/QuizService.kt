@@ -45,12 +45,16 @@ class QuizService(
             val ramRecommendations =
                 this.ramService.getRamRecommendations(budgetAllocation.getValue("ram"), filterObject)
 
+            val internalStorageRecommendations =
+                this.internalStorageService.getInternalStorageReccommendations(budgetAllocation.getValue("internal_storage"), filterObject)
+
             val recommendations = mutableListOf<PCReccomendation>()
 
             val lists = mutableListOf<List<Any>>()
 
             lists.add(cpuRecommendations)
             lists.add(ramRecommendations)
+            lists.add(internalStorageRecommendations)
 
             if(gpuRecommendations != null) {
                 lists.add(gpuRecommendations)
@@ -59,12 +63,12 @@ class QuizService(
             val minimumRecommendationSize = getMinimumSize(lists)
             for(i in 0 until minimumRecommendationSize) {
                 if(gpuRecommendations.isNullOrEmpty()) {
-                    val pcReccomendation = PCReccomendation(cpuRecommendations[i], null, ramRecommendations[i])
+                    val pcReccomendation = PCReccomendation(cpuRecommendations[i], null, ramRecommendations[i], internalStorageRecommendations[i])
                     recommendations.add(pcReccomendation)
                 }
 
                 else {
-                    val pcReccomendation = PCReccomendation(cpuRecommendations[i], gpuRecommendations[i], ramRecommendations[i])
+                    val pcReccomendation = PCReccomendation(cpuRecommendations[i], gpuRecommendations[i], ramRecommendations[i], internalStorageRecommendations[i])
                     recommendations.add(pcReccomendation)
                 }
             }
