@@ -10,6 +10,6 @@ interface InternalStorageRepository: MongoRepository<InternalStorage, String> {
 
     fun findByCapacityGreaterThanEqualAndTypeAndPriceUSDLessThanEqual(
         capacity: Int, type: String, priceUSD: Double, pageable: Pageable): List<InternalStorage>
-    fun findByCapacityGreaterThanEqualAndTypeAndCacheGreaterThanEqualAndPriceUSDLessThanEqual(
-        capacity: Int, type: String, cache: Int, priceUSD: Double, pageable: Pageable): List<InternalStorage>
+    fun findByCapacityGreaterThanEqualAndTypeAndCacheNotNullAndPriceUSDLessThanEqual(
+        capacity: Int, type: String, priceUSD: Double, pageable: Pageable): List<InternalStorage>
 }
