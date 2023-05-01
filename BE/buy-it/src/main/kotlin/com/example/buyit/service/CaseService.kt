@@ -28,6 +28,8 @@ class CaseService (
             "white" -> caseQueryObject.color = "White"
             "black" -> caseQueryObject.color = "Black"
             "white/black" -> caseQueryObject.color = "White / Black"
+            "white/gray" -> caseQueryObject.color = "White / Gray"
+            "black/red" -> caseQueryObject.color = "Black / Red"
             null -> caseQueryObject.color = ""
         }
 
