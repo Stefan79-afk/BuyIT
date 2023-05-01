@@ -130,16 +130,55 @@ class GPUService(
             gpuQueryObject.coreClock = 1500
         }
 
-        val queryResult = this.queryGPUCollection(gpuQueryObject, GPUQueryType.QUIZ_POWER)
+        if(filterObject.pcIntensiveMultipleGPUs != true) {
+            val queryResult = this.queryGPUCollection(gpuQueryObject, GPUQueryType.QUIZ_POWER)
 
-        if(queryResult.isEmpty()) {
-            gpuQueryObject.memory = 2
-            gpuQueryObject.coreClock = 1000
+            if(queryResult.isEmpty()) {
+                gpuQueryObject.memory = 2
+                gpuQueryObject.coreClock = 1000
 
-            return this.queryGPUCollection(gpuQueryObject, GPUQueryType.QUIZ_POWER)
+                return this.queryGPUCollection(gpuQueryObject, GPUQueryType.QUIZ_POWER)
+            }
+
+            return queryResult
+        } else {
+            gpuQueryObject.priceUSD /= 4
+
+            var queryResult = this.queryGPUCollection(gpuQueryObject, GPUQueryType.QUIZ_POWER)
+
+            if(queryResult.isEmpty()) {
+                gpuQueryObject.priceUSD = gpuQueryObject.priceUSD * 2
+
+                queryResult = this.queryGPUCollection(gpuQueryObject, GPUQueryType.QUIZ_POWER)
+
+                if(queryResult.isEmpty()) {
+                    gpuQueryObject.priceUSD = gpuQueryObject.priceUSD * 2
+
+                    queryResult = this.queryGPUCollection(gpuQueryObject, GPUQueryType.QUIZ_POWER)
+
+                    if(queryResult.isEmpty()) {
+                        gpuQueryObject.memory = 2
+                        gpuQueryObject.coreClock = 1000
+
+                        return this.queryGPUCollection(gpuQueryObject, GPUQueryType.QUIZ_POWER)
+                    }
+
+                    return queryResult
+                }
+
+                queryResult.forEach {
+                    it.amount = 2
+                }
+
+                return queryResult
+            }
+
+            queryResult.forEach {
+                it.amount = 4
+            }
+
+            return queryResult
         }
-
-        return queryResult
     }
 
     private fun queryGPUCollection(gpuFilterObject: GPU, gpuQueryType: GPUQueryType): List<GPU> {

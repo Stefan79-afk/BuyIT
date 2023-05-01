@@ -16,6 +16,7 @@ data class GPU(
     @Field("core_clock") var coreClock: Int = 0,
     @Field("boost_clock") var boostClock: Int? = null,
     @Field("color") var color: String = "",
-    @Field("length") var length: Int = 0
+    @Field("length") var length: Int = 0,
+    var amount: Int = 0
 ) {
 }
