@@ -291,7 +291,7 @@ class QuizService(
         }
     }
 
-    private fun getMinimumSize(lists: List<List<Any>>): Int {
+    fun getMinimumSize(lists: List<List<Any>>): Int {
         var minimumSize = 100
         for(list in lists) {
             if(list.size < minimumSize) {
