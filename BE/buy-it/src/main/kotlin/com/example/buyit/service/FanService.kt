@@ -31,6 +31,22 @@ class FanService (
             }
         }
 
+        when(filterObject.pcUseCase) {
+            "work" -> {
+                fanQueryObject.rpm = 1000
+            }
+            "gaming" -> {
+                fanQueryObject.rpm = 1500
+            }
+            "studio" -> {
+                fanQueryObject.rpm = 1800
+            }
+
+            "power" -> {
+                fanQueryObject.rpm = 2200
+            }
+        }
+
         if(filterObject.pcFanAmount != null) {
             fanQueryObject.priceUSD /= filterObject.pcFanAmount
         }
@@ -55,6 +71,7 @@ class FanService (
 
                         if(queryResult.isEmpty() && i == 1) {
                             fanQueryObject.noiseLevel = null
+                            fanQueryObject.rpm = 0
 
                             do {
                                 for(j in filterObject.pcFanAmount downTo  1) {
@@ -79,6 +96,7 @@ class FanService (
 
             else {
                 fanQueryObject.noiseLevel = null
+                fanQueryObject.rpm = 0
                 queryResult = this.queryFanCollection(fanQueryObject, FanQueryType.QUIZ)
 
                 if(queryResult.isEmpty()) {
@@ -105,10 +123,14 @@ class FanService (
         when(fanQueryType) {
             FanQueryType.QUIZ -> {
                 val pageRequest = PageRequest.of(0, 5, Sort.by(Sort.Direction.DESC, "price_usd"))
-                if(fanQueryObject.noiseLevel == null) {
+                if(fanQueryObject.noiseLevel == null && fanQueryObject.rpm == 0) {
                     return this.fanRepository.findByPriceUSDLessThanEqual(fanQueryObject.priceUSD, pageRequest)
+                } else if(fanQueryObject.noiseLevel == null && fanQueryObject.rpm != 0) {
+                    return this.fanRepository.findByRpmGreaterThanEqualAndPriceUSDLessThanEqual(
+                        fanQueryObject.rpm, fanQueryObject.priceUSD, pageRequest
+                    )
                 } else {
-                    return this.fanRepository.findByNoiseLevelLessThanEqualAndPriceUSDLessThanEqual(fanQueryObject.noiseLevel!!, fanQueryObject.priceUSD, pageRequest)
+                    return this.fanRepository.findByNoiseLevelLessThanEqualAndRpmGreaterThanEqualAndPriceUSDLessThanEqual(fanQueryObject.noiseLevel!!, fanQueryObject.rpm, fanQueryObject.priceUSD, pageRequest)
                 }
             }
         }

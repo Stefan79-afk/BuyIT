@@ -35,14 +35,25 @@ class SoundCardService (
             }
         }
 
-        return querySoundCardCollection(soundCardQueryObject, SoundCardQueryType.QUIZ)
+        val queryResult = querySoundCardCollection(soundCardQueryObject, SoundCardQueryType.QUIZ)
+
+        if(queryResult.isEmpty()) {
+            soundCardQueryObject.channels = ""
+            return querySoundCardCollection(soundCardQueryObject, SoundCardQueryType.QUIZ)
+        }
+
+        return queryResult
     }
 
     private fun querySoundCardCollection(soundCardQueryObject: SoundCard, soundCardQueryType: SoundCardQueryType): List<SoundCard> {
         when (soundCardQueryType) {
             SoundCardQueryType.QUIZ -> {
                 val pageRequest = PageRequest.of(0, 5, Sort.by(Sort.Direction.DESC, "price_usd"))
-                return this.soundCardRepository.findByChannelsAndPriceUSDLessThanEqual(soundCardQueryObject.channels, soundCardQueryObject.priceUSD, pageRequest)
+                if(soundCardQueryObject.channels == "") {
+                    return this.soundCardRepository.findByPriceUSDLessThanEqual(soundCardQueryObject.priceUSD, pageRequest)
+                } else {
+                    return this.soundCardRepository.findByChannelsAndPriceUSDLessThanEqual(soundCardQueryObject.channels, soundCardQueryObject.priceUSD, pageRequest)
+                }
             }
         }
     }

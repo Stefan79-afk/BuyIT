@@ -31,10 +31,27 @@ class CPUFanService(
             }
         }
 
+        when(filterObject.pcUseCase) {
+            "work" -> {
+                cpuFanQueryObject.fanRPM = 1000
+            }
+            "gaming" -> {
+                cpuFanQueryObject.fanRPM = 1500
+            }
+            "studio" -> {
+                cpuFanQueryObject.fanRPM = 1800
+            }
+
+            "power" -> {
+                cpuFanQueryObject.fanRPM = 2200
+            }
+        }
+
         val queryResult = this.queryCPUFanCollection(cpuFanQueryObject, FanQueryType.QUIZ)
 
         if(queryResult.isEmpty()) {
             cpuFanQueryObject.noiseLevel = null
+            cpuFanQueryObject.fanRPM = 0
             return this.queryCPUFanCollection(cpuFanQueryObject, FanQueryType.QUIZ)
         }
 
@@ -45,9 +62,15 @@ class CPUFanService(
         when(fanQueryType) {
             FanQueryType.QUIZ -> {
                 val pageRequest = PageRequest.of(0, 5, Sort.by(Sort.Direction.DESC, "price_usd"))
-                if(cpuFanQueryObject.noiseLevel != null) {
-                   return this.cpuFanRepository.findByNoiseLevelLessThanEqualAndPriceUSDLessThanEqual(cpuFanQueryObject.noiseLevel!!, cpuFanQueryObject.priceUSD,pageRequest )
-                } else {
+                if(cpuFanQueryObject.noiseLevel != null && cpuFanQueryObject.fanRPM != 0) {
+                   return this.cpuFanRepository.findByNoiseLevelLessThanEqualAndFanRPMGreaterThanEqualAndPriceUSDLessThanEqual(
+                       cpuFanQueryObject.noiseLevel!!, cpuFanQueryObject.fanRPM, cpuFanQueryObject.priceUSD,pageRequest )
+                } else if(cpuFanQueryObject.noiseLevel == null && cpuFanQueryObject.fanRPM != 0) {
+                    return this.cpuFanRepository.findByFanRPMGreaterThanEqualAndPriceUSDGreaterThanEqual(
+                        cpuFanQueryObject.fanRPM, cpuFanQueryObject.priceUSD, pageRequest
+                    )
+                }
+                else {
                     return this.cpuFanRepository.findByPriceUSDLessThanEqual(cpuFanQueryObject.priceUSD, pageRequest)
                 }
             }
