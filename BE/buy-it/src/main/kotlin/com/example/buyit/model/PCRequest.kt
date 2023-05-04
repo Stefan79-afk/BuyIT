@@ -41,5 +41,5 @@ data class PCRequest(
     val pcIntensiveBestPerformance: Boolean?,
     val pcIntensiveOverclock: Boolean?,
     val pcIntensiveMultitask: Boolean?,
-    val pcFanAmount: String?
+    val pcFanAmount: Int?
 )

@@ -13,9 +13,10 @@ data class Fan(
     @Field("price_usd") var priceUSD: Double = 0.0,
     @Field("size") var size: String = "",
     @Field("color") var color: String = "",
-    @Field("rpm") var rpm: String? = null,
+    @Field("rpm") var rpm: Int = 0,
     @Field("airflow") var airflow: String? = null,
-    @Field("noise_level") var noiseLevel: String? = null,
-    @Field("pwm") var pwm: Boolean = false
+    @Field("noise_level") var noiseLevel: Int? = null,
+    @Field("pwm") var pwm: Boolean = false,
+    var amount: Int = 0
 ) {
 }

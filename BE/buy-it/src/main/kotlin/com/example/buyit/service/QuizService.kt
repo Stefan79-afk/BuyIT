@@ -22,10 +22,6 @@ class QuizService(
     private val wifiCardService: WifiCardService
 
 ) {
-
-    companion object {
-        val optionalComponents = arrayListOf<String>("optical_drive", "network_card")
-    }
     fun quiz(filterObject: PCRequest): List<PCReccomendation> {
         val budgetAllocation: MutableMap<String, Double> = when (filterObject.pcUseCase) {
             "work" -> divideBudgetWork(filterObject)
@@ -51,12 +47,17 @@ class QuizService(
             val caseRecommendations =
                 this.caseService.getCaseRecommendations(budgetAllocation.getValue("case"), filterObject)
 
+            val fanRecommendations =
+                this.fanService.getFanRecommendations(budgetAllocation.getValue("fan"), filterObject)
+
+
             val lists = mutableListOf<List<Any>>()
 
             lists.add(cpuRecommendations)
             lists.add(ramRecommendations)
             lists.add(internalStorageRecommendations)
             lists.add(caseRecommendations)
+            lists.add(fanRecommendations)
 
             if(gpuRecommendations != null) {
                 lists.add(gpuRecommendations)
@@ -65,12 +66,12 @@ class QuizService(
             val minimumRecommendationSize = getMinimumSize(lists)
             for(i in minimumRecommendationSize - 1 downTo 0) {
                 if(gpuRecommendations.isNullOrEmpty()) {
-                    val pcReccomendation = PCReccomendation(cpuRecommendations[i], null, ramRecommendations[i], internalStorageRecommendations[i], caseRecommendations[i])
+                    val pcReccomendation = PCReccomendation(cpuRecommendations[i], null, ramRecommendations[i], internalStorageRecommendations[i], caseRecommendations[i], fanRecommendations[i])
                     recommendations.add(pcReccomendation)
                 }
 
                 else {
-                    val pcReccomendation = PCReccomendation(cpuRecommendations[i], gpuRecommendations[i], ramRecommendations[i], internalStorageRecommendations[i], caseRecommendations[i])
+                    val pcReccomendation = PCReccomendation(cpuRecommendations[i], gpuRecommendations[i], ramRecommendations[i], internalStorageRecommendations[i], caseRecommendations[i], fanRecommendations[i])
                     recommendations.add(pcReccomendation)
                 }
             }
