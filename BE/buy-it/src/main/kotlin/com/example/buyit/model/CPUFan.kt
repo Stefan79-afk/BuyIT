@@ -12,7 +12,7 @@ data class CPUFan(
     @Field("rating_count") var ratingCount: Int = 0,
     @Field("price_usd") var priceUSD: Double = 0.0,
     @Field("fan_rpm") var fanRPM: String = "",
-    @Field("noise_level") var noiseLevel: String? = null,
+    @Field("noise_level") var noiseLevel: Int? = null,
     @Field("color") var color: String? = null,
     @Field("radiator_size") var radiatorSize: String? = null
 ) {

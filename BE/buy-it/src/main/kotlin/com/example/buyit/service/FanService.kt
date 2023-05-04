@@ -92,6 +92,12 @@ class FanService (
             }
         }
 
+        queryResult.forEach{
+            if(filterObject.pcFanAmount != null)
+                it.amount = filterObject.pcFanAmount
+            else
+                it.amount = 1
+        }
         return queryResult
     }
 
