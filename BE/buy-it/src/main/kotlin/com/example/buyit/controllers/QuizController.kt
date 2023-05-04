@@ -2,7 +2,6 @@ package com.example.buyit.controllers
 
 import com.example.buyit.model.PCReccomendation
 import com.example.buyit.model.PCRequest
-import com.example.buyit.model.Recommendation
 import com.example.buyit.service.QuizService
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.PostMapping

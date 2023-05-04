@@ -53,6 +53,9 @@ class QuizService(
             val cpuFanRecommendations =
                 this.cpuFanService.getcpuFanRecommendations(budgetAllocation.getValue("cpu_fan"), filterObject)
 
+            val soundCardRecommendations =
+                this.soundCardService.getSoundCardRecommendations(budgetAllocation.getValue("sound_card"), filterObject)
+
             val lists = mutableListOf<List<Any>>()
 
             lists.add(cpuRecommendations)
@@ -61,6 +64,7 @@ class QuizService(
             lists.add(caseRecommendations)
             lists.add(fanRecommendations)
             lists.add(cpuFanRecommendations)
+            lists.add(soundCardRecommendations)
 
             if(gpuRecommendations != null) {
                 lists.add(gpuRecommendations)
@@ -69,12 +73,12 @@ class QuizService(
             val minimumRecommendationSize = getMinimumSize(lists)
             for(i in minimumRecommendationSize - 1 downTo 0) {
                 if(gpuRecommendations.isNullOrEmpty()) {
-                    val pcReccomendation = PCReccomendation(cpuRecommendations[i], null, ramRecommendations[i], internalStorageRecommendations[i], caseRecommendations[i], fanRecommendations[i], cpuFanRecommendations[i])
+                    val pcReccomendation = PCReccomendation(cpuRecommendations[i], null, ramRecommendations[i], internalStorageRecommendations[i], caseRecommendations[i], fanRecommendations[i], cpuFanRecommendations[i], soundCardRecommendations[i])
                     recommendations.add(pcReccomendation)
                 }
 
                 else {
-                    val pcReccomendation = PCReccomendation(cpuRecommendations[i], gpuRecommendations[i], ramRecommendations[i], internalStorageRecommendations[i], caseRecommendations[i], fanRecommendations[i], cpuFanRecommendations[i])
+                    val pcReccomendation = PCReccomendation(cpuRecommendations[i], gpuRecommendations[i], ramRecommendations[i], internalStorageRecommendations[i], caseRecommendations[i], fanRecommendations[i], cpuFanRecommendations[i], soundCardRecommendations[i])
                     recommendations.add(pcReccomendation)
                 }
             }
