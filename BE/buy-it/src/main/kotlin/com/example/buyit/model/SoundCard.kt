@@ -6,16 +6,16 @@ import org.springframework.data.mongodb.core.mapping.Field
 
 @Document("sound_cards")
 data class SoundCard(
-    @Id val id: String,
-    @Field("name") val name: String,
-    @Field("rating") val rating: Int,
-    @Field("rating_count") val ratingCount: Int,
-    @Field("price_usd") val priceUSD: Double?,
-    @Field("channels") val channels: String,
-    @Field("digital_audio") val digitalAudio: String?,
-    @Field("snr") val snr: String?,
-    @Field("sample_rate") val sampleRate: String?,
-    @Field("chipset") val chipset: String?,
-    @Field("interface") val soundCardInterface: String
+    @Id var id: String = "",
+    @Field("name") var name: String = "",
+    @Field("rating") var rating: Int = 0,
+    @Field("rating_count") var ratingCount: Int = 0,
+    @Field("price_usd") var priceUSD: Double = 0.0,
+    @Field("channels") var channels: String = "",
+    @Field("digital_audio") var digitalAudio: String? = null,
+    @Field("snr") var snr: String? = null,
+    @Field("sample_rate") var sampleRate: String? = null,
+    @Field("chipset") var chipset: String? = null,
+    @Field("interface") var soundCardInterface: String = ""
 ) {
 }

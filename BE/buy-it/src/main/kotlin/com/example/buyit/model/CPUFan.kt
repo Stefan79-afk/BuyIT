@@ -6,14 +6,14 @@ import org.springframework.data.mongodb.core.mapping.Field
 
 @Document("cpu_coolers")
 data class CPUFan(
-    @Id val id: String,
-    @Field("name") val name: String,
-    @Field("rating") val rating: Int,
-    @Field("rating_count") val ratingCount: Int,
-    @Field("price_usd") val priceUSD: Double?,
-    @Field("fan_rpm") val fanRPM: String?,
-    @Field("noise_level") val noiseLevel: String?,
-    @Field("color") val color: String?,
-    @Field("radiator_size") val radiatorSize: String?
+    @Id var id: String = "",
+    @Field("name") var name: String = "",
+    @Field("rating") var rating: Int = 0,
+    @Field("rating_count") var ratingCount: Int = 0,
+    @Field("price_usd") var priceUSD: Double = 0.0,
+    @Field("fan_rpm") var fanRPM: String = "",
+    @Field("noise_level") var noiseLevel: String? = null,
+    @Field("color") var color: String? = null,
+    @Field("radiator_size") var radiatorSize: String? = null
 ) {
 }

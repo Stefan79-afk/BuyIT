@@ -6,16 +6,16 @@ import org.springframework.data.mongodb.core.mapping.Field
 
 @Document("case_fans")
 data class Fan(
-    @Id val id: String,
-    @Field("name") val name: String,
-    @Field("rating") val rating: Int,
-    @Field("rating_count") val ratingCount: Int,
-    @Field("price_usd") val priceUSD: Double?,
-    @Field("size") val size: String,
-    @Field("color") val color: String,
-    @Field("rpm") val rpm: String?,
-    @Field("airflow") val airflow: String?,
-    @Field("noise_level") val noiseLevel: String?,
-    @Field("pwm") val pwm: Boolean
+    @Id var id: String = "",
+    @Field("name") var name: String = "",
+    @Field("rating") var rating: Int = 0,
+    @Field("rating_count") var ratingCount: Int = 0,
+    @Field("price_usd") var priceUSD: Double = 0.0,
+    @Field("size") var size: String = "",
+    @Field("color") var color: String = "",
+    @Field("rpm") var rpm: String? = null,
+    @Field("airflow") var airflow: String? = null,
+    @Field("noise_level") var noiseLevel: String? = null,
+    @Field("pwm") var pwm: Boolean = false
 ) {
 }

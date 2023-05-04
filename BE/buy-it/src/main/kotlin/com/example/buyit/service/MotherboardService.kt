@@ -9,7 +9,7 @@ class MotherboardService (
     private val motherboardRepository: MotherboardRepository
 ) {
 
-    fun getMotherboardRecommendations(motherboardBudget: Double, recommendations: List<PCReccomendation>, filterObject: PCRequest): List<Motherboard> {
+    fun getMotherboardRecommendations(motherboardBudget: Double, recommendations: List<PCReccomendation>, filterObject: PCRequest) {
 
         val motherBoardRecommendations = mutableListOf<Motherboard>()
 
@@ -60,7 +60,7 @@ class MotherboardService (
                 }
 
                 "MicroATX Mid Tower" -> {
-                    val queryResult = this.motherboardRepository.findFirstByFormFactors(
+                    val queryResult = this.findFirstByFormFactors(
                         motherboardQueryObject.socketCPU, motherboardQueryObject.memorySlots, motherboardQueryObject.memoryMax, listOf("Mini ITX", "Micro ATX"), motherboardQueryObject.priceUSD
                     )
 
@@ -70,7 +70,7 @@ class MotherboardService (
                 }
 
                 "ATX Mid Tower" -> {
-                    val queryResult = this.motherboardRepository.findFirstByFormFactors(
+                    val queryResult = this.findFirstByFormFactors(
                         motherboardQueryObject.socketCPU, motherboardQueryObject.memorySlots, motherboardQueryObject.memoryMax, listOf("Mini ITX", "Micro ATX", "ATX"), motherboardQueryObject.priceUSD
                     )
 
@@ -91,7 +91,13 @@ class MotherboardService (
             }
 
         }
+    }
 
-        return motherBoardRecommendations
+    private fun findFirstByFormFactors(socketCPU: String, memorySlots: Int, memoryMax: Int, formFactors: List<String>, priceUSD: Double): Motherboard? {
+        return formFactors.map {
+            this.motherboardRepository.findFirstBySocketCPUAndMemorySlotsGreaterThanEqualAndMemoryMaxGreaterThanEqualAndFormFactorAndPriceUSDLessThanEqual(
+                socketCPU, memorySlots, memoryMax, it, priceUSD
+            )
+        }.firstOrNull()
     }
 }

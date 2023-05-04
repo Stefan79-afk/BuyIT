@@ -2,19 +2,19 @@ package com.example.buyit.model
 
 
 data class Recommendation(
-    val cpu: CPU,
-    val gpu: GPU?,
-    val motherboard: Motherboard,
-    val psu: PSU,
-    val cpuFan: CPUFan,
-    val fan: Fan?,
-    val internalStorage: InternalStorage,
-    val networkCard: NetworkCard?,
-    val wifiCard: WifiCard,
-    val opticalDrive: OpticalDrive?,
-    val ram: RAM,
-    val soundCard: SoundCard,
-    val case: Case
+    val cpu: CPU = CPU(),
+    val gpu: GPU? = null,
+    val motherboard: Motherboard = Motherboard(),
+    val psu: PSU = PSU(),
+    val cpuFan: CPUFan = CPUFan(),
+    val fan: Fan = Fan(),
+    val internalStorage: InternalStorage = InternalStorage(),
+    val networkCard: NetworkCard? = null,
+    val wifiCard: WifiCard = WifiCard(),
+    val opticalDrive: OpticalDrive? = null,
+    val ram: RAM = RAM(),
+    val soundCard: SoundCard = SoundCard(),
+    val case: Case = Case()
 
 ) {
 }

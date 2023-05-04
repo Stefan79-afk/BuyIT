@@ -34,7 +34,7 @@ class QuizService(
             "power" -> divideBudgetGamingAndPower(filterObject)
             else -> mutableMapOf()
         }
-
+            val recommendations = mutableListOf<PCReccomendation>()
 
             val cpuRecommendations =
                 this.cpuService.getCPURecommendations(budgetAllocation.getValue("cpu"), filterObject)
@@ -51,8 +51,6 @@ class QuizService(
             val caseRecommendations =
                 this.caseService.getCaseRecommendations(budgetAllocation.getValue("case"), filterObject)
 
-            val recommendations = mutableListOf<PCReccomendation>()
-
             val lists = mutableListOf<List<Any>>()
 
             lists.add(cpuRecommendations)
@@ -65,7 +63,7 @@ class QuizService(
             }
 
             val minimumRecommendationSize = getMinimumSize(lists)
-            for(i in 0 until minimumRecommendationSize) {
+            for(i in minimumRecommendationSize - 1 downTo 0) {
                 if(gpuRecommendations.isNullOrEmpty()) {
                     val pcReccomendation = PCReccomendation(cpuRecommendations[i], null, ramRecommendations[i], internalStorageRecommendations[i], caseRecommendations[i])
                     recommendations.add(pcReccomendation)
@@ -291,7 +289,7 @@ class QuizService(
         }
     }
 
-    fun getMinimumSize(lists: List<List<Any>>): Int {
+    private fun getMinimumSize(lists: List<List<Any>>): Int {
         var minimumSize = 100
         for(list in lists) {
             if(list.size < minimumSize) {

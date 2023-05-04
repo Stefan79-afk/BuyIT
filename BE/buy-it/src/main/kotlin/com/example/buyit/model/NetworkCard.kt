@@ -6,13 +6,13 @@ import org.springframework.data.mongodb.core.mapping.Field
 
 @Document("network_cards")
 data class NetworkCard(
-    @Id val id: String,
-    @Field("name") val name: String,
-    @Field("rating") val rating: Int,
-    @Field("rating_count") val ratingCount: Int,
-    @Field("price_usd") val priceUSD: Double?,
-    @Field("interface") val networkCardInterface: String,
-    @Field("ports") val ports: String,
-    @Field("color") val color: String?
+    @Id var id: String,
+    @Field("name") var name: String = "",
+    @Field("rating") var rating: Int = 0,
+    @Field("rating_count") var ratingCount: Int = 0,
+    @Field("price_usd") var priceUSD: Double = 0.0,
+    @Field("interface") var networkCardInterface: String = "",
+    @Field("ports") var ports: String = "",
+    @Field("color") var color: String? = null
 ) {
 }

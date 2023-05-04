@@ -6,15 +6,15 @@ import org.springframework.data.mongodb.core.mapping.Field
 
 @Document("psus")
 data class PSU(
-    @Id val id: String,
-    @Field("name") val name: String,
-    @Field("rating") val rating: Int,
-    @Field("rating_count") val ratingCount: Int,
-    @Field("price_usd") val priceUSD: Double?,
-    @Field("form_factor") val formFactor: String,
-    @Field("efficiency_rating") val efficiencyRating: String?,
-    @Field("wattage") val wattage: String,
-    @Field("modular") val modular: String,
-    @Field("color") val color: String?
+    @Id var id: String = "",
+    @Field("name") var name: String = "",
+    @Field("rating") var rating: Int = 0,
+    @Field("rating_count") var ratingCount: Int = 0,
+    @Field("price_usd") var priceUSD: Double = 0.0,
+    @Field("form_factor") var formFactor: String = "",
+    @Field("efficiency_rating") var efficiencyRating: String = "",
+    @Field("wattage") var wattage: String = "",
+    @Field("modular") var modular: String = "",
+    @Field("color") var color: String? = null
 ) {
 }
