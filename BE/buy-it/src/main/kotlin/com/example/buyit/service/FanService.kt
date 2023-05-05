@@ -51,7 +51,7 @@ class FanService (
             fanQueryObject.priceUSD /= filterObject.pcFanAmount
         }
 
-        var queryResult = this.queryFanCollection(fanQueryObject, FanQueryType.QUIZ)
+        var queryResult = this.queryFanCollection(fanQueryObject, QueryType.QUIZ)
 
         if(queryResult.isEmpty()) {
             if(filterObject.pcFanAmount != null) {
@@ -59,7 +59,7 @@ class FanService (
                     for(i in filterObject.pcFanAmount downTo 1) {
 
                         fanQueryObject.priceUSD = (fanQueryObject.priceUSD * (i + 1)) / i
-                        queryResult = this.queryFanCollection(fanQueryObject, FanQueryType.QUIZ)
+                        queryResult = this.queryFanCollection(fanQueryObject, QueryType.QUIZ)
 
                         if(queryResult.isNotEmpty()) {
                             queryResult.forEach{
@@ -76,7 +76,7 @@ class FanService (
                             do {
                                 for(j in filterObject.pcFanAmount downTo  1) {
                                     fanQueryObject.priceUSD = (fanQueryObject.priceUSD * (j + 1)) / j
-                                    queryResult = this.queryFanCollection(fanQueryObject, FanQueryType.QUIZ)
+                                    queryResult = this.queryFanCollection(fanQueryObject, QueryType.QUIZ)
 
                                     if(queryResult.isNotEmpty()) {
                                         queryResult.forEach {
@@ -97,7 +97,7 @@ class FanService (
             else {
                 fanQueryObject.noiseLevel = null
                 fanQueryObject.rpm = 0
-                queryResult = this.queryFanCollection(fanQueryObject, FanQueryType.QUIZ)
+                queryResult = this.queryFanCollection(fanQueryObject, QueryType.QUIZ)
 
                 if(queryResult.isEmpty()) {
                     return queryResult
@@ -119,9 +119,9 @@ class FanService (
         return queryResult
     }
 
-    private fun queryFanCollection(fanQueryObject: Fan, fanQueryType: FanQueryType): List<Fan> {
-        when(fanQueryType) {
-            FanQueryType.QUIZ -> {
+    private fun queryFanCollection(fanQueryObject: Fan, queryType: QueryType): List<Fan> {
+        when(queryType) {
+            QueryType.QUIZ -> {
                 val pageRequest = PageRequest.of(0, 5, Sort.by(Sort.Direction.DESC, "price_usd"))
                 if(fanQueryObject.noiseLevel == null && fanQueryObject.rpm == 0) {
                     return this.fanRepository.findByPriceUSDLessThanEqual(fanQueryObject.priceUSD, pageRequest)
@@ -133,6 +133,8 @@ class FanService (
                     return this.fanRepository.findByNoiseLevelLessThanEqualAndRpmGreaterThanEqualAndPriceUSDLessThanEqual(fanQueryObject.noiseLevel!!, fanQueryObject.rpm, fanQueryObject.priceUSD, pageRequest)
                 }
             }
+
+            else -> return listOf()
         }
     }
 }

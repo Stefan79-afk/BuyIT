@@ -59,7 +59,7 @@ class RAMService (
             ramQueryObject.modules = "2 x"
         }
 
-        val queryResult = this.queryRAMCollection(ramQueryObject, RAMQueryType.QUIZ_WORK)
+        val queryResult = this.queryRAMCollection(ramQueryObject, QueryType.QUIZ)
 
         if(queryResult.isEmpty()) {
             ramQueryObject.capacity = 4
@@ -67,7 +67,7 @@ class RAMService (
             ramQueryObject.frequency = 1600
             ramQueryObject.modules = "1 x"
 
-            return this.queryRAMCollection(ramQueryObject, RAMQueryType.QUIZ_WORK)
+            return this.queryRAMCollection(ramQueryObject, QueryType.QUIZ)
         }
 
         return queryResult
@@ -103,7 +103,7 @@ class RAMService (
             ramQueryObject.modules = "2 x"
         }
 
-        val queryResult = queryRAMCollection(ramQueryObject, RAMQueryType.QUIZ_GAMING)
+        val queryResult = queryRAMCollection(ramQueryObject, QueryType.QUIZ)
 
         if(queryResult.isEmpty()) {
             ramQueryObject.capacity = 8
@@ -111,7 +111,7 @@ class RAMService (
             ramQueryObject.type = "DDR4"
             ramQueryObject.modules = "2 x"
 
-            return queryRAMCollection(ramQueryObject, RAMQueryType.QUIZ_GAMING)
+            return queryRAMCollection(ramQueryObject, QueryType.QUIZ)
         }
 
         return queryResult
@@ -140,7 +140,7 @@ class RAMService (
             ramQueryObject.modules = "4 x"
         }
 
-        val queryResult = queryRAMCollection(ramQueryObject, RAMQueryType.QUIZ_STUDIO)
+        val queryResult = queryRAMCollection(ramQueryObject, QueryType.QUIZ)
 
         if(queryResult.isEmpty()) {
             ramQueryObject.capacity = 16
@@ -148,7 +148,7 @@ class RAMService (
             ramQueryObject.type = "DDR4"
             ramQueryObject.modules = "2 x"
 
-            return queryRAMCollection(ramQueryObject, RAMQueryType.QUIZ_STUDIO)
+            return queryRAMCollection(ramQueryObject, QueryType.QUIZ)
         }
 
         return queryResult
@@ -177,7 +177,7 @@ class RAMService (
             ramQueryObject.modules = "4 x"
         }
 
-        val queryResult = queryRAMCollection(ramQueryObject, RAMQueryType.QUIZ_POWER)
+        val queryResult = queryRAMCollection(ramQueryObject, QueryType.QUIZ)
 
         if(queryResult.isEmpty()) {
             ramQueryObject.capacity = 16
@@ -185,7 +185,7 @@ class RAMService (
             ramQueryObject.type = "DDR4"
             ramQueryObject.modules = "2 x"
 
-            return queryRAMCollection(ramQueryObject, RAMQueryType.QUIZ_POWER)
+            return queryRAMCollection(ramQueryObject, QueryType.QUIZ)
         }
 
         return queryResult
@@ -194,19 +194,19 @@ class RAMService (
     }
 
 
-     fun queryRAMCollection(ramFilterObject: RAM, ramQueryType: RAMQueryType): List<RAM> {
+     fun queryRAMCollection(ramFilterObject: RAM, queryType: QueryType): List<RAM> {
         val pageRequest: PageRequest = PageRequest.of(0, 5, Sort.by(Sort.Direction.DESC, "capacity"))
 
-        when(ramQueryType) {
-            RAMQueryType.QUIZ_WORK, RAMQueryType.QUIZ_GAMING, RAMQueryType.QUIZ_STUDIO, RAMQueryType.QUIZ_POWER -> {
-                return this.ramRepository.findByCapacityGreaterThanEqualAndTypeGreaterThanEqualAndFrequencyGreaterThanEqualAndModulesGreaterThanEqualAndPriceUSDLessThanEqual(
-                    ramFilterObject.capacity, ramFilterObject.type, ramFilterObject.frequency, ramFilterObject.modules, ramFilterObject.priceUSD, pageRequest
-                )
-            }
+         return when(queryType) {
+             QueryType.QUIZ -> {
+                 this.ramRepository.findByCapacityGreaterThanEqualAndTypeGreaterThanEqualAndFrequencyGreaterThanEqualAndModulesGreaterThanEqualAndPriceUSDLessThanEqual(
+                     ramFilterObject.capacity, ramFilterObject.type, ramFilterObject.frequency, ramFilterObject.modules, ramFilterObject.priceUSD, pageRequest
+                 )
+             }
 
-            else -> {
-                return listOf()
-            }
-        }
+             else -> {
+                 listOf()
+             }
+         }
     }
 }

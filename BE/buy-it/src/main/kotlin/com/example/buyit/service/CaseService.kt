@@ -41,22 +41,22 @@ class CaseService (
             null -> caseQueryObject.sidePanelWindow = ""
         }
 
-        val queryResult = this.queryCaseCollection(caseQueryObject, CaseQueryType.QUIZ)
+        val queryResult = this.queryCaseCollection(caseQueryObject, QueryType.QUIZ)
 
         if(queryResult.isEmpty()) {
             caseQueryObject.type = ""
             caseQueryObject.color = ""
             caseQueryObject.sidePanelWindow = ""
 
-            return this.queryCaseCollection(caseQueryObject, CaseQueryType.QUIZ)
+            return this.queryCaseCollection(caseQueryObject, QueryType.QUIZ)
         }
 
         return queryResult
     }
 
-    private fun queryCaseCollection(caseQueryObject: Case, caseQueryType: CaseQueryType): List<Case> {
-        when (caseQueryType) {
-            CaseQueryType.QUIZ -> {
+    private fun queryCaseCollection(caseQueryObject: Case, queryType: QueryType): List<Case> {
+        when (queryType) {
+            QueryType.QUIZ -> {
                 val pageRequestQuiz: PageRequest = PageRequest.of(0, 5, Sort.by(Sort.Direction.DESC, "price_usd"))
                 if(caseQueryObject.type == "") {
                     if(caseQueryObject.color == "") {
@@ -141,6 +141,8 @@ class CaseService (
                     }
                 }
             }
+
+            else -> return listOf()
         }
     }
 }

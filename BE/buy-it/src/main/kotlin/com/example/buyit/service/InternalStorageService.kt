@@ -44,14 +44,14 @@ class InternalStorageService(
             internalStorage.cache = 0
         }
 
-        val queryResult = this.queryInternalStorageCollection(internalStorage, InternalStorageQueryType.QUIZ_WORK)
+        val queryResult = this.queryInternalStorageCollection(internalStorage, QueryType.QUIZ)
 
         if (queryResult.isEmpty()) {
             internalStorage.capacity = 240
             internalStorage.type = ""
             internalStorage.cache = null
 
-            return this.queryInternalStorageCollection(internalStorage, InternalStorageQueryType.QUIZ_WORK)
+            return this.queryInternalStorageCollection(internalStorage, QueryType.QUIZ)
         }
 
         return queryResult
@@ -73,13 +73,13 @@ class InternalStorageService(
         }
 
         val queryResult =
-            this.queryInternalStorageCollection(internalStorageQueryObject, InternalStorageQueryType.QUIZ_GAMING)
+            this.queryInternalStorageCollection(internalStorageQueryObject, QueryType.QUIZ)
 
         if (queryResult.isEmpty()) {
             internalStorageQueryObject.capacity = 500
             internalStorageQueryObject.type = ""
 
-            return this.queryInternalStorageCollection(internalStorageQueryObject, InternalStorageQueryType.QUIZ_GAMING)
+            return this.queryInternalStorageCollection(internalStorageQueryObject, QueryType.QUIZ)
         }
 
         return queryResult
@@ -104,13 +104,13 @@ class InternalStorageService(
             internalStorageQueryObject.cache = 0
         }
 
-        val queryResult = this.queryInternalStorageCollection(internalStorageQueryObject, InternalStorageQueryType.QUIZ_STUDIO)
+        val queryResult = this.queryInternalStorageCollection(internalStorageQueryObject, QueryType.QUIZ)
 
         if(queryResult.isEmpty()) {
             internalStorageQueryObject.capacity = 500
             internalStorageQueryObject.type = "SSD"
 
-            return this.queryInternalStorageCollection(internalStorageQueryObject, InternalStorageQueryType.QUIZ_STUDIO)
+            return this.queryInternalStorageCollection(internalStorageQueryObject, QueryType.QUIZ)
         }
 
         return queryResult
@@ -138,14 +138,14 @@ class InternalStorageService(
             internalStorageQueryObject.cache = 0
         }
 
-        val queryResult = this.queryInternalStorageCollection(internalStorageQueryObject, InternalStorageQueryType.QUIZ_POWER)
+        val queryResult = this.queryInternalStorageCollection(internalStorageQueryObject, QueryType.QUIZ)
 
         if(queryResult.isEmpty()) {
             internalStorageQueryObject.capacity = 1000
             internalStorageQueryObject.type = "SSD"
             internalStorageQueryObject.cache = null
 
-            return this.queryInternalStorageCollection(internalStorageQueryObject, InternalStorageQueryType.QUIZ_POWER)
+            return this.queryInternalStorageCollection(internalStorageQueryObject, QueryType.QUIZ)
         }
 
         return queryResult
@@ -153,11 +153,11 @@ class InternalStorageService(
 
     private fun queryInternalStorageCollection(
         internalStorageQueryObject: InternalStorage,
-        internalStorageQueryType: InternalStorageQueryType
+        queryType: QueryType
     ): List<InternalStorage> {
         val pageRequest: PageRequest = PageRequest.of(0, 5, Sort.by(Sort.Direction.DESC, "capacity"))
-        return when (internalStorageQueryType) {
-            InternalStorageQueryType.QUIZ_WORK, InternalStorageQueryType.QUIZ_GAMING, InternalStorageQueryType.QUIZ_STUDIO, InternalStorageQueryType.QUIZ_POWER -> {
+        return when (queryType) {
+            QueryType.QUIZ -> {
                 if (internalStorageQueryObject.type == "")
                     this.internalStorageRepository.findByCapacityGreaterThanEqualAndPriceUSDLessThanEqual(
                         internalStorageQueryObject.capacity, internalStorageQueryObject.priceUSD, pageRequest
@@ -179,6 +179,8 @@ class InternalStorageService(
                 }
 
             }
+
+            else -> listOf()
         }
     }
 }

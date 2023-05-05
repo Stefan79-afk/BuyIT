@@ -47,20 +47,20 @@ class CPUFanService(
             }
         }
 
-        val queryResult = this.queryCPUFanCollection(cpuFanQueryObject, FanQueryType.QUIZ)
+        val queryResult = this.queryCPUFanCollection(cpuFanQueryObject, QueryType.QUIZ)
 
         if(queryResult.isEmpty()) {
             cpuFanQueryObject.noiseLevel = null
             cpuFanQueryObject.fanRPM = 0
-            return this.queryCPUFanCollection(cpuFanQueryObject, FanQueryType.QUIZ)
+            return this.queryCPUFanCollection(cpuFanQueryObject, QueryType.QUIZ)
         }
 
         return queryResult
     }
 
-    private fun queryCPUFanCollection(cpuFanQueryObject: CPUFan, fanQueryType: FanQueryType): List<CPUFan> {
-        when(fanQueryType) {
-            FanQueryType.QUIZ -> {
+    private fun queryCPUFanCollection(cpuFanQueryObject: CPUFan, queryType: QueryType): List<CPUFan> {
+        when(queryType) {
+            QueryType.QUIZ -> {
                 val pageRequest = PageRequest.of(0, 5, Sort.by(Sort.Direction.DESC, "price_usd"))
                 if(cpuFanQueryObject.noiseLevel != null && cpuFanQueryObject.fanRPM != 0) {
                    return this.cpuFanRepository.findByNoiseLevelLessThanEqualAndFanRPMGreaterThanEqualAndPriceUSDLessThanEqual(
@@ -74,6 +74,8 @@ class CPUFanService(
                     return this.cpuFanRepository.findByPriceUSDLessThanEqual(cpuFanQueryObject.priceUSD, pageRequest)
                 }
             }
+
+            else -> return listOf()
         }
     }
 }

@@ -38,13 +38,13 @@ class CPUService(
             cpuQueryObject.coreClock = 2.5
         }
 
-        var queryResult = this.queryCPUCollection(cpuQueryObject, CPUQueryType.QUIZ_WORK)
+        var queryResult = this.queryCPUCollection(cpuQueryObject, QueryType.QUIZ_WORK)
 
         if(queryResult.isEmpty()) {
             cpuQueryObject.coreCount = 2
             cpuQueryObject.coreClock = 2.0
 
-            queryResult =  this.queryCPUCollection(cpuQueryObject, CPUQueryType.QUIZ_WORK)
+            queryResult =  this.queryCPUCollection(cpuQueryObject, QueryType.QUIZ_WORK)
         }
 
         return queryResult
@@ -72,12 +72,12 @@ class CPUService(
             cpuQueryObject.coreClock = 3.5
         }
 
-       val queryResult =  queryCPUCollection(cpuQueryObject, CPUQueryType.QUIZ_GAMING)
+       val queryResult =  queryCPUCollection(cpuQueryObject, QueryType.QUIZ_GAMING)
 
         if(queryResult.isEmpty()) {
             cpuQueryObject.coreCount = 2
             cpuQueryObject.coreClock = 3.0
-            return queryCPUCollection(cpuQueryObject, CPUQueryType.QUIZ_GAMING)
+            return queryCPUCollection(cpuQueryObject, QueryType.QUIZ_GAMING)
         }
 
         return queryResult
@@ -102,13 +102,13 @@ class CPUService(
         }
 
 
-        val queryResult = this.queryCPUCollection(cpuQueryObject, CPUQueryType.QUIZ_STUDIO)
+        val queryResult = this.queryCPUCollection(cpuQueryObject, QueryType.QUIZ_STUDIO)
 
         if(queryResult.isEmpty()) {
             cpuQueryObject.coreCount = 4
             cpuQueryObject.coreClock = 3.0
 
-            return this.queryCPUCollection(cpuQueryObject, CPUQueryType.QUIZ_STUDIO)
+            return this.queryCPUCollection(cpuQueryObject, QueryType.QUIZ_STUDIO)
         }
 
         return queryResult
@@ -154,30 +154,30 @@ class CPUService(
             }
         }
 
-        val queryResult = this.queryCPUCollection(cpuQueryObject, CPUQueryType.QUIZ_POWER)
+        val queryResult = this.queryCPUCollection(cpuQueryObject, QueryType.QUIZ_POWER)
 
         if(queryResult.isEmpty()) {
             cpuQueryObject.coreCount = 6
             cpuQueryObject.coreClock = 3.0
 
-            return this.queryCPUCollection(cpuQueryObject, CPUQueryType.QUIZ_POWER)
+            return this.queryCPUCollection(cpuQueryObject, QueryType.QUIZ_POWER)
         }
 
         return queryResult
 
     }
 
-    private fun queryCPUCollection(cpuFilterObject: CPU, cpuQueryType: CPUQueryType): List<CPU> {
+    private fun queryCPUCollection(cpuFilterObject: CPU, queryType: QueryType): List<CPU> {
         val pageRequestQuiz: PageRequest = PageRequest.of(0, 5, Sort.by(Sort.Direction.DESC, "core_count"))
-        when(cpuQueryType) {
-            CPUQueryType.QUIZ_WORK -> {
+        when(queryType) {
+            QueryType.QUIZ_WORK -> {
 
                 return this.cpuRepository.findByCoreCountGreaterThanEqualAndCoreClockGreaterThanEqualAndPriceUSDLessThanEqualAndIntegratedGraphicsNotNull(
                     cpuFilterObject.coreCount, cpuFilterObject.coreClock, cpuFilterObject.priceUSD, pageRequestQuiz
                 )
             }
 
-             CPUQueryType.QUIZ_GAMING, CPUQueryType.QUIZ_STUDIO -> {
+             QueryType.QUIZ_GAMING, QueryType.QUIZ_STUDIO -> {
                 
 
                 return this.cpuRepository.findByCoreCountGreaterThanEqualAndCoreClockGreaterThanEqualAndPriceUSDLessThanEqual(
@@ -185,7 +185,7 @@ class CPUService(
                 )
             }
 
-            CPUQueryType.QUIZ_POWER -> {
+            QueryType.QUIZ_POWER -> {
 
                 return if(cpuFilterObject.name == "overclock") {
                     this.cpuRepository.findByCoreCountGreaterThanEqualAndCoreClockGreaterThanEqualAndPriceUSDLessThanEqualAndNameContainingOrCoreCountGreaterThanEqualAndCoreClockGreaterThanEqualAndPriceUSDLessThanEqualAndNameContaining(
@@ -197,6 +197,9 @@ class CPUService(
                     )
                 }
             }
+
+            else -> return listOf()
         }
+
     }
 }

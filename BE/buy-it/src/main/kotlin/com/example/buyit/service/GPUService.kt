@@ -51,14 +51,14 @@ class GPUService(
         }
 
 
-        val queryResult: List<GPU> = this.queryGPUCollection(gpuQueryObject, GPUQueryType.QUIZ_GAMING)
+        val queryResult: List<GPU> = this.queryGPUCollection(gpuQueryObject, QueryType.QUIZ_GAMING)
 
         if (queryResult.isEmpty()) {
             gpuQueryObject.memory = 2
             gpuQueryObject.coreClock = 1500
             gpuQueryObject.name = ""
 
-            return this.queryGPUCollection(gpuQueryObject, GPUQueryType.QUIZ_GAMING)
+            return this.queryGPUCollection(gpuQueryObject, QueryType.QUIZ_GAMING)
         }
 
         return queryResult
@@ -88,13 +88,13 @@ class GPUService(
             gpuQueryObject.coreClock = 1500
         }
 
-        val queryResult = this.queryGPUCollection(gpuQueryObject, GPUQueryType.QUIZ_STUDIO)
+        val queryResult = this.queryGPUCollection(gpuQueryObject, QueryType.QUIZ_STUDIO)
 
         if (queryResult.isEmpty()) {
             gpuQueryObject.memory = 2
             gpuQueryObject.coreClock = 700
 
-            return this.queryGPUCollection(gpuQueryObject, GPUQueryType.QUIZ_STUDIO)
+            return this.queryGPUCollection(gpuQueryObject, QueryType.QUIZ_STUDIO)
         }
 
         return queryResult
@@ -131,13 +131,13 @@ class GPUService(
         }
 
         if(filterObject.pcIntensiveMultipleGPUs != true) {
-            val queryResult = this.queryGPUCollection(gpuQueryObject, GPUQueryType.QUIZ_POWER)
+            val queryResult = this.queryGPUCollection(gpuQueryObject, QueryType.QUIZ_POWER)
 
             if(queryResult.isEmpty()) {
                 gpuQueryObject.memory = 2
                 gpuQueryObject.coreClock = 1000
 
-                return this.queryGPUCollection(gpuQueryObject, GPUQueryType.QUIZ_POWER)
+                return this.queryGPUCollection(gpuQueryObject, QueryType.QUIZ_POWER)
             }
 
             queryResult.forEach {
@@ -148,23 +148,23 @@ class GPUService(
         } else {
             gpuQueryObject.priceUSD /= 4
 
-            var queryResult = this.queryGPUCollection(gpuQueryObject, GPUQueryType.QUIZ_POWER)
+            var queryResult = this.queryGPUCollection(gpuQueryObject, QueryType.QUIZ_POWER)
 
             if(queryResult.isEmpty()) {
                 gpuQueryObject.priceUSD = gpuQueryObject.priceUSD * 2
 
-                queryResult = this.queryGPUCollection(gpuQueryObject, GPUQueryType.QUIZ_POWER)
+                queryResult = this.queryGPUCollection(gpuQueryObject, QueryType.QUIZ_POWER)
 
                 if(queryResult.isEmpty()) {
                     gpuQueryObject.priceUSD = gpuQueryObject.priceUSD * 2
 
-                    queryResult = this.queryGPUCollection(gpuQueryObject, GPUQueryType.QUIZ_POWER)
+                    queryResult = this.queryGPUCollection(gpuQueryObject, QueryType.QUIZ_POWER)
 
                     if(queryResult.isEmpty()) {
                         gpuQueryObject.memory = 2
                         gpuQueryObject.coreClock = 1000
 
-                        return this.queryGPUCollection(gpuQueryObject, GPUQueryType.QUIZ_POWER)
+                        return this.queryGPUCollection(gpuQueryObject, QueryType.QUIZ_POWER)
                     }
 
                     queryResult.forEach {
@@ -189,10 +189,10 @@ class GPUService(
         }
     }
 
-    private fun queryGPUCollection(gpuFilterObject: GPU, gpuQueryType: GPUQueryType): List<GPU> {
+    private fun queryGPUCollection(gpuFilterObject: GPU, queryType: QueryType): List<GPU> {
         val pageRequestQuiz: PageRequest = PageRequest.of(0, 5, Sort.by(Sort.Direction.DESC, "memory"))
-        when (gpuQueryType) {
-            GPUQueryType.QUIZ_GAMING -> {
+        when (queryType) {
+            QueryType.QUIZ_GAMING -> {
 
                 return if (gpuFilterObject.name == "RTX") {
                     this.gpuRepository.findByMemoryGreaterThanEqualAndCoreClockGreaterThanEqualAndNameContainingAndPriceUSDLessThanEqual(
@@ -209,7 +209,7 @@ class GPUService(
                 }
             }
 
-            GPUQueryType.QUIZ_STUDIO, GPUQueryType.QUIZ_POWER -> {
+            QueryType.QUIZ_STUDIO, QueryType.QUIZ_POWER -> {
                 return this.gpuRepository.findByMemoryGreaterThanEqualAndCoreClockGreaterThanEqualAndPriceUSDLessThanEqual(
                     gpuFilterObject.memory, gpuFilterObject.coreClock, gpuFilterObject.priceUSD, pageRequestQuiz
                 )
