@@ -140,6 +140,10 @@ class GPUService(
                 return this.queryGPUCollection(gpuQueryObject, GPUQueryType.QUIZ_POWER)
             }
 
+            queryResult.forEach {
+                it.amount = 1
+            }
+
             return queryResult
         } else {
             gpuQueryObject.priceUSD /= 4
@@ -161,6 +165,10 @@ class GPUService(
                         gpuQueryObject.coreClock = 1000
 
                         return this.queryGPUCollection(gpuQueryObject, GPUQueryType.QUIZ_POWER)
+                    }
+
+                    queryResult.forEach {
+                        it.amount = 1
                     }
 
                     return queryResult
