@@ -9,7 +9,7 @@ class MotherboardService (
     private val motherboardRepository: MotherboardRepository
 ) {
 
-    fun getMotherboardRecommendations(motherboardBudget: Double, recommendations: List<PCReccomendation>, filterObject: PCRequest) {
+    fun getMotherboardRecommendations(motherboardBudget: Double, recommendations: List<PCReccomendation>, filterObject: PCRequest): List<Motherboard> {
 
         val motherBoardRecommendations = mutableListOf<Motherboard>()
 
@@ -42,10 +42,14 @@ class MotherboardService (
                 motherboardQueryObject.memorySlots = 8
             }
 
-            if(it.ram.capacity > 128) {
-                motherboardQueryObject.memoryMax = 256
-            } else {
+            if(it.ram.capacity <= 32) {
+                motherboardQueryObject.memoryMax = 32
+            } else if(it.ram.capacity <= 64) {
+                motherboardQueryObject.memoryMax = 64
+            } else if(it.ram.capacity <= 128) {
                 motherboardQueryObject.memoryMax = 128
+            } else {
+                motherboardQueryObject.memoryMax = 256
             }
 
             when(it.case.type) {
@@ -91,13 +95,31 @@ class MotherboardService (
             }
 
         }
+
+        return motherBoardRecommendations
     }
 
     private fun findFirstByFormFactors(socketCPU: String, memorySlots: Int, memoryMax: Int, formFactors: List<String>, priceUSD: Double): Motherboard? {
-        return formFactors.map {
+
+        val queryResult = mutableListOf<Motherboard>()
+
+        formFactors.forEach{
+            val motherboard = this.motherboardRepository.findFirstBySocketCPUAndMemorySlotsGreaterThanEqualAndMemoryMaxGreaterThanEqualAndFormFactorAndPriceUSDLessThanEqual(
+                socketCPU, memorySlots, memoryMax, it, priceUSD
+            )
+
+            if(motherboard != null) {
+                queryResult.add(motherboard)
+            }
+        }
+
+        return if(queryResult.isEmpty()) {
+            null
+        } else queryResult[0]
+        /*return formFactors.map {
             this.motherboardRepository.findFirstBySocketCPUAndMemorySlotsGreaterThanEqualAndMemoryMaxGreaterThanEqualAndFormFactorAndPriceUSDLessThanEqual(
                 socketCPU, memorySlots, memoryMax, it, priceUSD
             )
-        }.firstOrNull()
+        }.firstOrNull()*/
     }
 }

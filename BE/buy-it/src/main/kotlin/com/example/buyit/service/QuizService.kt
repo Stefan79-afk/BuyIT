@@ -75,7 +75,10 @@ class QuizService(
             }
 
             val minimumRecommendationSize = getMinimumSize(lists)
-            for(i in minimumRecommendationSize - 1 downTo 0) {
+
+
+
+            for(i in 0 until minimumRecommendationSize) {
                 if(gpuRecommendations.isNullOrEmpty()) {
                     val pcReccomendation = PCReccomendation(cpuRecommendations[i], null, ramRecommendations[i], internalStorageRecommendations[i], caseRecommendations[i], fanRecommendations[i], cpuFanRecommendations[i], soundCardRecommendations[i], wifiCardRecommendations[i])
                     recommendations.add(pcReccomendation)
@@ -86,6 +89,17 @@ class QuizService(
                     recommendations.add(pcReccomendation)
                 }
             }
+
+            val motherBoardRecommendations = this.motherboardService.getMotherboardRecommendations(budgetAllocation.getValue("motherboard"), recommendations, filterObject)
+
+            if(motherBoardRecommendations.isEmpty()) {
+                return listOf()
+            }
+
+            for(i in motherBoardRecommendations.indices) {
+                recommendations[i].motherboard = motherBoardRecommendations[i]
+            }
+
             return recommendations
 
     }
