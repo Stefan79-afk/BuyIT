@@ -56,6 +56,9 @@ class QuizService(
             val soundCardRecommendations =
                 this.soundCardService.getSoundCardRecommendations(budgetAllocation.getValue("sound_card"), filterObject)
 
+            val wifiCardRecommendations =
+                this.wifiCardService.getWifiCardRecommendations(budgetAllocation.getValue("wifi_card"), filterObject)
+
             val lists = mutableListOf<List<Any>>()
 
             lists.add(cpuRecommendations)
@@ -65,6 +68,7 @@ class QuizService(
             lists.add(fanRecommendations)
             lists.add(cpuFanRecommendations)
             lists.add(soundCardRecommendations)
+            lists.add(wifiCardRecommendations)
 
             if(gpuRecommendations != null) {
                 lists.add(gpuRecommendations)
@@ -73,12 +77,12 @@ class QuizService(
             val minimumRecommendationSize = getMinimumSize(lists)
             for(i in minimumRecommendationSize - 1 downTo 0) {
                 if(gpuRecommendations.isNullOrEmpty()) {
-                    val pcReccomendation = PCReccomendation(cpuRecommendations[i], null, ramRecommendations[i], internalStorageRecommendations[i], caseRecommendations[i], fanRecommendations[i], cpuFanRecommendations[i], soundCardRecommendations[i])
+                    val pcReccomendation = PCReccomendation(cpuRecommendations[i], null, ramRecommendations[i], internalStorageRecommendations[i], caseRecommendations[i], fanRecommendations[i], cpuFanRecommendations[i], soundCardRecommendations[i], wifiCardRecommendations[i])
                     recommendations.add(pcReccomendation)
                 }
 
                 else {
-                    val pcReccomendation = PCReccomendation(cpuRecommendations[i], gpuRecommendations[i], ramRecommendations[i], internalStorageRecommendations[i], caseRecommendations[i], fanRecommendations[i], cpuFanRecommendations[i], soundCardRecommendations[i])
+                    val pcReccomendation = PCReccomendation(cpuRecommendations[i], gpuRecommendations[i], ramRecommendations[i], internalStorageRecommendations[i], caseRecommendations[i], fanRecommendations[i], cpuFanRecommendations[i], soundCardRecommendations[i], wifiCardRecommendations[i])
                     recommendations.add(pcReccomendation)
                 }
             }
