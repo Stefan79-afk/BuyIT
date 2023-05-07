@@ -4,9 +4,9 @@ import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
 import org.springframework.data.mongodb.core.mapping.Field
 
-@Document("optical_drive")
+@Document("optical_drives")
 data class OpticalDrive(
-    @Id var id: String,
+    @Id var id: String = "",
     @Field("name") var name: String = "",
     @Field("rating") var rating: Int = 0,
     @Field("rating_count") var ratingCount: Int = 0,

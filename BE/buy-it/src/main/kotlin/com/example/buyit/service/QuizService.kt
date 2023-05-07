@@ -96,7 +96,7 @@ class QuizService(
                 return listOf()
             }
 
-            for(i in motherBoardRecommendations.indices) {
+            for(i in recommendations.indices) {
                 recommendations[i].motherboard = motherBoardRecommendations[i]
             }
 
@@ -106,7 +106,7 @@ class QuizService(
                 return listOf()
             }
 
-            for(i in psuRecommendations.indices) {
+            for(i in recommendations.indices) {
                 recommendations[i].psu = psuRecommendations[i]
             }
 
@@ -114,8 +114,16 @@ class QuizService(
                 val networkCardRecommendations =
                     this.networkCardService.getNetworkCardRecommendations(budgetAllocation.getValue("network_card"), filterObject)
 
-                for(i in networkCardRecommendations.indices) {
+                for(i in recommendations.indices) {
                     recommendations[i].networkCard = networkCardRecommendations[i]
+                }
+            }
+
+            if(filterObject.pcNeedOpticalDrive) {
+                val opticalDriveRecommendations =
+                    this.opticalDriveService.getOpticalDriveRecommendations(budgetAllocation.getValue("optical_drive"))
+                for(i in recommendations.indices) {
+                    recommendations[i].opticalDrive = opticalDriveRecommendations[i]
                 }
             }
 
