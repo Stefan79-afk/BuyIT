@@ -100,6 +100,16 @@ class QuizService(
                 recommendations[i].motherboard = motherBoardRecommendations[i]
             }
 
+            val psuRecommendations = this.psuService.getPSURecommendations(budgetAllocation.getValue("power_supply"), recommendations, filterObject)
+
+            if(psuRecommendations.isEmpty()) {
+                return listOf()
+            }
+
+            for(i in psuRecommendations.indices) {
+                recommendations[i].psu = psuRecommendations[i]
+            }
+
             return recommendations
 
     }
