@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Field
 
 @Document("network_cards")
 data class NetworkCard(
-    @Id var id: String,
+    @Id var id: String = "",
     @Field("name") var name: String = "",
     @Field("rating") var rating: Int = 0,
     @Field("rating_count") var ratingCount: Int = 0,

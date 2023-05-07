@@ -110,6 +110,15 @@ class QuizService(
                 recommendations[i].psu = psuRecommendations[i]
             }
 
+            if(filterObject.pcNeedNetworkCard) {
+                val networkCardRecommendations =
+                    this.networkCardService.getNetworkCardRecommendations(budgetAllocation.getValue("network_card"), filterObject)
+
+                for(i in networkCardRecommendations.indices) {
+                    recommendations[i].networkCard = networkCardRecommendations[i]
+                }
+            }
+
             return recommendations
 
     }
