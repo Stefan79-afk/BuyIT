@@ -1,6 +1,6 @@
 package com.example.buyit.model
 
-data class PCReccomendation (
+data class PCRecommendation (
     var cpu: CPU = CPU(),
     var gpu: GPU? = null,
     var ram: RAM = RAM(),

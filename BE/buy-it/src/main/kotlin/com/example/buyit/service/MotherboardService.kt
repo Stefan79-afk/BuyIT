@@ -9,7 +9,7 @@ class MotherboardService (
     private val motherboardRepository: MotherboardRepository
 ) {
 
-    fun getMotherboardRecommendations(motherboardBudget: Double, recommendations: List<PCReccomendation>, filterObject: PCRequest): List<Motherboard> {
+    fun getMotherboardRecommendations(motherboardBudget: Double, recommendations: List<PCRecommendation>, filterObject: PCRequest): List<Motherboard> {
 
         val motherBoardRecommendations = mutableListOf<Motherboard>()
 

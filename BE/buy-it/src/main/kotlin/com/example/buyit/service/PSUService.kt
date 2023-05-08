@@ -1,6 +1,6 @@
 package com.example.buyit.service
 
-import com.example.buyit.model.PCReccomendation
+import com.example.buyit.model.PCRecommendation
 import com.example.buyit.model.PCRequest
 import com.example.buyit.model.PSU
 import com.example.buyit.repositories.PSURepository
@@ -11,7 +11,7 @@ class PSUService (
     private val psuRepository: PSURepository
 ) {
 
-    fun getPSURecommendations(psuBudget: Double, recommendations: List<PCReccomendation>, filterObject: PCRequest): List<PSU> {
+    fun getPSURecommendations(psuBudget: Double, recommendations: List<PCRecommendation>, filterObject: PCRequest): List<PSU> {
 
         val psuRecommendations = mutableListOf<PSU>()
 

@@ -1,6 +1,6 @@
 package com.example.buyit.controllers
 
-import com.example.buyit.model.PCReccomendation
+import com.example.buyit.model.PCRecommendation
 import com.example.buyit.model.PCRequest
 import com.example.buyit.service.QuizService
 import org.springframework.http.ResponseEntity
@@ -15,7 +15,7 @@ class QuizController(private val quizService: QuizService) {
 
     @PostMapping("/quiz")
     fun getRecommendations(@RequestBody quiz: PCRequest): ResponseEntity<Any> {
-        val recommendations: List<PCReccomendation> = quizService.quiz(quiz);
+        val recommendations: List<PCRecommendation> = quizService.quiz(quiz);
 
         if(recommendations.isEmpty()) {
             return ResponseEntity.notFound().build();
