@@ -58,4 +58,5 @@ FE/buy-it/yarn-error.log*
 .vscode/
 
 ### Backend application.properties file ###
-BE/buy-it/src/main/resources/application.properties
+BE/buy-it/src/main/resources
+all/
