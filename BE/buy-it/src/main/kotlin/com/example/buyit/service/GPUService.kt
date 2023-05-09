@@ -27,27 +27,22 @@ class GPUService(
 
         gpuQueryObject.priceUSD = gpuBudget
         gpuQueryObject.memory = 2
-        gpuQueryObject.coreClock = 1500
 
         if (filterObject.pcMonitorResolution == "1920x1080" || filterObject.pcGamingGraphicsOrPerformance == "performance") {
             gpuQueryObject.memory = 4
-            gpuQueryObject.coreClock = 1500
         }
 
         if (filterObject.pcGamingWantStreaming == true || filterObject.pcGamingGraphicsOrPerformance == "graphics" || filterObject.pcGamingLatestGames == true || filterObject.pcMonitorResolution == "2560x1440") {
             gpuQueryObject.memory = 6
-            gpuQueryObject.coreClock = 1500
         }
 
         if (filterObject.pcGamingRayTracingGPU == true) {
             gpuQueryObject.memory = 6
-            gpuQueryObject.coreClock = 1500
-            gpuQueryObject.name = "RTX"
+            gpuQueryObject.chipset = "ray_tracing"
         }
 
         if (filterObject.pcMonitorResolution == "3840x2160" || filterObject.pcGamingGraphicsOrPerformance == "both") {
             gpuQueryObject.memory = 8
-            gpuQueryObject.coreClock = 1800
         }
 
 
@@ -55,8 +50,7 @@ class GPUService(
 
         if (queryResult.isEmpty()) {
             gpuQueryObject.memory = 2
-            gpuQueryObject.coreClock = 1500
-            gpuQueryObject.name = ""
+            gpuQueryObject.chipset = ""
 
             return this.queryGPUCollection(gpuQueryObject, QueryType.QUIZ_GAMING)
         }
@@ -194,24 +188,26 @@ class GPUService(
         when (queryType) {
             QueryType.QUIZ_GAMING -> {
 
-                return if (gpuFilterObject.name == "RTX") {
-                    this.gpuRepository.findByMemoryGreaterThanEqualAndCoreClockGreaterThanEqualAndNameContainingAndPriceUSDLessThanEqual(
+                return if (gpuFilterObject.chipset == "ray_tracing") {
+                    this.gpuRepository.findByMemoryGreaterThanEqualAndChipsetContainingAndPriceUSDLessThanEqualOrMemoryGreaterThanEqualAndNameContainingAndPriceUSDLessThanEqual(
                         gpuFilterObject.memory,
-                        gpuFilterObject.coreClock,
-                        gpuFilterObject.name,
+                        "RTX",
+                        gpuFilterObject.priceUSD,
+                        gpuFilterObject.memory,
+                        Regex("Radeon RX 6\\d\\d\\d").toString(),
                         gpuFilterObject.priceUSD,
                         pageRequestQuiz
                     )
                 } else {
-                    this.gpuRepository.findByMemoryGreaterThanEqualAndCoreClockGreaterThanEqualAndPriceUSDLessThanEqual(
-                        gpuFilterObject.memory, gpuFilterObject.coreClock, gpuFilterObject.priceUSD, pageRequestQuiz
+                    this.gpuRepository.findByMemoryGreaterThanEqualAndPriceUSDLessThanEqual(
+                        gpuFilterObject.memory, gpuFilterObject.priceUSD, pageRequestQuiz
                     )
                 }
             }
 
             QueryType.QUIZ_STUDIO, QueryType.QUIZ_POWER -> {
-                return this.gpuRepository.findByMemoryGreaterThanEqualAndCoreClockGreaterThanEqualAndPriceUSDLessThanEqual(
-                    gpuFilterObject.memory, gpuFilterObject.coreClock, gpuFilterObject.priceUSD, pageRequestQuiz
+                return this.gpuRepository.findByMemoryGreaterThanEqualAndPriceUSDLessThanEqual(
+                    gpuFilterObject.memory, gpuFilterObject.priceUSD, pageRequestQuiz
                 )
             }
 

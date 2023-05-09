@@ -7,10 +7,10 @@ import org.springframework.data.mongodb.repository.MongoRepository
 
 interface GPURepository: MongoRepository<GPU, String> {
 
-    fun findByMemoryGreaterThanEqualAndCoreClockGreaterThanEqualAndPriceUSDLessThanEqual(
-        memory: Int, coreClock: Int, priceUSD: Double, pageable: Pageable): List<GPU>
+    fun findByMemoryGreaterThanEqualAndPriceUSDLessThanEqual(
+        memory: Int, priceUSD: Double, pageable: Pageable): List<GPU>
 
-    fun findByMemoryGreaterThanEqualAndCoreClockGreaterThanEqualAndNameContainingAndPriceUSDLessThanEqual(
-        memory: Int, coreClock: Int, name: String, priceUSD: Double, pageable: Pageable): List<GPU>
+    fun findByMemoryGreaterThanEqualAndChipsetContainingAndPriceUSDLessThanEqualOrMemoryGreaterThanEqualAndNameContainingAndPriceUSDLessThanEqual(
+        memory: Int, chipset: String, priceUSD: Double, memory1: Int, chipset1: String, priceUSD1: Double, pageable: Pageable): List<GPU>
 
 }

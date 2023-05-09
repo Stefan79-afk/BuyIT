@@ -55,105 +55,6 @@ class QuizService(
 
         return recommendations
 
-
-
-            /*val cpuRecommendations =
-                this.cpuService.getCPURecommendations(budgetAllocation.getValue("cpu"), filterObject)
-
-            val gpuRecommendations = if (filterObject.pcUseCase == "work") null else
-                this.gpuService.getGPURecommendations(budgetAllocation.getValue("gpu"), filterObject)
-
-            val ramRecommendations =
-                this.ramService.getRamRecommendations(budgetAllocation.getValue("ram"), filterObject)
-
-            val internalStorageRecommendations =
-                this.internalStorageService.getInternalStorageReccommendations(budgetAllocation.getValue("internal_storage"), filterObject)
-
-            val caseRecommendations =
-                this.caseService.getCaseRecommendations(budgetAllocation.getValue("case"), filterObject)
-
-            val fanRecommendations =
-                this.fanService.getFanRecommendations(budgetAllocation.getValue("fan"), filterObject)
-
-            val cpuFanRecommendations =
-                this.cpuFanService.getcpuFanRecommendations(budgetAllocation.getValue("cpu_fan"), filterObject)
-
-            val soundCardRecommendations =
-                this.soundCardService.getSoundCardRecommendations(budgetAllocation.getValue("sound_card"), filterObject)
-
-            val wifiCardRecommendations =
-                this.wifiCardService.getWifiCardRecommendations(budgetAllocation.getValue("wifi_card"), filterObject)
-
-            val lists = mutableListOf<List<Any>>()
-
-            lists.add(cpuRecommendations)
-            lists.add(ramRecommendations)
-            lists.add(internalStorageRecommendations)
-            lists.add(caseRecommendations)
-            lists.add(fanRecommendations)
-            lists.add(cpuFanRecommendations)
-            lists.add(soundCardRecommendations)
-            lists.add(wifiCardRecommendations)
-
-            if(gpuRecommendations != null) {
-                lists.add(gpuRecommendations)
-            }
-
-            val minimumRecommendationSize = getMinimumSize(lists)
-
-
-
-            for(i in 0 until minimumRecommendationSize) {
-                if(gpuRecommendations.isNullOrEmpty()) {
-                    val pcRecommendation = PCRecommendation(cpuRecommendations[i], null, ramRecommendations[i], internalStorageRecommendations[i], caseRecommendations[i], fanRecommendations[i], cpuFanRecommendations[i], soundCardRecommendations[i], wifiCardRecommendations[i])
-                    recommendations.add(pcRecommendation)
-                }
-
-                else {
-                    val pcRecommendation = PCRecommendation(cpuRecommendations[i], gpuRecommendations[i], ramRecommendations[i], internalStorageRecommendations[i], caseRecommendations[i], fanRecommendations[i], cpuFanRecommendations[i], soundCardRecommendations[i], wifiCardRecommendations[i])
-                    recommendations.add(pcRecommendation)
-                }
-            }
-
-            val motherBoardRecommendations = this.motherboardService.getMotherboardRecommendations(budgetAllocation.getValue("motherboard"), recommendations, filterObject)
-
-            if(motherBoardRecommendations.isEmpty()) {
-                return listOf()
-            }
-
-            for(i in recommendations.indices) {
-                recommendations[i].motherboard = motherBoardRecommendations[i]
-            }
-
-            val psuRecommendations = this.psuService.getPSURecommendations(budgetAllocation.getValue("power_supply"), recommendations, filterObject)
-
-            if(psuRecommendations.isEmpty()) {
-                return listOf()
-            }
-
-            for(i in recommendations.indices) {
-                recommendations[i].psu = psuRecommendations[i]
-            }
-
-            if(filterObject.pcNeedNetworkCard) {
-                val networkCardRecommendations =
-                    this.networkCardService.getNetworkCardRecommendations(budgetAllocation.getValue("network_card"), filterObject)
-
-                for(i in recommendations.indices) {
-                    recommendations[i].networkCard = networkCardRecommendations[i]
-                }
-            }
-
-            if(filterObject.pcNeedOpticalDrive) {
-                val opticalDriveRecommendations =
-                    this.opticalDriveService.getOpticalDriveRecommendations(budgetAllocation.getValue("optical_drive"))
-                for(i in recommendations.indices) {
-                    recommendations[i].opticalDrive = opticalDriveRecommendations[i]
-                }
-            }
-
-            return recommendations
-             */
     }
 
     private fun divideBudgetWork(filterObject: PCRequest): MutableMap<String, Double> {
@@ -519,17 +420,6 @@ class QuizService(
             }
         }
 
-    }
-
-    private fun getMinimumSize(lists: List<List<Any>>): Int {
-        var minimumSize = 100
-        for(list in lists) {
-            if(list.size < minimumSize) {
-                minimumSize = list.size
-            }
-        }
-
-        return minimumSize
     }
 
 }
