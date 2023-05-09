@@ -27,7 +27,7 @@ class CPUService(
 
         cpuQueryObject.priceUSD = cpuBudget
         cpuQueryObject.coreCount = 2
-        cpuQueryObject.coreClock = 2.0
+        //cpuQueryObject.coreClock = 2.0
 
         if (filterObject.pcWorkMultitask == true) {
             cpuQueryObject.coreCount = 4
@@ -35,14 +35,14 @@ class CPUService(
 
         if (filterObject.pcWorkProgramming == true || filterObject.pcWorkVirtualization == true) {
             cpuQueryObject.coreCount = 4
-            cpuQueryObject.coreClock = 2.5
+            //cpuQueryObject.coreClock = 2.5
         }
 
         var queryResult = this.queryCPUCollection(cpuQueryObject, QueryType.QUIZ_WORK)
 
         if(queryResult.isEmpty()) {
             cpuQueryObject.coreCount = 2
-            cpuQueryObject.coreClock = 2.0
+            //cpuQueryObject.coreClock = 2.0
 
             queryResult =  this.queryCPUCollection(cpuQueryObject, QueryType.QUIZ_WORK)
         }
@@ -55,28 +55,28 @@ class CPUService(
 
         cpuQueryObject.priceUSD = cpuBudget
         cpuQueryObject.coreCount = 2
-        cpuQueryObject.coreClock = 3.0
+        //cpuQueryObject.coreClock = 3.0
 
         if(filterObject.pcGamingWantStreaming == true) {
             cpuQueryObject.coreCount = 4
-            cpuQueryObject.coreClock = 3.0
+            //cpuQueryObject.coreClock = 3.0
         }
 
         if(filterObject.pcGamingRayTracingGPU == true) {
             cpuQueryObject.coreCount = 6
-            cpuQueryObject.coreClock = 3.5
+            //cpuQueryObject.coreClock = 3.5
         }
 
         if(filterObject.pcGamingGraphicsOrPerformance == "both") {
             cpuQueryObject.coreCount = 8
-            cpuQueryObject.coreClock = 3.5
+            //cpuQueryObject.coreClock = 3.5
         }
 
        val queryResult =  queryCPUCollection(cpuQueryObject, QueryType.QUIZ_GAMING)
 
         if(queryResult.isEmpty()) {
             cpuQueryObject.coreCount = 2
-            cpuQueryObject.coreClock = 3.0
+            //cpuQueryObject.coreClock = 3.0
             return queryCPUCollection(cpuQueryObject, QueryType.QUIZ_GAMING)
         }
 
@@ -89,16 +89,16 @@ class CPUService(
 
         cpuQueryObject.priceUSD = cpuBudget
         cpuQueryObject.coreCount = 4
-        cpuQueryObject.coreClock = 3.0
+        //cpuQueryObject.coreClock = 3.0
 
         if(filterObject.pcCreativeMostDemandingTask == "3D" || filterObject.pcCreativeMultitask == true) {
             cpuQueryObject.coreCount = 6
-            cpuQueryObject.coreClock = 3.0
+            //cpuQueryObject.coreClock = 3.0
         }
 
         if(filterObject.pcCreativeNoLoadingTimes == true) {
             cpuQueryObject.coreCount = 8
-            cpuQueryObject.coreClock = 3.5
+            //cpuQueryObject.coreClock = 3.5
         }
 
 
@@ -106,7 +106,7 @@ class CPUService(
 
         if(queryResult.isEmpty()) {
             cpuQueryObject.coreCount = 4
-            cpuQueryObject.coreClock = 3.0
+            //cpuQueryObject.coreClock = 3.0
 
             return this.queryCPUCollection(cpuQueryObject, QueryType.QUIZ_STUDIO)
         }
@@ -119,16 +119,17 @@ class CPUService(
 
         cpuQueryObject.priceUSD = cpuBudget
         cpuQueryObject.coreCount = 6
-        cpuQueryObject.coreClock = 3.0
+        ////cpuQueryObject.coreClock = 3.0
 
         when (filterObject.pcIntensiveMostDemandingTask) {
             "crypto_mining", "data" -> {
-                cpuQueryObject.coreClock = 3.5
+                cpuQueryObject.coreCount = 6
+                ////cpuQueryObject.coreClock = 3.5
             }
 
             "ai", "science" -> {
                 cpuQueryObject.coreCount = 8
-                cpuQueryObject.coreClock = 3.5
+                //cpuQueryObject.coreClock = 3.5
             }
         }
 
@@ -140,16 +141,16 @@ class CPUService(
             when (filterObject.pcIntensiveMostDemandingTask) {
                 "server" -> {
                     cpuQueryObject.coreCount = 8
-                    cpuQueryObject.coreClock = 3.5
+                    //cpuQueryObject.coreClock = 3.5
                 }
                 "crypto_mining", "data" -> {
                     cpuQueryObject.coreCount = 12
-                    cpuQueryObject.coreClock = 3.5
+                    //cpuQueryObject.coreClock = 3.5
                 }
 
                 "ai", "science" -> {
                     cpuQueryObject.coreCount = 16
-                    cpuQueryObject.coreClock = 3.5
+                    //cpuQueryObject.coreClock = 3.5
                 }
             }
         }
@@ -158,7 +159,7 @@ class CPUService(
 
         if(queryResult.isEmpty()) {
             cpuQueryObject.coreCount = 6
-            cpuQueryObject.coreClock = 3.0
+            //cpuQueryObject.coreClock = 3.0
 
             return this.queryCPUCollection(cpuQueryObject, QueryType.QUIZ_POWER)
         }
@@ -172,28 +173,28 @@ class CPUService(
         when(queryType) {
             QueryType.QUIZ_WORK -> {
 
-                return this.cpuRepository.findByCoreCountGreaterThanEqualAndCoreClockGreaterThanEqualAndPriceUSDLessThanEqualAndIntegratedGraphicsNotNull(
-                    cpuFilterObject.coreCount, cpuFilterObject.coreClock, cpuFilterObject.priceUSD, pageRequestQuiz
+                return this.cpuRepository.findByCoreCountGreaterThanEqualAndPriceUSDLessThanEqualAndIntegratedGraphicsNotNull(
+                    cpuFilterObject.coreCount, cpuFilterObject.priceUSD, pageRequestQuiz
                 )
             }
 
              QueryType.QUIZ_GAMING, QueryType.QUIZ_STUDIO -> {
                 
 
-                return this.cpuRepository.findByCoreCountGreaterThanEqualAndCoreClockGreaterThanEqualAndPriceUSDLessThanEqual(
-                    cpuFilterObject.coreCount, cpuFilterObject.coreClock,cpuFilterObject.priceUSD, pageRequestQuiz
+                return this.cpuRepository.findByCoreCountGreaterThanEqualAndPriceUSDLessThanEqual(
+                    cpuFilterObject.coreCount, cpuFilterObject.priceUSD, pageRequestQuiz
                 )
             }
 
             QueryType.QUIZ_POWER -> {
 
                 return if(cpuFilterObject.name == "overclock") {
-                    this.cpuRepository.findByCoreCountGreaterThanEqualAndCoreClockGreaterThanEqualAndPriceUSDLessThanEqualAndNameContainingOrCoreCountGreaterThanEqualAndCoreClockGreaterThanEqualAndPriceUSDLessThanEqualAndNameContaining(
-                        cpuFilterObject.coreCount, cpuFilterObject.coreClock, cpuFilterObject.priceUSD, "AMD", cpuFilterObject.coreCount, cpuFilterObject.coreClock, cpuFilterObject.priceUSD, "K", pageRequestQuiz
+                    this.cpuRepository.findByCoreCountGreaterThanEqualAndPriceUSDLessThanEqualAndNameContainingOrCoreCountGreaterThanEqualAndPriceUSDLessThanEqualAndNameContaining(
+                        cpuFilterObject.coreCount, cpuFilterObject.priceUSD, "AMD", cpuFilterObject.coreCount, cpuFilterObject.priceUSD, "K", pageRequestQuiz
                     )
                 } else {
-                    this.cpuRepository.findByCoreCountGreaterThanEqualAndCoreClockGreaterThanEqualAndPriceUSDLessThanEqual(
-                        cpuFilterObject.coreCount, cpuFilterObject.coreClock, cpuFilterObject.priceUSD, pageRequestQuiz
+                    this.cpuRepository.findByCoreCountGreaterThanEqualAndPriceUSDLessThanEqual(
+                        cpuFilterObject.coreCount, cpuFilterObject.priceUSD, pageRequestQuiz
                     )
                 }
             }

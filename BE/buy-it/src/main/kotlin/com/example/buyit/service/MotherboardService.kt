@@ -63,7 +63,7 @@ class MotherboardService (
                     }
                 }
 
-                "MicroATX Mid Tower" -> {
+                "MicroATX Mini Tower" -> {
                     val queryResult = this.findFirstByFormFactors(
                         motherboardQueryObject.socketCPU, motherboardQueryObject.memorySlots, motherboardQueryObject.memoryMax, listOf("Mini ITX", "Micro ATX"), motherboardQueryObject.priceUSD
                     )

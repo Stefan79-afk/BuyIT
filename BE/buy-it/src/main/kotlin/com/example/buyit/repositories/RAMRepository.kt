@@ -6,10 +6,10 @@ import org.springframework.data.domain.Pageable
 import org.springframework.data.mongodb.repository.MongoRepository
 
 interface RAMRepository: MongoRepository<RAM, String> {
-    fun findByCapacityGreaterThanEqualAndTypeGreaterThanEqualAndFrequencyGreaterThanEqualAndModulesContainingAndPriceUSDLessThanEqual(
-        capacity: Int, type: String, frequency: Int, modules: String, priceUSD: Double, pageable: Pageable): List<RAM>
+    fun findByCapacityGreaterThanEqualAndTypeGreaterThanEqualAndModulesContainingAndPriceUSDLessThanEqual(
+        capacity: Int, type: String, modules: String, priceUSD: Double, pageable: Pageable): List<RAM>
 
-    fun findByCapacityGreaterThanEqualAndTypeGreaterThanEqualAndFrequencyGreaterThanEqualAndModulesGreaterThanEqualAndPriceUSDLessThanEqual(
-        capacity: Int, type: String, frequency: Int, modules: String, priceUSD: Double, pageable: Pageable): List<RAM>
+    fun findByCapacityGreaterThanEqualAndTypeGreaterThanEqualAndModulesGreaterThanEqualAndPriceUSDLessThanEqual(
+        capacity: Int, type: String, modules: String, priceUSD: Double, pageable: Pageable): List<RAM>
 
 }
