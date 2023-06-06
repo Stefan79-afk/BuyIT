@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import HomePage from './homePage/HomePage'
 import {createBrowserRouter, RouterProvider} from "react-router-dom"
+import QuizStartPage from './quizPage/QuizStartPage'
 
 const router = createBrowserRouter([
   {
@@ -9,8 +10,8 @@ const router = createBrowserRouter([
     element: <HomePage />
   },
   {
-    path: "/test",
-    element: <h1>Hello this is a test route, ignore pls</h1>
+    path: "/quiz/start",
+   element: <QuizStartPage />
   }
 ])
 
