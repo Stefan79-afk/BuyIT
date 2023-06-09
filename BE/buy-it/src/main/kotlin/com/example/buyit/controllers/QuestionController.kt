@@ -5,11 +5,9 @@ import com.example.buyit.service.QuestionService
 import org.apache.coyote.Response
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
+import org.springframework.http.RequestEntity.BodyBuilder
 import org.springframework.http.ResponseEntity
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PathVariable
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 import org.springframework.web.server.ResponseStatusException
 import java.util.*
 
@@ -17,14 +15,19 @@ import java.util.*
 @RequestMapping("/odata/BuyITService/")
 class QuestionController(private val questionService: QuestionService) {
 
+    @CrossOrigin(origins = ["http://localhost:5173"])
     @GetMapping("Questions({questionId})")
-    fun getQuestionById(@PathVariable("questionId") questionId: Int): ResponseEntity<Question> {
-        val queryResult: Optional<Question> = questionService.getQuestion(questionId);
+    fun getQuestionById(@PathVariable("questionId") questionId: Int): ResponseEntity<Any> {
+        try {
+            val queryResult: Optional<Question> = questionService.getQuestion(questionId);
 
-        if (queryResult.isEmpty) {
-            return ResponseEntity.notFound().build()
+            if (queryResult.isEmpty) {
+                return ResponseEntity.notFound().build()
+            }
+
+            return ResponseEntity.ok(queryResult.get());
+        } catch (exception: Exception) {
+            return ResponseEntity.badRequest().body(exception.message);
         }
-
-        return ResponseEntity.ok(queryResult.get());
     }
 }

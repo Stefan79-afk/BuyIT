@@ -33,7 +33,7 @@ BE/nbdist/
 BE/.nb-gradle/
 
 # dependencies
-FE/buy-it/node_modules
+FE/buy-it/node_modules/*
 FE/buy-it/.pnp
 FE/buy-it/.pnp.js
 

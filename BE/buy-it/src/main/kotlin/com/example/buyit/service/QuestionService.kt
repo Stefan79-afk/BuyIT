@@ -11,6 +11,6 @@ import java.util.*
 class QuestionService(private val questionsRepository: QuestionsRepository) {
     @Transactional(readOnly = true)
     fun getQuestion(id: Int): Optional<Question> {
-        return this.questionsRepository.findById(id);
+        return this.questionsRepository.findById(id)
     }
 }

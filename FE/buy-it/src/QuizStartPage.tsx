@@ -1,9 +1,11 @@
-import "../index.css"
+import "./index.css"
 import "@fontsource/black-ops-one"
 import "@fontsource/chakra-petch"
-import NavBar from "../components/NavBar";
+import NavBar from "./components/NavBar";
+import { useNavigate } from "react-router";
 
 function QuizStartPage() {
+    const navigate = useNavigate();
     return (
             <div style={{fontFamily: "Chakra Petch", backgroundColor: "#1F1F1F", height: "100vh", fontSize: "24px"}} className="text-white" >
                 <NavBar />
@@ -24,7 +26,7 @@ function QuizStartPage() {
                             </ul>
                         </div>
 
-                        <button style={{backgroundColor: "#30D5C8", margin: "0 auto 0 auto", fontSize: "24px"}} className="rounded-md p-2 w-3/12">
+                        <button onClick={() => {navigate("/quiz/question/1")}} style={{backgroundColor: "#30D5C8", margin: "0 auto 0 auto", fontSize: "24px"}} className="rounded-md p-2 w-3/12">
                         Start Quiz
                         </button>
                     </div>
