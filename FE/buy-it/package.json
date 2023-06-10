@@ -26,6 +26,7 @@
     "react-dom": "^18.2.0",
     "react-flag-icon-css": "^1.0.25",
     "react-query": "^3.39.3",
+    "react-redux": "^8.0.7",
     "react-router": "^6.8.1",
     "react-router-dom": "^6.12.1"
   },

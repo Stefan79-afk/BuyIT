@@ -10,7 +10,8 @@ data class Question(
     @Field("question") val question: String,
     @Field("filterProp") val filterProp: String,
     @Field("answers") val answers: Array<Answer>?,
-    @Field("answer") val answer: Any?
+    @Field("value") val value: Any?,
+    @Field("branch") val branch: Int?
 ) {
 }
 
