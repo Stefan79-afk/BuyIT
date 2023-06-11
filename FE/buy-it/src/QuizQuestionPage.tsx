@@ -74,10 +74,6 @@ function QuizQuestion() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (JSON.stringify(filterObject) === "{}" && questionID !== "1") {
-      navigate("/quiz/question/1");
-      return;
-    }
     setLoading(true);
     fetch(`http://localhost:8080/odata/BuyITService/Questions(${questionID})`)
       .then((response) => {
@@ -94,7 +90,8 @@ function QuizQuestion() {
         setError(error);
         setLoading(false);
       });
-  }, [questionID, filterObject, navigate]);
+      
+  }, [questionID]);
 
   const handleAnswer = (answer: Answer) => {
     setSelectedAnswer(answer);
@@ -113,7 +110,7 @@ function QuizQuestion() {
       } else if (selectedAnswer.branch !== 0) {
         navigate(`/quiz/question/${selectedAnswer.branch}`);
       } else {
-        navigate("/quiz/results");
+        navigate("/quiz/results", { state: filterObject });
       }
     }
   };
@@ -176,7 +173,7 @@ function QuizQuestion() {
           }}
         >
           <h1 className="text-white" style={{ fontSize: "48px" }}>
-            Error: {message}
+            {message}
           </h1>
         </div>
       </div>

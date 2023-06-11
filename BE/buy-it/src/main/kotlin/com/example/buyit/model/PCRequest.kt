@@ -2,7 +2,7 @@ package com.example.buyit.model
 
 data class PCRequest(
     val isKnowledgeable: Boolean,
-    val pcType: String,
+    val pcType: String?,
     val pcSize: String?,
     val pcCaseColor: String?,
     val pcCasePanel: String?,

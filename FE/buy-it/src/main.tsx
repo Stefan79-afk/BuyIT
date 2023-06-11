@@ -5,6 +5,7 @@ import HomePage from './HomePage'
 import {createBrowserRouter, RouterProvider} from "react-router-dom"
 import QuizStartPage from './QuizStartPage'
 import QuizQuestionPage from './QuizQuestionPage'
+import QuizResultPage from './QuizResultPage';
 
 const queryClient = new QueryClient()
 
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   }, {
     path: "/quiz/question/:questionID",
     element: <QuizQuestionPage />
+  },
+  {
+    path: "/quiz/results",
+    element: <QuizResultPage />
   }
 ])
 
