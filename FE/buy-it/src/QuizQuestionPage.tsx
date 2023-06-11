@@ -62,7 +62,9 @@ function isValidQuestion(question: Question | Question_Five): boolean {
 
 function QuizQuestion() {
   const { questionID } = useParams();
-  const [filterObject, setFilterObject] = useState<FilterObject>({} as FilterObject);
+  const [filterObject, setFilterObject] = useState<FilterObject>(
+    {} as FilterObject
+  );
   const [question, setQuestion] = useState<Question | Question_Five>(
     {} as Question | Question_Five
   );
@@ -72,6 +74,10 @@ function QuizQuestion() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    if (JSON.stringify(filterObject) === "{}" && questionID !== "1") {
+      navigate("/quiz/question/1");
+      return;
+    }
     setLoading(true);
     fetch(`http://localhost:8080/odata/BuyITService/Questions(${questionID})`)
       .then((response) => {
@@ -88,7 +94,7 @@ function QuizQuestion() {
         setError(error);
         setLoading(false);
       });
-  }, [questionID]);
+  }, [questionID, filterObject, navigate]);
 
   const handleAnswer = (answer: Answer) => {
     setSelectedAnswer(answer);
@@ -100,13 +106,11 @@ function QuizQuestion() {
         ...prevState,
         [question.filterProp]: selectedAnswer.value,
       }));
-      
+
       console.log(filterObject);
-      if(question.id === 6 && filterObject.isKnowledgeable === false) {
+      if (question.id === 6 && filterObject.isKnowledgeable === false) {
         navigate("/quiz/question/7");
-      }
-  
-      else if (selectedAnswer.branch !== 0) {
+      } else if (selectedAnswer.branch !== 0) {
         navigate(`/quiz/question/${selectedAnswer.branch}`);
       } else {
         navigate("/quiz/results");
@@ -114,18 +118,13 @@ function QuizQuestion() {
     }
   };
 
-
-  // if(Object.keys(filterObject).length === 0) {
-  //   navigate("/quiz/question/1");
-  // }
-
   if (loading)
     return (
       <div
         style={{
           fontFamily: "Chakra Petch",
           height: "100vh",
-          backgroundColor: "#1F1F1F"
+          backgroundColor: "#1F1F1F",
         }}
       >
         <NavBar />
@@ -139,7 +138,9 @@ function QuizQuestion() {
             backgroundBlendMode: "multiply",
           }}
         >
-          <h1 className="text-white" style={{fontSize: "48px"}}>Loading...</h1>
+          <h1 className="text-white" style={{ fontSize: "48px" }}>
+            Loading...
+          </h1>
         </div>
       </div>
     );
@@ -148,10 +149,10 @@ function QuizQuestion() {
     let message: string = "Something else went wrong.";
     console.log(error.message);
 
-    if(error instanceof Response && error.status == 404) {
+    if (error instanceof Response && error.status == 404) {
       message = `Question ${questionID} not found.`;
     }
-    if(error.message == "Failed to fetch") {
+    if (error.message == "Failed to fetch") {
       message = "Failed to connect to the server.";
     }
 
@@ -160,7 +161,7 @@ function QuizQuestion() {
         style={{
           fontFamily: "Chakra Petch",
           height: "100vh",
-          backgroundColor: "#1F1F1F"
+          backgroundColor: "#1F1F1F",
         }}
       >
         <NavBar />
@@ -174,38 +175,42 @@ function QuizQuestion() {
             backgroundBlendMode: "multiply",
           }}
         >
-          <h1 className="text-white" style={{fontSize: "48px"}}>Error: {message}</h1>
+          <h1 className="text-white" style={{ fontSize: "48px" }}>
+            Error: {message}
+          </h1>
         </div>
       </div>
     );
   }
-  
+
   console.log(filterObject);
 
   if (!isValidQuestion(question))
-  return (
-    <div
-      style={{
-        fontFamily: "Chakra Petch",
-        height: "100vh",
-        backgroundColor: "#1F1F1F"
-      }}
-    >
-      <NavBar />
+    return (
       <div
-        className="flex flex-row justify-center items-center"
         style={{
-          backgroundColor: "rgba(137, 137, 137, 0.4",
-          height: "90%",
-          backgroundImage: "url(/buyit.jpg)",
-          backgroundSize: "100% 100%",
-          backgroundBlendMode: "multiply",
+          fontFamily: "Chakra Petch",
+          height: "100vh",
+          backgroundColor: "#1F1F1F",
         }}
       >
-        <h1 className="text-white" style={{fontSize: "48px"}}>Question could not be retrieved properly</h1>
+        <NavBar />
+        <div
+          className="flex flex-row justify-center items-center"
+          style={{
+            backgroundColor: "rgba(137, 137, 137, 0.4",
+            height: "90%",
+            backgroundImage: "url(/buyit.jpg)",
+            backgroundSize: "100% 100%",
+            backgroundBlendMode: "multiply",
+          }}
+        >
+          <h1 className="text-white" style={{ fontSize: "48px" }}>
+            Question could not be retrieved properly
+          </h1>
+        </div>
       </div>
-    </div>
-  );
+    );
   else {
     if (isQuestionFive(question)) {
       return (
@@ -228,19 +233,11 @@ function QuizQuestion() {
             }}
             className="flex flex-col justify-evenly items-center text-white"
           >
-            <div
-              className="w-4/5"
-              style={{ backgroundColor: "#2B2828"}}
-            >
-              <h1
-                style={{ backgroundColor: "#001540" }}
-                className="p-4"
-              >
+            <div className="w-4/5" style={{ backgroundColor: "#2B2828" }}>
+              <h1 style={{ backgroundColor: "#001540" }} className="p-4">
                 {question.id}. {question.question}
               </h1>
-              <div
-                className="flex flex-col justify-center items-center"
-              >
+              <div className="flex flex-col justify-center items-center">
                 <div className="flex flex-row items-center p-4">
                   <input
                     id={question.id.toString()}
@@ -268,16 +265,18 @@ function QuizQuestion() {
                 </div>
               </div>
             </div>
-            <button className="p-2 bg-green-700" onClick={() => {
-              console.log(question);       
-              setFilterObject((prevState) => ({
-                ...prevState,
-                [question.filterProp]: question.value,
-              }));
+            <button
+              className="p-2 bg-green-700"
+              onClick={() => {
+                console.log(question);
+                setFilterObject((prevState) => ({
+                  ...prevState,
+                  [question.filterProp]: question.value,
+                }));
 
-              navigate("/quiz/question/6");
-              
-            }}>
+                navigate("/quiz/question/6");
+              }}
+            >
               Submit
             </button>
           </div>
@@ -306,10 +305,7 @@ function QuizQuestion() {
             }}
             className="flex flex-col justify-evenly items-center text-white"
           >
-            <div
-              className="w-4/5"
-              style={{ backgroundColor: "#2B2828" }}
-            >
+            <div className="w-4/5" style={{ backgroundColor: "#2B2828" }}>
               <h1 style={{ backgroundColor: "#001540" }} className="p-4">
                 {question.id}. {question.question}
               </h1>
