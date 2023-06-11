@@ -26,6 +26,11 @@ interface Answer {
   branch: number;
 }
 
+interface FilterObject {
+  isKnowledgeable: boolean;
+  [key: string]: any;
+}
+
 function isQuestionFive(
   question: Question | Question_Five
 ): question is Question_Five {
@@ -57,7 +62,7 @@ function isValidQuestion(question: Question | Question_Five): boolean {
 
 function QuizQuestion() {
   const { questionID } = useParams();
-  const [filterObject, setFilterObject] = useState({});
+  const [filterObject, setFilterObject] = useState<FilterObject>({} as FilterObject);
   const [question, setQuestion] = useState<Question | Question_Five>(
     {} as Question | Question_Five
   );
@@ -95,14 +100,24 @@ function QuizQuestion() {
         ...prevState,
         [question.filterProp]: selectedAnswer.value,
       }));
-
-      if (selectedAnswer.branch !== 0) {
-        navigate(`/question/${selectedAnswer.branch}`);
+      
+      console.log(filterObject);
+      if(question.id === 6 && filterObject.isKnowledgeable === false) {
+        navigate("/quiz/question/7");
+      }
+  
+      else if (selectedAnswer.branch !== 0) {
+        navigate(`/quiz/question/${selectedAnswer.branch}`);
       } else {
-        navigate("question/results");
+        navigate("/quiz/results");
       }
     }
   };
+
+
+  // if(Object.keys(filterObject).length === 0) {
+  //   navigate("/quiz/question/1");
+  // }
 
   if (loading)
     return (
@@ -165,6 +180,7 @@ function QuizQuestion() {
     );
   }
   
+  console.log(filterObject);
 
   if (!isValidQuestion(question))
   return (
@@ -227,11 +243,19 @@ function QuizQuestion() {
               >
                 <div className="flex flex-row items-center p-4">
                   <input
+                    id={question.id.toString()}
                     type="text"
                     name="answer"
                     value={question.value}
-                    onChange={(event) => console.log(event.target.value)}
-                    id="inputAnswer"
+                    onChange={(event) => {
+                      console.log(event.target.value);
+                      console.log(question);
+                      setQuestion((prevState) => ({
+                        ...prevState,
+                        value: event.target.value,
+                      }));
+                      console.log(question);
+                    }}
                     className="bg-black p-3 text-white"
                   />
                   <label
@@ -244,7 +268,16 @@ function QuizQuestion() {
                 </div>
               </div>
             </div>
-            <button className="p-2 bg-green-700" onClick={handleSubmit}>
+            <button className="p-2 bg-green-700" onClick={() => {
+              console.log(question);       
+              setFilterObject((prevState) => ({
+                ...prevState,
+                [question.filterProp]: question.value,
+              }));
+
+              navigate("/quiz/question/6");
+              
+            }}>
               Submit
             </button>
           </div>
