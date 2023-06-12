@@ -275,7 +275,7 @@ function QuizResultPage() {
     console.log(error.message);
 
     if (error instanceof Response && error.status == 404) {
-      message = `We couldn't find any builds for your needs.`;
+      message = `We couldn't find any builds for your needs. Please try retaking the quiz.`;
     }
     if (error.message == "Failed to fetch") {
       message = "Failed to connect to the server.";
@@ -291,7 +291,7 @@ function QuizResultPage() {
       >
         <NavBar />
         <div
-          className="flex flex-row justify-center items-center"
+          className="flex flex-col justify-evenly items-center"
           style={{
             backgroundColor: "rgba(137, 137, 137, 0.4",
             height: "90%",
@@ -303,6 +303,11 @@ function QuizResultPage() {
           <h1 className="text-white" style={{ fontSize: "48px" }}>
             {message}
           </h1>
+          <button style={{backgroundColor: "#30D5C8"}} className="p-2" onClick={() => {
+                    navigate("/");
+                }}>
+                    Back to Home Page.
+                </button>
         </div>
       </div>
     );
@@ -325,17 +330,18 @@ function QuizResultPage() {
                     backgroundImage: "url(/buyit.jpg)",
                     backgroundSize: "100% 100%",
                     backgroundBlendMode: "multiply",
+                    width: "100%"
                 }}
                 className="flex flex-col text-white items-center justify-evenly"
             >
                 <h1 style={{fontSize: "32px"}}>Here are your Recommendations</h1>
-                <div className="flex flex-row justify-center items-center">
+                <div className="flex flex-row justify-between items-center" style={{width: "100%"}}>
                     {results.map((result) => {
                         debugger;
                         if(result.gpu === null && result.networkCard == null && result.opticalDrive == null) {
                             const totalPrice = result.case.priceUSD + result.cpu.priceUSD + result.cpuFan.priceUSD + result.fan.priceUSD * result.fan.amount + result.internalStorage.priceUSD + result.motherboard.priceUSD + result.psu.priceUSD + result.ram.priceUSD + result.soundCard.priceUSD + result.wifiCard.priceUSD;
                             return (
-                                <div style={{fontSize: "16px"}} className="bg-black p-2">
+                                <div style={{fontSize: "12px", maxWidth: "17%", height: "100%"}} className="bg-black p-2">
                                     <ul>
                                         <li>Case: {result.case.name} - {result.case.priceUSD.toString()}$</li>
                                         <li>CPU: {result.cpu.name} - {result.cpu.priceUSD.toString()}$</li>
@@ -357,7 +363,7 @@ function QuizResultPage() {
                                 totalPrice = result.case.priceUSD + result.cpu.priceUSD + result.cpuFan.priceUSD + result.fan.priceUSD * result.fan.amount + result.gpu?.priceUSD * result.gpu?.amount + result.internalStorage.priceUSD + result.motherboard.priceUSD + result.psu.priceUSD + result.ram.priceUSD + result.soundCard.priceUSD + result.wifiCard.priceUSD;
                             }    
                             return (
-                                <div style={{fontSize: "16px"}} className="bg-black p-2">
+                                <div style={{fontSize: "12px", maxWidth: "17%", height: "100%"}} className="bg-black p-2">
                                     <ul>
                                         <li>Case: {result.case.name} - {result.case.priceUSD.toString()}$</li>
                                         <li>CPU: {result.cpu.name} - {result.cpu.priceUSD.toString()}$</li>
@@ -381,7 +387,7 @@ function QuizResultPage() {
                                 totalPrice = result.case.priceUSD + result.cpu.priceUSD + result.cpuFan.priceUSD + result.fan.priceUSD * result.fan.amount + result.internalStorage.priceUSD + result.motherboard.priceUSD + result.opticalDrive?.priceUSD + result.psu.priceUSD + result.ram.priceUSD + result.soundCard.priceUSD + result.wifiCard.priceUSD;
                             }
                             return (
-                                <div style={{fontSize: "16px"}} className="bg-black p-2">
+                                <div style={{fontSize: "12px", maxWidth: "17%", height: "100%"}} className="bg-black p-2">
                                     <ul>
                                         <li>Case: {result.case.name} - {result.case.priceUSD.toString()}$</li>
                                         <li>CPU: {result.cpu.name} - {result.cpu.priceUSD.toString()}$</li>
@@ -405,7 +411,7 @@ function QuizResultPage() {
                                 totalPrice = result.case.priceUSD + result.cpu.priceUSD + result.cpuFan.priceUSD + result.fan.priceUSD * result.fan.amount + result.internalStorage.priceUSD + result.motherboard.priceUSD + result.networkCard?.priceUSD + result.psu.priceUSD + result.ram.priceUSD + result.soundCard.priceUSD + result.wifiCard.priceUSD;
                             }
                             return (
-                                <div style={{fontSize: "16px"}} className="bg-black p-2">
+                                <div style={{fontSize: "12px", maxWidth: "17%", height: "100%"}} className="bg-black p-2">
                                     <ul>
                                         <li>Case: {result.case.name} - {result.case.priceUSD.toString()}$</li>
                                         <li>CPU: {result.cpu.name} - {result.cpu.priceUSD.toString()}$</li>
@@ -428,7 +434,7 @@ function QuizResultPage() {
                                 totalPrice = result.case.priceUSD + result.cpu.priceUSD + result.cpuFan.priceUSD + result.fan.priceUSD * result.fan.amount + result.gpu?.priceUSD * result.gpu?.amount + result.internalStorage.priceUSD + result.motherboard.priceUSD + result.opticalDrive?.priceUSD + result.psu.priceUSD + result.ram.priceUSD + result.soundCard.priceUSD + result.wifiCard.priceUSD;
                             }
                             return (
-                                <div style={{fontSize: "16px"}} className="bg-black p-2">
+                                <div style={{fontSize: "12px", maxWidth: "17%", height: "100%"}} className="bg-black p-2">
                                     <ul>
                                         <li>Case: {result.case.name} - {result.case.priceUSD.toString()}$</li>
                                         <li>CPU: {result.cpu.name} - {result.cpu.priceUSD.toString()}$</li>
@@ -452,7 +458,7 @@ function QuizResultPage() {
                                 totalPrice = result.case.priceUSD + result.cpu.priceUSD + result.cpuFan.priceUSD + result.fan.priceUSD * result.fan.amount + result.gpu?.priceUSD * result.gpu?.amount + result.internalStorage.priceUSD + result.motherboard.priceUSD + result.networkCard?.priceUSD + result.psu.priceUSD + result.ram.priceUSD + result.soundCard.priceUSD + result.wifiCard.priceUSD;
                             }
                             return (
-                                <div style={{fontSize: "16px"}} className="bg-black p-2">
+                                <div style={{fontSize: "12px", maxWidth: "17%", height: "100%"}} className="bg-black p-2">
                                     <ul>
                                         <li>Case: {result.case.name} - {result.case.priceUSD.toString()}$</li>
                                         <li>CPU: {result.cpu.name} - {result.cpu.priceUSD.toString()}$</li>
@@ -476,7 +482,7 @@ function QuizResultPage() {
                                 totalPrice = result.case.priceUSD + result.cpu.priceUSD + result.cpuFan.priceUSD + result.fan.priceUSD * result.fan.amount + result.internalStorage.priceUSD + result.motherboard.priceUSD + result.networkCard?.priceUSD + result.opticalDrive?.priceUSD + result.psu.priceUSD + result.ram.priceUSD + result.soundCard.priceUSD + result.wifiCard.priceUSD;
                             }
                             return (
-                                <div style={{fontSize: "16px"}} className="bg-black p-2">
+                                <div style={{fontSize: "12px", maxWidth: "17%", height: "100%"}} className="bg-black p-2" >
                                     <ul>
                                         <li>Case: {result.case.name} - {result.case.priceUSD.toString()}$</li>
                                         <li>CPU: {result.cpu.name} - {result.cpu.priceUSD.toString()}$</li>
@@ -500,7 +506,7 @@ function QuizResultPage() {
                                 totalPrice = result.case.priceUSD + result.cpu.priceUSD + result.cpuFan.priceUSD + result.fan.priceUSD * result.fan.amount + result.gpu?.priceUSD * result.gpu?.amount + result.internalStorage.priceUSD + result.motherboard.priceUSD + result.networkCard?.priceUSD + result.opticalDrive?.priceUSD + result.psu.priceUSD + result.ram.priceUSD + result.soundCard.priceUSD + result.wifiCard.priceUSD;
                             }
                             return (
-                                <div style={{fontSize: "16px"}} className="bg-black p-2">
+                                <div style={{fontSize: "12px", maxWidth: "17%", height: "100%"}} className="bg-black p-2">
                                     <ul>
                                         <li>Case: {result.case.name} - {result.case.priceUSD.toString()}$</li>
                                         <li>CPU: {result.cpu.name} - {result.cpu.priceUSD.toString()}$</li>

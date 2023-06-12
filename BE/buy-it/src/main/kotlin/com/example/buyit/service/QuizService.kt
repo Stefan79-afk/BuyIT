@@ -44,8 +44,16 @@ class QuizService(
         addRecommendation(recommendations, Component.Motherboard, budgetAllocation.getValue("motherboard"), filterObject)
         addRecommendation(recommendations, Component.PSU, budgetAllocation.getValue("power_supply"), filterObject)
 
-        if(filterObject.pcUseCase != "work")
+        if(filterObject.pcUseCase != "work") {
             addRecommendation(recommendations, Component.GPU, budgetAllocation.getValue("gpu"), filterObject)
+            if(filterObject.pcIntensiveMultipleGPUs != true) {
+                recommendations.forEach { recommendation ->
+                    println(recommendation)
+                    recommendation.gpu?.amount = 1
+                    println(recommendation)
+                }
+            }
+        }
 
         if(filterObject.pcNeedNetworkCard)
             addRecommendation(recommendations, Component.Network_Card, budgetAllocation.getValue("network_card"), filterObject)
