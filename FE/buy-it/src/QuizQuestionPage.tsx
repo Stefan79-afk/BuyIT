@@ -335,9 +335,14 @@ function QuizQuestion() {
                 ))}
               </div>
             </div>
-            <button className="p-2 bg-green-700" onClick={handleSubmit}>
-              Submit
-            </button>
+            <div className="flex flex-row bg-300-red w-1/3 justify-between">
+            <button className="p-2 bg-red-700" onClick={() => navigate(-1)}>
+                Back
+              </button>
+              <button className="p-2 bg-green-700" onClick={handleSubmit}>
+                Submit
+              </button>     
+            </div>
           </div>
         </div>
       );
