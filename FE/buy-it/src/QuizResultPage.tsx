@@ -271,6 +271,8 @@ function QuizResultPage() {
     }
     if (error.message == "Failed to fetch") {
       message = "Failed to connect to the server.";
+    } else if (error instanceof Response && error.status == 400) {
+      message = "Some questions were not answered properly. Please try again.";
     }
 
     return (

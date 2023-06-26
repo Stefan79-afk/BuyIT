@@ -238,7 +238,7 @@ function QuizQuestion() {
                 <div className="flex flex-row items-center p-4">
                   <input
                     id={question.id.toString()}
-                    type="text"
+                    type="number"
                     name="answer"
                     value={question.value}
                     onChange={(event) => {
@@ -262,11 +262,27 @@ function QuizQuestion() {
             <button
               className="p-2 bg-green-700"
               onClick={() => {
-                setFilterObject((prevState) => ({
-                  ...prevState,
-                  [question.filterProp]: question.value,
-                }));
-                navigate("/quiz/question/6");
+                try {
+                  debugger;
+                  const budget: number = parseFloat(question.value);
+                  if(Number.isNaN(budget)) throw new TypeError("Your budget must be a valid number (e.g. 1000.00).");
+                  if (budget < 0) throw new RangeError("Your budget cannot be negative.");
+                  if (budget == 0) throw new RangeError("Your budget cannot be zero.");
+
+                  setFilterObject((prevState) => ({
+                    ...prevState,
+                    [question.filterProp]: question.value,
+                  }));
+                  navigate("/quiz/question/6");
+                  
+                } catch(error) {
+                  document.getElementById(question.id.toString())?.style.setProperty("border", "2px solid red");
+                  if(error instanceof RangeError || error instanceof TypeError){
+                    alert(error.message);
+                  } else {
+                    alert(`Something else went wrong: ${error}`)
+                  }
+                }
               }}
             >
               Submit
