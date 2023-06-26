@@ -39,7 +39,6 @@ class PSUService (
             var queryResult = this.queryPSUCollection(psuQueryObject, QueryType.QUIZ)
 
             if(queryResult == null) {
-                psuQueryObject.wattage = 0
                 psuQueryObject.efficiencyRating = null
 
                 queryResult = this.queryPSUCollection(psuQueryObject, QueryType.QUIZ)

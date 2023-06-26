@@ -66,7 +66,7 @@ class CPUFanService(
                    return this.cpuFanRepository.findByNoiseLevelLessThanEqualAndFanRPMGreaterThanEqualAndPriceUSDLessThanEqual(
                        cpuFanQueryObject.noiseLevel!!, cpuFanQueryObject.fanRPM, cpuFanQueryObject.priceUSD,pageRequest )
                 } else if(cpuFanQueryObject.noiseLevel == null && cpuFanQueryObject.fanRPM != 0) {
-                    return this.cpuFanRepository.findByFanRPMGreaterThanEqualAndPriceUSDGreaterThanEqual(
+                    return this.cpuFanRepository.findByFanRPMGreaterThanEqualAndPriceUSDLessThanEqual(
                         cpuFanQueryObject.fanRPM, cpuFanQueryObject.priceUSD, pageRequest
                     )
                 }

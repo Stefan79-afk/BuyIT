@@ -220,28 +220,21 @@ function QuizResultPage() {
       }
     })
       .then((response) => {
-        console.log(response);
-        debugger;
         if (response.ok) {
           return response.json();
         }
         throw response;
       })
       .then((data) => {
-        console.log(data);
-        debugger;
         setResults(data);
         setLoading(false);
       })
       .catch((error) => {
-        console.log(error);
-        debugger;
         setError(error);
         setLoading(false);
       });
   }, [filterObject]);
 
-  debugger;
   if (loading) {
     return (
       <div
@@ -272,7 +265,6 @@ function QuizResultPage() {
 
   if (error) {
     let message: string = "Something else went wrong.";
-    console.log(error.message);
 
     if (error instanceof Response && error.status == 404) {
       message = `We couldn't find any builds for your needs. Please try retaking the quiz.`;

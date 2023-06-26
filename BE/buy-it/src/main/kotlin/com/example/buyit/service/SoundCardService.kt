@@ -16,7 +16,6 @@ class SoundCardService (
         val soundCardQueryObject = SoundCard()
 
         soundCardQueryObject.priceUSD = soundCardBudget
-
         when (filterObject.pcSoundChannel) {
             "2.0" -> {
                 soundCardQueryObject.channels = "2.0"
@@ -38,7 +37,7 @@ class SoundCardService (
         val queryResult = querySoundCardCollection(soundCardQueryObject, QueryType.QUIZ)
 
         if(queryResult.isEmpty()) {
-            soundCardQueryObject.channels = ""
+            soundCardQueryObject.chipset = ""
             return querySoundCardCollection(soundCardQueryObject, QueryType.QUIZ)
         }
 
@@ -49,8 +48,8 @@ class SoundCardService (
         return when (queryType) {
             QueryType.QUIZ -> {
                 val pageRequest = PageRequest.of(0, 5, Sort.by(Sort.Direction.DESC, "price_usd"))
-                if(soundCardQueryObject.channels == "") {
-                    this.soundCardRepository.findByPriceUSDLessThanEqual(soundCardQueryObject.priceUSD, pageRequest)
+                if(soundCardQueryObject.chipset == "") {
+                    this.soundCardRepository.findByChannelsGreaterThanEqualAndPriceUSDLessThanEqual(soundCardQueryObject.channels, soundCardQueryObject.priceUSD, pageRequest)
                 } else {
                     this.soundCardRepository.findByChannelsAndPriceUSDLessThanEqual(soundCardQueryObject.channels, soundCardQueryObject.priceUSD, pageRequest)
                 }

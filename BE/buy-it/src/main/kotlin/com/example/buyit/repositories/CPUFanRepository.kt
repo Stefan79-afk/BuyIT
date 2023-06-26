@@ -11,6 +11,6 @@ interface CPUFanRepository: MongoRepository<CPUFan, String> {
     fun findByNoiseLevelLessThanEqualAndFanRPMGreaterThanEqualAndPriceUSDLessThanEqual(
         noiseLevel: Int, fanRPM: Int, priceUSD: Double, pageable: Pageable): List<CPUFan>
 
-    fun findByFanRPMGreaterThanEqualAndPriceUSDGreaterThanEqual(
+    fun findByFanRPMGreaterThanEqualAndPriceUSDLessThanEqual(
         fanRPM: Int, priceUSD: Double, pageable: Pageable): List<CPUFan>
 }

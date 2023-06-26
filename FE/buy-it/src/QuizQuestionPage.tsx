@@ -105,7 +105,7 @@ function QuizQuestion() {
       }));
 
       console.log(filterObject);
-      if (question.id === 6 && filterObject.isKnowledgeable === false) {
+      if (question.id === 6 && !filterObject.isKnowledgeable) {
         navigate("/quiz/question/7");
       } else if (selectedAnswer.branch !== 0) {
         navigate(`/quiz/question/${selectedAnswer.branch}`);
@@ -242,13 +242,10 @@ function QuizQuestion() {
                     name="answer"
                     value={question.value}
                     onChange={(event) => {
-                      console.log(event.target.value);
-                      console.log(question);
                       setQuestion((prevState) => ({
                         ...prevState,
                         value: event.target.value,
                       }));
-                      console.log(question);
                     }}
                     className="bg-black p-3 text-white"
                   />
@@ -265,12 +262,10 @@ function QuizQuestion() {
             <button
               className="p-2 bg-green-700"
               onClick={() => {
-                console.log(question);
                 setFilterObject((prevState) => ({
                   ...prevState,
                   [question.filterProp]: question.value,
                 }));
-
                 navigate("/quiz/question/6");
               }}
             >

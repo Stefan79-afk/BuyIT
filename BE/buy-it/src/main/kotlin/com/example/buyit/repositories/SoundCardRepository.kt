@@ -8,6 +8,6 @@ interface SoundCardRepository: MongoRepository<SoundCard, String> {
     fun findByChannelsAndPriceUSDLessThanEqual(
         channel: String, priceUSD: Double, pageable: Pageable): List<SoundCard>
 
-    fun findByPriceUSDLessThanEqual(
-        priceUSD: Double, pageable: Pageable): List<SoundCard>
+    fun findByChannelsGreaterThanEqualAndPriceUSDLessThanEqual(
+        channel: String, priceUSD: Double, pageable: Pageable): List<SoundCard>
 }

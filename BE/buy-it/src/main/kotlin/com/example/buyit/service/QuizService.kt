@@ -48,9 +48,7 @@ class QuizService(
             addRecommendation(recommendations, Component.GPU, budgetAllocation.getValue("gpu"), filterObject)
             if(filterObject.pcIntensiveMultipleGPUs != true) {
                 recommendations.forEach { recommendation ->
-                    println(recommendation)
                     recommendation.gpu?.amount = 1
-                    println(recommendation)
                 }
             }
         }
@@ -164,7 +162,7 @@ class QuizService(
                 "case" to (filterObject.pcPrice * 0.03),
                 "cpu_fan" to (filterObject.pcPrice * 0.02),
                 "fan" to (filterObject.pcPrice * 0.02),
-                "wifi_card" to (filterObject.pcPrice * 0.01),
+                "wifi_card" to (filterObject.pcPrice * 0.02),
                 "sound_card" to (filterObject.pcPrice * 0.02),
                 "optical_drive" to (filterObject.pcPrice * 0.02)
             );
