@@ -1,0 +1,1400 @@
+[{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaac93"
+  },
+  "name": "Corsair RM (2019)",
+  "rating": 4,
+  "rating_count": 195,
+  "price_usd": 124.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 750,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaac96"
+  },
+  "name": "EVGA SuperNOVA GA",
+  "rating": 4,
+  "rating_count": 27,
+  "price_usd": 84.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 650,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaac9a"
+  },
+  "name": "Corsair SF",
+  "rating": 4,
+  "rating_count": 98,
+  "price_usd": 178.12,
+  "form_factor": "SFX",
+  "efficiency_rating": "80+ Platinum",
+  "wattage": 750,
+  "modular": "Full",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacb0"
+  },
+  "name": "Corsair RMx (2021)",
+  "rating": 4,
+  "rating_count": 1,
+  "price_usd": 189.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 1000,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacca"
+  },
+  "name": "Gigabyte P GM",
+  "rating": 4,
+  "rating_count": 10,
+  "price_usd": 109.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 850,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacb2"
+  },
+  "name": "EVGA GD (2019)",
+  "rating": 4,
+  "rating_count": 8,
+  "price_usd": 64.54,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 600,
+  "modular": false,
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacb1"
+  },
+  "name": "EVGA G3",
+  "rating": 4,
+  "rating_count": 185,
+  "price_usd": 102.89,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 750,
+  "modular": "Full",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacaf"
+  },
+  "name": "EVGA B5",
+  "rating": 4,
+  "rating_count": 12,
+  "price_usd": 59.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Bronze",
+  "wattage": 550,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacf2"
+  },
+  "name": "SeaSonic FOCUS Plus Platinum",
+  "rating": 4,
+  "rating_count": 26,
+  "price_usd": 148,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Platinum",
+  "wattage": 750,
+  "modular": "Full",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaace9"
+  },
+  "name": "Corsair RMx (2018)",
+  "rating": 4,
+  "rating_count": 25,
+  "price_usd": 114.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 550,
+  "modular": "Full",
+  "color": "Black / Silver"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacdf"
+  },
+  "name": "EVGA 100-N1-0400-L1",
+  "rating": 4,
+  "rating_count": 33,
+  "price_usd": 39.99,
+  "form_factor": "ATX",
+  "efficiency_rating": null,
+  "wattage": 400,
+  "modular": false,
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacbc"
+  },
+  "name": "SeaSonic FOCUS Plus Gold",
+  "rating": 4,
+  "rating_count": 70,
+  "price_usd": 139.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 850,
+  "modular": "Full",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacac"
+  },
+  "name": "EVGA BQ",
+  "rating": 4,
+  "rating_count": 42,
+  "price_usd": 50,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Bronze",
+  "wattage": 650,
+  "modular": "Semi",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaac9c"
+  },
+  "name": "EVGA BQ",
+  "rating": 4,
+  "rating_count": 86,
+  "price_usd": 34.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Bronze",
+  "wattage": 500,
+  "modular": "Semi",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaac9b"
+  },
+  "name": "Corsair AXi",
+  "rating": 5,
+  "rating_count": 4,
+  "price_usd": 935.9,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Titanium",
+  "wattage": 1600,
+  "modular": "Full",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaaca9"
+  },
+  "name": "SeaSonic FOCUS Plus Gold",
+  "rating": 4,
+  "rating_count": 69,
+  "price_usd": 114,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 650,
+  "modular": "Full",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaaccd"
+  },
+  "name": "Corsair TXM Gold",
+  "rating": 4,
+  "rating_count": 63,
+  "price_usd": 109.98,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 650,
+  "modular": "Semi",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacd0"
+  },
+  "name": "EVGA G5",
+  "rating": 4,
+  "rating_count": 17,
+  "price_usd": 59.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 650,
+  "modular": "Full",
+  "color": "Black / Green"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacda"
+  },
+  "name": "EVGA GD (2019)",
+  "rating": 4,
+  "rating_count": 9,
+  "price_usd": 69.98,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 700,
+  "modular": false,
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaace7"
+  },
+  "name": "Cooler Master MWE Gold",
+  "rating": 4,
+  "rating_count": 17,
+  "price_usd": 92.97,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 650,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacc9"
+  },
+  "name": "EVGA BR",
+  "rating": 4,
+  "rating_count": 18,
+  "price_usd": 62.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Bronze",
+  "wattage": 700,
+  "modular": false,
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaac94"
+  },
+  "name": "EVGA BQ",
+  "rating": 4,
+  "rating_count": 109,
+  "price_usd": 64,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Bronze",
+  "wattage": 600,
+  "modular": "Semi",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaac9d"
+  },
+  "name": "Corsair HX Platinum",
+  "rating": 4,
+  "rating_count": 16,
+  "price_usd": 348.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Platinum",
+  "wattage": 1000,
+  "modular": "Full",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacbf"
+  },
+  "name": "Corsair CV",
+  "rating": 4,
+  "rating_count": 11,
+  "price_usd": 39.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Bronze",
+  "wattage": 550,
+  "modular": false,
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacd5"
+  },
+  "name": "EVGA G3",
+  "rating": 4,
+  "rating_count": 68,
+  "price_usd": 166.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 850,
+  "modular": "Full",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacde"
+  },
+  "name": "Corsair TXM Gold",
+  "rating": 4,
+  "rating_count": 30,
+  "price_usd": 119.92,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 750,
+  "modular": "Semi",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaaca8"
+  },
+  "name": "NZXT C",
+  "rating": 4,
+  "rating_count": 15,
+  "price_usd": 129.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 850,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacb9"
+  },
+  "name": "Corsair RMx (2018)",
+  "rating": 4,
+  "rating_count": 41,
+  "price_usd": 154.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 850,
+  "modular": "Full",
+  "color": "White / Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacb6"
+  },
+  "name": "Cooler Master V SFX Gold",
+  "rating": 4,
+  "rating_count": 2,
+  "price_usd": 150.98,
+  "form_factor": "SFX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 850,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacb8"
+  },
+  "name": "Corsair RMx (2018)",
+  "rating": 4,
+  "rating_count": 121,
+  "price_usd": 134.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 750,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacd9"
+  },
+  "name": "Corsair CXF",
+  "rating": 5,
+  "rating_count": 1,
+  "price_usd": 114.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Bronze",
+  "wattage": 750,
+  "modular": "Full",
+  "color": "White / Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacbd"
+  },
+  "name": "MSI MPG A650GF",
+  "rating": 5,
+  "rating_count": 4,
+  "price_usd": 80.59,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 650,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaace2"
+  },
+  "name": "Corsair SF",
+  "rating": 4,
+  "rating_count": 100,
+  "price_usd": 116.96,
+  "form_factor": "SFX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 600,
+  "modular": "Full",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaaca5"
+  },
+  "name": "EVGA SuperNOVA GM",
+  "rating": 4,
+  "rating_count": 22,
+  "price_usd": 99,
+  "form_factor": "SFX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 650,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaac9f"
+  },
+  "name": "Corsair CXM",
+  "rating": 4,
+  "rating_count": 139,
+  "price_usd": 84.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Bronze",
+  "wattage": 650,
+  "modular": "Semi",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacaa"
+  },
+  "name": "Gigabyte P-B",
+  "rating": 4,
+  "rating_count": 5,
+  "price_usd": 28,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Bronze",
+  "wattage": 450,
+  "modular": false,
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacbb"
+  },
+  "name": "NZXT C",
+  "rating": 5,
+  "rating_count": 4,
+  "price_usd": 105.71,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 750,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacc2"
+  },
+  "name": "SeaSonic FOCUS Plus Gold",
+  "rating": 4,
+  "rating_count": 63,
+  "price_usd": 114.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 750,
+  "modular": "Full",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacdc"
+  },
+  "name": "SeaSonic S12III",
+  "rating": 4,
+  "rating_count": 16,
+  "price_usd": 44.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Bronze",
+  "wattage": 500,
+  "modular": false,
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaace6"
+  },
+  "name": "be quiet! Dark Power Pro 12",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 522.74,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Titanium",
+  "wattage": 1500,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacc4"
+  },
+  "name": "EVGA SuperNOVA GM",
+  "rating": 4,
+  "rating_count": 9,
+  "price_usd": 69.98,
+  "form_factor": "SFX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 550,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacef"
+  },
+  "name": "Thermaltake Smart",
+  "rating": 4,
+  "rating_count": 51,
+  "price_usd": 49.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+",
+  "wattage": 500,
+  "modular": false,
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacd4"
+  },
+  "name": "Cooler Master MWE Gold",
+  "rating": 4,
+  "rating_count": 29,
+  "price_usd": 107.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 750,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacab"
+  },
+  "name": "EVGA BQ",
+  "rating": 4,
+  "rating_count": 23,
+  "price_usd": 66,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Bronze",
+  "wattage": 750,
+  "modular": "Semi",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacf6"
+  },
+  "name": "SeaSonic S12III",
+  "rating": 4,
+  "rating_count": 5,
+  "price_usd": 54.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Bronze",
+  "wattage": 550,
+  "modular": false,
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacd6"
+  },
+  "name": "EVGA B5",
+  "rating": 4,
+  "rating_count": 4,
+  "price_usd": 68.98,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Bronze",
+  "wattage": 750,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaac95"
+  },
+  "name": "Corsair RM (2019)",
+  "rating": 4,
+  "rating_count": 72,
+  "price_usd": 134.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 850,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacf1"
+  },
+  "name": "Cooler Master V Gold V2",
+  "rating": 5,
+  "rating_count": 1,
+  "price_usd": 131.19,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 750,
+  "modular": "Full",
+  "color": "White"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaace4"
+  },
+  "name": "EVGA GQ",
+  "rating": 4,
+  "rating_count": 44,
+  "price_usd": 88.88,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 750,
+  "modular": "Semi",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacc5"
+  },
+  "name": "Asus ROG Strix",
+  "rating": 3,
+  "rating_count": 2,
+  "price_usd": 189.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 850,
+  "modular": "Full",
+  "color": "White"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaaccb"
+  },
+  "name": "EVGA BR",
+  "rating": 4,
+  "rating_count": 30,
+  "price_usd": 51,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Bronze",
+  "wattage": 600,
+  "modular": false,
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacdd"
+  },
+  "name": "Asus ROG Thor 850",
+  "rating": 4,
+  "rating_count": 14,
+  "price_usd": 218,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Platinum",
+  "wattage": 850,
+  "modular": "Full",
+  "color": "Black / Red"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacc7"
+  },
+  "name": "EVGA B5",
+  "rating": 4,
+  "rating_count": 12,
+  "price_usd": 44.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Bronze",
+  "wattage": 650,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaac97"
+  },
+  "name": "Corsair RM (2019)",
+  "rating": 4,
+  "rating_count": 58,
+  "price_usd": 89.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 650,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacae"
+  },
+  "name": "Asus ROG Thor 1200P",
+  "rating": 5,
+  "rating_count": 8,
+  "price_usd": 424.48,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Platinum",
+  "wattage": 1200,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaac98"
+  },
+  "name": "EVGA BR",
+  "rating": 4,
+  "rating_count": 61,
+  "price_usd": 39.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Bronze",
+  "wattage": 500,
+  "modular": false,
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaaca2"
+  },
+  "name": "EVGA BR",
+  "rating": 4,
+  "rating_count": 44,
+  "price_usd": 39.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Bronze",
+  "wattage": 450,
+  "modular": false,
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacba"
+  },
+  "name": "Corsair RMx",
+  "rating": 4,
+  "rating_count": 24,
+  "price_usd": 198.9,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 1000,
+  "modular": "Full",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacf3"
+  },
+  "name": "EVGA SuperNOVA GM",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 189.99,
+  "form_factor": "SFX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 850,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacec"
+  },
+  "name": "Asus ROG STRIX G",
+  "rating": 5,
+  "rating_count": 1,
+  "price_usd": 229.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 1000,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaaced"
+  },
+  "name": "NZXT C",
+  "rating": 5,
+  "rating_count": 3,
+  "price_usd": 107.72,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 650,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaac99"
+  },
+  "name": "EVGA SuperNOVA GA",
+  "rating": 4,
+  "rating_count": 17,
+  "price_usd": 115.95,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 750,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaac9e"
+  },
+  "name": "Corsair RMx (2018)",
+  "rating": 4,
+  "rating_count": 135,
+  "price_usd": 144.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 850,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacf4"
+  },
+  "name": "SeaSonic FOCUS Plus Gold",
+  "rating": 4,
+  "rating_count": 6,
+  "price_usd": 187.98,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 1000,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacf5"
+  },
+  "name": "Aerocool Integrator",
+  "rating": 4,
+  "rating_count": 6,
+  "price_usd": 173.91,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Bronze",
+  "wattage": 500,
+  "modular": false,
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaaca4"
+  },
+  "name": "Corsair CV",
+  "rating": 4,
+  "rating_count": 10,
+  "price_usd": 34.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Bronze",
+  "wattage": 450,
+  "modular": false,
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacad"
+  },
+  "name": "Corsair SF",
+  "rating": 4,
+  "rating_count": 62,
+  "price_usd": 139.99,
+  "form_factor": "SFX",
+  "efficiency_rating": "80+ Platinum",
+  "wattage": 600,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacb5"
+  },
+  "name": "Antec High Current Gamer Gold",
+  "rating": 4,
+  "rating_count": 5,
+  "price_usd": 108.54,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 650,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacb7"
+  },
+  "name": "EVGA G3",
+  "rating": 4,
+  "rating_count": 142,
+  "price_usd": 119.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 650,
+  "modular": "Full",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacbe"
+  },
+  "name": "Corsair TXM Gold",
+  "rating": 4,
+  "rating_count": 61,
+  "price_usd": 99.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 550,
+  "modular": "Semi",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacc0"
+  },
+  "name": "EVGA 100-W1-0500-KR",
+  "rating": 4,
+  "rating_count": 178,
+  "price_usd": 34.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+",
+  "wattage": 500,
+  "modular": false,
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaace3"
+  },
+  "name": "ARESGAME AGV",
+  "rating": 4,
+  "rating_count": 7,
+  "price_usd": 35.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Bronze",
+  "wattage": 500,
+  "modular": false,
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacc8"
+  },
+  "name": "SeaSonic S12III",
+  "rating": 4,
+  "rating_count": 19,
+  "price_usd": 49.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Bronze",
+  "wattage": 650,
+  "modular": false,
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaace5"
+  },
+  "name": "EVGA 100-W1-0600-K1",
+  "rating": 4,
+  "rating_count": 38,
+  "price_usd": 57.59,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+",
+  "wattage": 600,
+  "modular": false,
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaaca6"
+  },
+  "name": "EVGA SuperNOVA GA",
+  "rating": 4,
+  "rating_count": 12,
+  "price_usd": 79.64,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 550,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaaca7"
+  },
+  "name": "Corsair RMx (2021)",
+  "rating": 5,
+  "rating_count": 1,
+  "price_usd": 149.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 850,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacc1"
+  },
+  "name": "EVGA 210-GQ-0650-V1",
+  "rating": 4,
+  "rating_count": 96,
+  "price_usd": 74.98,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 650,
+  "modular": "Semi",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaace8"
+  },
+  "name": "EVGA SuperNOVA GM",
+  "rating": 4,
+  "rating_count": 5,
+  "price_usd": 59.99,
+  "form_factor": "SFX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 450,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaace1"
+  },
+  "name": "SeaSonic PRIME Ultra Titanium",
+  "rating": 5,
+  "rating_count": 5,
+  "price_usd": 308.98,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Titanium",
+  "wattage": 1000,
+  "modular": "Full",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaaccf"
+  },
+  "name": "Corsair CV",
+  "rating": 4,
+  "rating_count": 10,
+  "price_usd": 69.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Bronze",
+  "wattage": 650,
+  "modular": false,
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacd3"
+  },
+  "name": "Corsair RMx (2018)",
+  "rating": 4,
+  "rating_count": 85,
+  "price_usd": 124.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 650,
+  "modular": "Full",
+  "color": "Black / Silver"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacd8"
+  },
+  "name": "SeaSonic FOCUS Plus Platinum",
+  "rating": 5,
+  "rating_count": 10,
+  "price_usd": 163.98,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Platinum",
+  "wattage": 850,
+  "modular": "Full",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacc3"
+  },
+  "name": "Corsair CXM (2015)",
+  "rating": 4,
+  "rating_count": 143,
+  "price_usd": 59.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Bronze",
+  "wattage": 450,
+  "modular": "Semi",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaaca3"
+  },
+  "name": "Corsair RMx White (2018)",
+  "rating": 4,
+  "rating_count": 49,
+  "price_usd": 144.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 750,
+  "modular": "Full",
+  "color": "White / Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacf0"
+  },
+  "name": "Corsair CXF",
+  "rating": 4,
+  "rating_count": 12,
+  "price_usd": 89.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Bronze",
+  "wattage": 650,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacce"
+  },
+  "name": "Corsair CXM",
+  "rating": 4,
+  "rating_count": 300,
+  "price_usd": 91.6,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Bronze",
+  "wattage": 750,
+  "modular": "Semi",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacd1"
+  },
+  "name": "EVGA GD (2019)",
+  "rating": 4,
+  "rating_count": 8,
+  "price_usd": 46,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 500,
+  "modular": false,
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacee"
+  },
+  "name": "be quiet! Straight Power 11",
+  "rating": 5,
+  "rating_count": 9,
+  "price_usd": 139.9,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 750,
+  "modular": "Full",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaace0"
+  },
+  "name": "Corsair RMx (2021)",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 139.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 750,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacb3"
+  },
+  "name": "Thermaltake Toughpower DPS G RGB Titanium",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 1299,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Titanium",
+  "wattage": 1500,
+  "modular": "Full",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacb4"
+  },
+  "name": "EVGA SuperNOVA GA",
+  "rating": 4,
+  "rating_count": 15,
+  "price_usd": 159.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 850,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaaccc"
+  },
+  "name": "EVGA SuperNOVA GT",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 49.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 650,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacea"
+  },
+  "name": "MSI MPG A-GF",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 89.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 750,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaaca1"
+  },
+  "name": "Corsair CXM",
+  "rating": 4,
+  "rating_count": 170,
+  "price_usd": 72.65,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Bronze",
+  "wattage": 550,
+  "modular": "Semi",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacd7"
+  },
+  "name": "EVGA G3",
+  "rating": 4,
+  "rating_count": 94,
+  "price_usd": 79.72,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 550,
+  "modular": "Full",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacd2"
+  },
+  "name": "EVGA BA",
+  "rating": 4,
+  "rating_count": 6,
+  "price_usd": 44.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Bronze",
+  "wattage": 600,
+  "modular": false,
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaaca0"
+  },
+  "name": "Gigabyte P GM",
+  "rating": 4,
+  "rating_count": 16,
+  "price_usd": 87.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 750,
+  "modular": "Full",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaaceb"
+  },
+  "name": "Asus ROG Strix",
+  "rating": 4,
+  "rating_count": 4,
+  "price_usd": 150.29,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Gold",
+  "wattage": 750,
+  "modular": "Full",
+  "color": "Black / Red"
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacdb"
+  },
+  "name": "Corsair HX Platinum",
+  "rating": 4,
+  "rating_count": 10,
+  "price_usd": 184.99,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Platinum",
+  "wattage": 850,
+  "modular": "Full",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d685f339364bb8bbaacc6"
+  },
+  "name": "Corsair HX Platinum",
+  "rating": 4,
+  "rating_count": 8,
+  "price_usd": 444.5,
+  "form_factor": "ATX",
+  "efficiency_rating": "80+ Platinum",
+  "wattage": 1200,
+  "modular": "Full",
+  "color": null
+}]

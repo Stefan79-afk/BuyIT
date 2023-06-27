@@ -1,0 +1,1200 @@
+[{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4b9"
+  },
+  "name": "TP-Link Archer TX50E",
+  "rating": 4,
+  "rating_count": 28,
+  "price_usd": 44.99,
+  "protocol": "Wi-Fi 6",
+  "interface": "PCIe x1",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4ba"
+  },
+  "name": "TP-Link Archer T4E",
+  "rating": 4,
+  "rating_count": 24,
+  "price_usd": 26.99,
+  "protocol": "Wi-Fi 5",
+  "interface": "PCIe x1",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4bb"
+  },
+  "name": "TP-Link Archer TX3000E",
+  "rating": 4,
+  "rating_count": 18,
+  "price_usd": 52.23,
+  "protocol": "Wi-Fi 6",
+  "interface": "PCIe x1",
+  "color": "Red / Black"
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4bc"
+  },
+  "name": "TP-Link TL-WN881ND",
+  "rating": 4,
+  "rating_count": 192,
+  "price_usd": 17.98,
+  "protocol": "Wi-Fi 4",
+  "interface": "PCIe x1",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4bd"
+  },
+  "name": "Asus PCE-AX58BT",
+  "rating": 4,
+  "rating_count": 7,
+  "price_usd": 66.56,
+  "protocol": "Wi-Fi 6",
+  "interface": "PCIe x1",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4be"
+  },
+  "name": "Gigabyte GC-WBAX200",
+  "rating": 5,
+  "rating_count": 3,
+  "price_usd": 39.99,
+  "protocol": "Wi-Fi 6",
+  "interface": "PCIe x1",
+  "color": "Black / Silver"
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4bf"
+  },
+  "name": "Intel 62205ANHMWDTX1",
+  "rating": 4,
+  "rating_count": 4,
+  "price_usd": 249.95,
+  "protocol": "Wi-Fi 4",
+  "interface": "PCIe x1",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4c0"
+  },
+  "name": "TP-Link Archer T3U",
+  "rating": 4,
+  "rating_count": 10,
+  "price_usd": 17.98,
+  "protocol": "Wi-Fi 5",
+  "interface": "USB 3.0",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4c1"
+  },
+  "name": "Ziyituod ZYT-AX200",
+  "rating": 4,
+  "rating_count": 18,
+  "price_usd": 28.9,
+  "protocol": "Wi-Fi 6",
+  "interface": "PCIe x1",
+  "color": "Green"
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4c2"
+  },
+  "name": "EDUP EP-9636GS-BL",
+  "rating": 4,
+  "rating_count": 1,
+  "price_usd": 29.99,
+  "protocol": "Wi-Fi 6",
+  "interface": "PCIe x1",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4c3"
+  },
+  "name": "TP-Link TL-WN725N",
+  "rating": 3,
+  "rating_count": 52,
+  "price_usd": 9.99,
+  "protocol": "Wi-Fi 4",
+  "interface": "USB 2.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4c4"
+  },
+  "name": "Asus PCE-AC68",
+  "rating": 4,
+  "rating_count": 68,
+  "price_usd": 79.8,
+  "protocol": "Wi-Fi 5",
+  "interface": "PCIe x1",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4c5"
+  },
+  "name": "TP-Link ARCHER T2U PLUS",
+  "rating": 4,
+  "rating_count": 12,
+  "price_usd": 16.98,
+  "protocol": "Wi-Fi 5",
+  "interface": "USB 2.0",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4c6"
+  },
+  "name": "TP-Link Archer T6E AC1300",
+  "rating": 4,
+  "rating_count": 52,
+  "price_usd": 29.99,
+  "protocol": "Wi-Fi 5",
+  "interface": "PCIe x1",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4c7"
+  },
+  "name": "MSI AX905C",
+  "rating": 4,
+  "rating_count": 1,
+  "price_usd": 38.99,
+  "protocol": "Wi-Fi 6",
+  "interface": "PCIe x1",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4c8"
+  },
+  "name": "Asus PCE-AC56",
+  "rating": 4,
+  "rating_count": 46,
+  "price_usd": 54.99,
+  "protocol": "Wi-Fi 5",
+  "interface": "PCIe x1",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4c9"
+  },
+  "name": "Asus PCE-AC88",
+  "rating": 4,
+  "rating_count": 14,
+  "price_usd": 96.44,
+  "protocol": "Wi-Fi 5",
+  "interface": "PCIe x1",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4ca"
+  },
+  "name": "TP-Link Archer T5E",
+  "rating": 4,
+  "rating_count": 7,
+  "price_usd": 29.99,
+  "protocol": "Wi-Fi 5",
+  "interface": "PCIe x1",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4cb"
+  },
+  "name": "Asus PCE-AC58BT",
+  "rating": 5,
+  "rating_count": 6,
+  "price_usd": 39.99,
+  "protocol": "Wi-Fi 5",
+  "interface": "PCIe x1",
+  "color": "Blue"
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4cc"
+  },
+  "name": "TP-Link TL-WDN4800",
+  "rating": 4,
+  "rating_count": 259,
+  "price_usd": 234.98,
+  "protocol": "Wi-Fi 4",
+  "interface": "PCIe x1",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4cd"
+  },
+  "name": "Asus PCE-AC55BT B1",
+  "rating": 4,
+  "rating_count": 83,
+  "price_usd": 139.19,
+  "protocol": "Wi-Fi 5",
+  "interface": "PCIe x1",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4ce"
+  },
+  "name": "Netgear Nighthawk AC1900 A7000-10000S",
+  "rating": 4,
+  "rating_count": 2,
+  "price_usd": 69.77,
+  "protocol": "Wi-Fi 5",
+  "interface": "USB 3.0",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4cf"
+  },
+  "name": "Rosewill RNX-AC600NUBv2",
+  "rating": 5,
+  "rating_count": 2,
+  "price_usd": 13.99,
+  "protocol": "Wi-Fi 5",
+  "interface": "USB 2.0",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4d0"
+  },
+  "name": "MSI AC905C",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 23.3,
+  "protocol": "Wi-Fi 5",
+  "interface": "PCIe x1",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4d1"
+  },
+  "name": "Asus PCE-AC51",
+  "rating": 4,
+  "rating_count": 25,
+  "price_usd": 29.99,
+  "protocol": "Wi-Fi 5",
+  "interface": "PCIe x1",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4d2"
+  },
+  "name": "Gigabyte GC-WB867D-I",
+  "rating": 4,
+  "rating_count": 183,
+  "price_usd": 25,
+  "protocol": "Wi-Fi 5",
+  "interface": "PCIe x1",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4d3"
+  },
+  "name": "Gigabyte GC-WB1733D-I",
+  "rating": 5,
+  "rating_count": 1,
+  "price_usd": 34.99,
+  "protocol": "Wi-Fi 5",
+  "interface": "PCIe x1",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4d4"
+  },
+  "name": "Rosewill RNX-AC600HGUBEv2",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 9.48,
+  "protocol": "Wi-Fi 5",
+  "interface": "USB 2.0",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4d5"
+  },
+  "name": "Netgear A6210-100PAS",
+  "rating": 4,
+  "rating_count": 18,
+  "price_usd": 44.99,
+  "protocol": "Wi-Fi 5",
+  "interface": "USB 3.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4d6"
+  },
+  "name": "Asus PCE-N15",
+  "rating": 4,
+  "rating_count": 84,
+  "price_usd": 40.07,
+  "protocol": "Wi-Fi 4",
+  "interface": "PCIe x1",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4d7"
+  },
+  "name": "Gigabyte GC-WB867D-I REV 4.2",
+  "rating": 4,
+  "rating_count": 17,
+  "price_usd": 25,
+  "protocol": "Wi-Fi 5",
+  "interface": "PCIe x1",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4d8"
+  },
+  "name": "Belkin E9L3000",
+  "rating": 4,
+  "rating_count": 2,
+  "price_usd": 237.11,
+  "protocol": "Wi-Fi 4",
+  "interface": "USB 2.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4d9"
+  },
+  "name": "Rosewill RNX-N250PCe",
+  "rating": 4,
+  "rating_count": 76,
+  "price_usd": 18.63,
+  "protocol": "Wi-Fi 4",
+  "interface": "PCIe x1",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4da"
+  },
+  "name": "TP-Link TL-WN781ND",
+  "rating": 4,
+  "rating_count": 42,
+  "price_usd": 15.27,
+  "protocol": "Wi-Fi 4",
+  "interface": "PCIe x1",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4db"
+  },
+  "name": "TP-Link Archer T9E",
+  "rating": 4,
+  "rating_count": 27,
+  "price_usd": 139.99,
+  "protocol": "Wi-Fi 5",
+  "interface": "PCIe x1",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4dc"
+  },
+  "name": "fenvi FV-T919",
+  "rating": 4,
+  "rating_count": 1,
+  "price_usd": 59.99,
+  "protocol": "Wi-Fi 5",
+  "interface": "PCIe x1",
+  "color": "Black / Gold"
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4dd"
+  },
+  "name": "TP-Link Archer T2U",
+  "rating": 4,
+  "rating_count": 7,
+  "price_usd": 28.07,
+  "protocol": "Wi-Fi 5",
+  "interface": "USB 2.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4de"
+  },
+  "name": "Rosewill RNX-N300UB",
+  "rating": 3,
+  "rating_count": 1,
+  "price_usd": 12.99,
+  "protocol": "Wi-Fi 4",
+  "interface": "USB 2.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4df"
+  },
+  "name": "Hawking Technology HW12ACU",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 29.99,
+  "protocol": "Wi-Fi 5",
+  "interface": "USB 2.0",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4e0"
+  },
+  "name": "Asus USB-AC68",
+  "rating": 5,
+  "rating_count": 1,
+  "price_usd": 81.99,
+  "protocol": "Wi-Fi 5",
+  "interface": "USB 3.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4e1"
+  },
+  "name": "D-Link DWA-171",
+  "rating": 4,
+  "rating_count": 3,
+  "price_usd": 19.98,
+  "protocol": "Wi-Fi 5",
+  "interface": "USB 2.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4e2"
+  },
+  "name": "D-Link DWA-582",
+  "rating": 4,
+  "rating_count": 7,
+  "price_usd": 60.99,
+  "protocol": "Wi-Fi 5",
+  "interface": "PCIe x1",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4e3"
+  },
+  "name": "Asus USB-AC56",
+  "rating": 4,
+  "rating_count": 7,
+  "price_usd": 54.57,
+  "protocol": "Wi-Fi 5",
+  "interface": "USB 3.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4e4"
+  },
+  "name": "BrosTrend AC5",
+  "rating": 4,
+  "rating_count": 11,
+  "price_usd": 24.99,
+  "protocol": "Wi-Fi 5",
+  "interface": "USB 2.0",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4e5"
+  },
+  "name": "TP-Link TL-WDN3200",
+  "rating": 4,
+  "rating_count": 6,
+  "price_usd": 144.99,
+  "protocol": "Wi-Fi 4",
+  "interface": "USB 2.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4e6"
+  },
+  "name": "Ziyituod ZYT-7265",
+  "rating": 5,
+  "rating_count": 1,
+  "price_usd": 49.99,
+  "protocol": "Wi-Fi 5",
+  "interface": "PCIe x1",
+  "color": "Green"
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4e7"
+  },
+  "name": "Rosewill RNX-AC600PCEv3",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 23.99,
+  "protocol": "Wi-Fi 5",
+  "interface": "PCIe x1",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4e8"
+  },
+  "name": "Asus USB-AC53 NANO",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 34.88,
+  "protocol": "Wi-Fi 5",
+  "interface": "USB 2.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4e9"
+  },
+  "name": "Intel 7260HMWDTX1",
+  "rating": 4,
+  "rating_count": 23,
+  "price_usd": 70.29,
+  "protocol": "Wi-Fi 5",
+  "interface": "PCIe x1",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4ea"
+  },
+  "name": "D-Link DWA-121",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 17.99,
+  "protocol": "Wi-Fi 4",
+  "interface": "USB 2.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4eb"
+  },
+  "name": "Rosewill RNX-AC1900PCE",
+  "rating": 4,
+  "rating_count": 8,
+  "price_usd": 50.67,
+  "protocol": "Wi-Fi 5",
+  "interface": "PCIe x1",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4ec"
+  },
+  "name": "TP-Link TL-WN722N",
+  "rating": 4,
+  "rating_count": 20,
+  "price_usd": 14.98,
+  "protocol": "Wi-Fi 4",
+  "interface": "USB 2.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4ed"
+  },
+  "name": "Linksys WUSB6300",
+  "rating": 4,
+  "rating_count": 14,
+  "price_usd": 39.94,
+  "protocol": "Wi-Fi 5",
+  "interface": "USB 3.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4ee"
+  },
+  "name": "TP-Link Archer T2U Nano",
+  "rating": 3,
+  "rating_count": 3,
+  "price_usd": 14.99,
+  "protocol": "Wi-Fi 4",
+  "interface": "USB 2.0",
+  "color": "Black / Gold"
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4ef"
+  },
+  "name": "TP-Link Archer T4U",
+  "rating": 3,
+  "rating_count": 18,
+  "price_usd": 37.99,
+  "protocol": "Wi-Fi 5",
+  "interface": "USB 3.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4f0"
+  },
+  "name": "Asus PCE-AC55BT",
+  "rating": 4,
+  "rating_count": 16,
+  "price_usd": 34.4,
+  "protocol": "Wi-Fi 5",
+  "interface": "PCIe x1",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4f1"
+  },
+  "name": "TP-Link TL-WN823N",
+  "rating": 3,
+  "rating_count": 13,
+  "price_usd": 13.42,
+  "protocol": "Wi-Fi 4",
+  "interface": "USB 2.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4f2"
+  },
+  "name": "TRENDnet TEW-643PI",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 19.99,
+  "protocol": "Wi-Fi 4",
+  "interface": "PCI",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4f3"
+  },
+  "name": "Netgear WNA1100-100ENS",
+  "rating": 4,
+  "rating_count": 6,
+  "price_usd": 59.99,
+  "protocol": "Wi-Fi 4",
+  "interface": "USB 2.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4f4"
+  },
+  "name": "fenvi FV-8802",
+  "rating": 5,
+  "rating_count": 2,
+  "price_usd": 27.99,
+  "protocol": "Wi-Fi 5",
+  "interface": "PCIe x1",
+  "color": "Black / Orange"
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4f5"
+  },
+  "name": "TP-Link TL-WN822N",
+  "rating": 4,
+  "rating_count": 20,
+  "price_usd": 16.64,
+  "protocol": "Wi-Fi 4",
+  "interface": "USB 2.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4f6"
+  },
+  "name": "TP-Link Archer T9UH",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 56.39,
+  "protocol": "Wi-Fi 5",
+  "interface": "USB 3.0",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4f7"
+  },
+  "name": "TRENDnet TEW-648UBM",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 8.33,
+  "protocol": "Wi-Fi 4",
+  "interface": "USB 2.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4f8"
+  },
+  "name": "Netgear WNA3100M-100ENS",
+  "rating": 4,
+  "rating_count": 2,
+  "price_usd": 111.59,
+  "protocol": "Wi-Fi 4",
+  "interface": "USB 2.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4f9"
+  },
+  "name": "Inamax 4332804407",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 19.98,
+  "protocol": "Wi-Fi 5",
+  "interface": "USB 3.0",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4fa"
+  },
+  "name": "Rosewill RNX-N150NUB",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 10.99,
+  "protocol": "Wi-Fi 4",
+  "interface": "USB 2.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4fb"
+  },
+  "name": "Netgear A6100-10000S",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 29.99,
+  "protocol": "Wi-Fi 5",
+  "interface": "USB 2.0",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4fc"
+  },
+  "name": "Edimax EW-7811UTC",
+  "rating": 3,
+  "rating_count": 5,
+  "price_usd": 15.1,
+  "protocol": "Wi-Fi 5",
+  "interface": "USB 2.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4fd"
+  },
+  "name": "Rosewill RNX-N150UBE",
+  "rating": 4,
+  "rating_count": 7,
+  "price_usd": 14.99,
+  "protocol": "Wi-Fi 4",
+  "interface": "USB 2.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4fe"
+  },
+  "name": "Intel 7260HMWDTX1",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 70.29,
+  "protocol": "Wi-Fi 5",
+  "interface": "PCIe x1",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad4ff"
+  },
+  "name": "Linksys WMP600N",
+  "rating": 3,
+  "rating_count": 7,
+  "price_usd": 38.49,
+  "protocol": "Wi-Fi 4",
+  "interface": "PCI",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad500"
+  },
+  "name": "TP-Link TL-WN821N",
+  "rating": 4,
+  "rating_count": 6,
+  "price_usd": 13.31,
+  "protocol": "Wi-Fi 4",
+  "interface": "USB 2.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad501"
+  },
+  "name": "Netgear A6100-100PAS",
+  "rating": 4,
+  "rating_count": 3,
+  "price_usd": 35.98,
+  "protocol": "Wi-Fi 5",
+  "interface": "USB 2.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad502"
+  },
+  "name": "D-Link DWA-130",
+  "rating": 3,
+  "rating_count": 5,
+  "price_usd": 31.99,
+  "protocol": "Wi-Fi 4",
+  "interface": "USB 2.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad503"
+  },
+  "name": "BrosTrend AC3",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 28.99,
+  "protocol": "Wi-Fi 5",
+  "interface": "USB 3.0",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad504"
+  },
+  "name": "BrosTrend AC1",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 19.98,
+  "protocol": "Wi-Fi 5",
+  "interface": "USB 3.0",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad505"
+  },
+  "name": "Asus USB-AC53",
+  "rating": 4,
+  "rating_count": 3,
+  "price_usd": 36.89,
+  "protocol": "Wi-Fi 5",
+  "interface": "USB 2.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad506"
+  },
+  "name": "Edimax EW-7811UAC",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 18.98,
+  "protocol": "Wi-Fi 5",
+  "interface": "USB 2.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad507"
+  },
+  "name": "Intel 7260",
+  "rating": 5,
+  "rating_count": 1,
+  "price_usd": 29,
+  "protocol": "Wi-Fi 5",
+  "interface": "Mini-PCIe",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad508"
+  },
+  "name": "Edimax EW-7822UTC",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 26.02,
+  "protocol": "Wi-Fi 5",
+  "interface": "USB 3.0",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad509"
+  },
+  "name": "Edimax EW-7612PIN V2",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 21.49,
+  "protocol": "Wi-Fi 4",
+  "interface": "PCIe x1",
+  "color": "Green"
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad50a"
+  },
+  "name": "Asus USB-AC51",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 27.97,
+  "protocol": "Wi-Fi 5",
+  "interface": "USB 2.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad50b"
+  },
+  "name": "Asus USB-N13",
+  "rating": 4,
+  "rating_count": 20,
+  "price_usd": 14.99,
+  "protocol": "Wi-Fi 4",
+  "interface": "USB 2.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad50c"
+  },
+  "name": "TP-Link TL-WDN4200",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 59,
+  "protocol": "Wi-Fi 4",
+  "interface": "USB 2.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad50d"
+  },
+  "name": "TP-Link TL-WDN3800",
+  "rating": 4,
+  "rating_count": 27,
+  "price_usd": 30,
+  "protocol": "Wi-Fi 4",
+  "interface": "PCIe x1",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad50e"
+  },
+  "name": "Encore ENEWI-1XN45",
+  "rating": 2,
+  "rating_count": 2,
+  "price_usd": 21,
+  "protocol": "Wi-Fi 4",
+  "interface": "PCIe x1",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad50f"
+  },
+  "name": "Netgear WNDA4100-100NAS",
+  "rating": 4,
+  "rating_count": 7,
+  "price_usd": 129.99,
+  "protocol": "Wi-Fi 4",
+  "interface": "USB 2.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad510"
+  },
+  "name": "Rosewill RNX-AC1200PCE",
+  "rating": 1,
+  "rating_count": 2,
+  "price_usd": 37.95,
+  "protocol": "Wi-Fi 5",
+  "interface": "PCIe x1",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad511"
+  },
+  "name": "Rosewill N900PCE",
+  "rating": 4,
+  "rating_count": 27,
+  "price_usd": 8.99,
+  "protocol": "Wi-Fi 4",
+  "interface": "PCIe x1",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad512"
+  },
+  "name": "fenvi FV8303",
+  "rating": 5,
+  "rating_count": 1,
+  "price_usd": 22.06,
+  "protocol": "Wi-Fi 4",
+  "interface": "PCIe x1",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad513"
+  },
+  "name": "Rosewill RNX-AC1200PCEv2",
+  "rating": 5,
+  "rating_count": 1,
+  "price_usd": 68.55,
+  "protocol": "Wi-Fi 5",
+  "interface": "PCIe x1",
+  "color": "Green"
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad514"
+  },
+  "name": "Rosewill RNX-AC2030PCE",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 29.99,
+  "protocol": "Wi-Fi 5",
+  "interface": "PCIe x1",
+  "color": "Red / Black"
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad515"
+  },
+  "name": "Rosewill RNX-N180UBE",
+  "rating": 4,
+  "rating_count": 15,
+  "price_usd": 12.99,
+  "protocol": "Wi-Fi 4",
+  "interface": "USB 2.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad516"
+  },
+  "name": "TP-Link Archer T4U V2",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 35.99,
+  "protocol": "Wi-Fi 5",
+  "interface": "USB 3.0",
+  "color": "Black"
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad517"
+  },
+  "name": "D-Link DWA-140",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 34.99,
+  "protocol": "Wi-Fi 4",
+  "interface": "USB 2.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad518"
+  },
+  "name": "TP-Link Archer T8E",
+  "rating": 4,
+  "rating_count": 13,
+  "price_usd": 34.99,
+  "protocol": "Wi-Fi 5",
+  "interface": "PCIe x1",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad519"
+  },
+  "name": "StarTech PEX867WAC22",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 66.44,
+  "protocol": "Wi-Fi 5",
+  "interface": "PCIe x1",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad51a"
+  },
+  "name": "D-Link DWA-182",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 48,
+  "protocol": "Wi-Fi 5",
+  "interface": "USB 2.0",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad51b"
+  },
+  "name": "HP FH971AA",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 24.99,
+  "protocol": "Wi-Fi 4",
+  "interface": "PCIe x1",
+  "color": null
+},
+{
+  "_id": {
+    "$oid": "643d699e339364bb8bbad51c"
+  },
+  "name": "D-Link DWA-131",
+  "rating": 4,
+  "rating_count": 1,
+  "price_usd": 14.65,
+  "protocol": "Wi-Fi 4",
+  "interface": "USB 2.0",
+  "color": null
+}]

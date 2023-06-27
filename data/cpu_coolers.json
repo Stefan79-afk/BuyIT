@@ -1,0 +1,1300 @@
+[{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65cf"
+  },
+  "name": "Cooler Master Hyper 212 EVO",
+  "rating": 4,
+  "rating_count": 1421,
+  "price_usd": 24.99,
+  "fan_rpm": 2000,
+  "noise_level": 36,
+  "color": null,
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65d0"
+  },
+  "name": "Cooler Master Hyper 212 RGB Black Edition",
+  "rating": 4,
+  "rating_count": 175,
+  "price_usd": 44.99,
+  "fan_rpm": 2000,
+  "noise_level": 30,
+  "color": "Black",
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65d1"
+  },
+  "name": "Cooler Master MASTERLIQUID ML240L RGB V2",
+  "rating": 4,
+  "rating_count": 40,
+  "price_usd": 61.5,
+  "fan_rpm": 1800,
+  "noise_level": 27,
+  "color": "Black",
+  "radiator_size": "240 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65d2"
+  },
+  "name": "NZXT Kraken X53",
+  "rating": 4,
+  "rating_count": 59,
+  "price_usd": 119.99,
+  "fan_rpm": 2000,
+  "noise_level": 36,
+  "color": "Black",
+  "radiator_size": "240 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65d3"
+  },
+  "name": "Corsair iCUE H150i ELITE CAPELLIX",
+  "rating": 4,
+  "rating_count": 34,
+  "price_usd": 174.99,
+  "fan_rpm": 2400,
+  "noise_level": 37,
+  "color": "Black",
+  "radiator_size": "360 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65d4"
+  },
+  "name": "NZXT Kraken Z73",
+  "rating": 4,
+  "rating_count": 47,
+  "price_usd": 252,
+  "fan_rpm": 1800,
+  "noise_level": 36,
+  "color": "Black",
+  "radiator_size": "360 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65d5"
+  },
+  "name": "Cooler Master Hyper 212 Black Edition",
+  "rating": 4,
+  "rating_count": 149,
+  "price_usd": 30.99,
+  "fan_rpm": 2000,
+  "noise_level": 26,
+  "color": "Black",
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65d6"
+  },
+  "name": "Corsair iCUE H100i ELITE CAPELLIX",
+  "rating": 4,
+  "rating_count": 25,
+  "price_usd": 137.99,
+  "fan_rpm": 2400,
+  "noise_level": 37,
+  "color": "Black",
+  "radiator_size": "240 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65d7"
+  },
+  "name": "Noctua NH-D15 CHROMAX.BLACK",
+  "rating": 4,
+  "rating_count": 118,
+  "price_usd": 109.95,
+  "fan_rpm": 1500,
+  "noise_level": 24.6,
+  "color": "Black",
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65d8"
+  },
+  "name": "Corsair H100i RGB PLATINUM SE",
+  "rating": 4,
+  "rating_count": 124,
+  "price_usd": 149.99,
+  "fan_rpm": 2200,
+  "noise_level": 36,
+  "color": "White",
+  "radiator_size": "240 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65d9"
+  },
+  "name": "NZXT Kraken X63",
+  "rating": 4,
+  "rating_count": 78,
+  "price_usd": 134.22,
+  "fan_rpm": 2000,
+  "noise_level": 38,
+  "color": "Black",
+  "radiator_size": "280 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65da"
+  },
+  "name": "be quiet! Dark Rock Pro 4",
+  "rating": 4,
+  "rating_count": 126,
+  "price_usd": 86.27,
+  "fan_rpm": 1500,
+  "noise_level": 24.3,
+  "color": "Black",
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65db"
+  },
+  "name": "Noctua NH-D15",
+  "rating": 4,
+  "rating_count": 135,
+  "price_usd": 99.95,
+  "fan_rpm": 1500,
+  "noise_level": 24.6,
+  "color": null,
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65dc"
+  },
+  "name": "NZXT Kraken Z63",
+  "rating": 4,
+  "rating_count": 35,
+  "price_usd": 244.99,
+  "fan_rpm": 1800,
+  "noise_level": 38,
+  "color": "Black",
+  "radiator_size": "280 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65dd"
+  },
+  "name": "Corsair iCUE H150i ELITE CAPELLIX",
+  "rating": 4,
+  "rating_count": 7,
+  "price_usd": 199.99,
+  "fan_rpm": 2400,
+  "noise_level": 37,
+  "color": "White",
+  "radiator_size": "360 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65de"
+  },
+  "name": "Corsair iCUE H100i RGB PRO XT",
+  "rating": 4,
+  "rating_count": 44,
+  "price_usd": 109.99,
+  "fan_rpm": 2400,
+  "noise_level": 37,
+  "color": "Black",
+  "radiator_size": "240 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65df"
+  },
+  "name": "Noctua NH-U12S chromax.black",
+  "rating": 4,
+  "rating_count": 89,
+  "price_usd": 79.95,
+  "fan_rpm": 1500,
+  "noise_level": 22.4,
+  "color": "Black",
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65e0"
+  },
+  "name": "Thermaltake UX100",
+  "rating": 4,
+  "rating_count": 10,
+  "price_usd": 19.98,
+  "fan_rpm": 1800,
+  "noise_level": 26.92,
+  "color": "Black",
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65e1"
+  },
+  "name": "NZXT Kraken X73",
+  "rating": 4,
+  "rating_count": 31,
+  "price_usd": 159.94,
+  "fan_rpm": 2000,
+  "noise_level": 36,
+  "color": "Black",
+  "radiator_size": "360 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65e2"
+  },
+  "name": "NZXT Kraken M22",
+  "rating": 4,
+  "rating_count": 39,
+  "price_usd": 79.98,
+  "fan_rpm": 2000,
+  "noise_level": 36,
+  "color": "Black",
+  "radiator_size": "120 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65e3"
+  },
+  "name": "MSI MAG CORE LIQUID 240R",
+  "rating": 4,
+  "rating_count": 31,
+  "price_usd": 90.46,
+  "fan_rpm": 2000,
+  "noise_level": 34.3,
+  "color": "Black",
+  "radiator_size": "240 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65e4"
+  },
+  "name": "be quiet! Dark Rock 4",
+  "rating": 4,
+  "rating_count": 74,
+  "price_usd": 69.9,
+  "fan_rpm": 1400,
+  "noise_level": null,
+  "color": "Black",
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65e5"
+  },
+  "name": "Cooler Master MASTERLIQUID ML120L RGB V2",
+  "rating": 4,
+  "rating_count": 3,
+  "price_usd": 54.99,
+  "fan_rpm": 1800,
+  "noise_level": 27,
+  "color": "Black",
+  "radiator_size": "120 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65e6"
+  },
+  "name": "Intel E97379-001",
+  "rating": 3,
+  "rating_count": 14,
+  "price_usd": 9.5,
+  "fan_rpm": 2800,
+  "noise_level": 22,
+  "color": "Silver / Black",
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65e7"
+  },
+  "name": "Corsair iCUE H100i ELITE CAPELLIX",
+  "rating": 5,
+  "rating_count": 8,
+  "price_usd": 159.99,
+  "fan_rpm": 2400,
+  "noise_level": 37,
+  "color": "White",
+  "radiator_size": "240 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65e8"
+  },
+  "name": "MSI MAG CORE LIQUID 360R",
+  "rating": 4,
+  "rating_count": 8,
+  "price_usd": 124.99,
+  "fan_rpm": 2000,
+  "noise_level": 34.3,
+  "color": "Black",
+  "radiator_size": "360 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65e9"
+  },
+  "name": "ARCTIC Liquid Freezer II 240",
+  "rating": 4,
+  "rating_count": 36,
+  "price_usd": 87.99,
+  "fan_rpm": 1800,
+  "noise_level": null,
+  "color": "Black",
+  "radiator_size": "240 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65ea"
+  },
+  "name": "Noctua NH-L9i",
+  "rating": 4,
+  "rating_count": 83,
+  "price_usd": 44.95,
+  "fan_rpm": 2500,
+  "noise_level": 23.6,
+  "color": null,
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65eb"
+  },
+  "name": "Lian Li GALAHAD AIO 360 RGB",
+  "rating": 4,
+  "rating_count": 11,
+  "price_usd": 147.5,
+  "fan_rpm": 1900,
+  "noise_level": null,
+  "color": "White / Silver",
+  "radiator_size": "360 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65ec"
+  },
+  "name": "Corsair H100x",
+  "rating": 4,
+  "rating_count": 11,
+  "price_usd": 84.99,
+  "fan_rpm": 1700,
+  "noise_level": 37,
+  "color": "Black",
+  "radiator_size": "240 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65ed"
+  },
+  "name": "Cooler Master MasterLiquid ML240L RGB",
+  "rating": 4,
+  "rating_count": 106,
+  "price_usd": 66.99,
+  "fan_rpm": 2000,
+  "noise_level": 30,
+  "color": null,
+  "radiator_size": "240 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65ee"
+  },
+  "name": "ARCTIC Freezer 34 eSports DUO",
+  "rating": 4,
+  "rating_count": 47,
+  "price_usd": 44.99,
+  "fan_rpm": 2100,
+  "noise_level": 24.4,
+  "color": "White / Black",
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65ef"
+  },
+  "name": "Scythe FUMA 2",
+  "rating": 4,
+  "rating_count": 53,
+  "price_usd": 59.99,
+  "fan_rpm": 1200,
+  "noise_level": 24.9,
+  "color": "Black / Silver",
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65f0"
+  },
+  "name": "NZXT Kraken X53 RGB",
+  "rating": 4,
+  "rating_count": 4,
+  "price_usd": 149.99,
+  "fan_rpm": 1500,
+  "noise_level": 33,
+  "color": "Black",
+  "radiator_size": "240 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65f1"
+  },
+  "name": "Asus ROG STRIX LC 360 RGB White",
+  "rating": 3,
+  "rating_count": 2,
+  "price_usd": 249.99,
+  "fan_rpm": 2500,
+  "noise_level": 37.6,
+  "color": "White",
+  "radiator_size": "360 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65f2"
+  },
+  "name": "Noctua NH-U12S",
+  "rating": 4,
+  "rating_count": 86,
+  "price_usd": 69.94,
+  "fan_rpm": 1500,
+  "noise_level": 22.4,
+  "color": null,
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65f3"
+  },
+  "name": "NZXT Kraken Z53",
+  "rating": 4,
+  "rating_count": 3,
+  "price_usd": 229.99,
+  "fan_rpm": 2000,
+  "noise_level": 36,
+  "color": "Black",
+  "radiator_size": "240 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65f4"
+  },
+  "name": "Asus ROG RYUJIN 360",
+  "rating": 4,
+  "rating_count": 16,
+  "price_usd": 299.99,
+  "fan_rpm": 2000,
+  "noise_level": 29.7,
+  "color": "Black",
+  "radiator_size": "360 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65f5"
+  },
+  "name": "Corsair iCUE H150i RGB PRO XT",
+  "rating": 4,
+  "rating_count": 19,
+  "price_usd": 159.99,
+  "fan_rpm": 2400,
+  "noise_level": 37,
+  "color": "Black / White",
+  "radiator_size": "360 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65f6"
+  },
+  "name": "ARCTIC Liquid Freezer II 360",
+  "rating": 4,
+  "rating_count": 22,
+  "price_usd": 134.99,
+  "fan_rpm": 2000,
+  "noise_level": null,
+  "color": "Black",
+  "radiator_size": "360 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65f7"
+  },
+  "name": "Noctua NH-L9i chromax.black",
+  "rating": 4,
+  "rating_count": 8,
+  "price_usd": 54.95,
+  "fan_rpm": 2500,
+  "noise_level": 23.6,
+  "color": "Black",
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65f8"
+  },
+  "name": "Corsair H100i RGB PLATINUM",
+  "rating": 4,
+  "rating_count": 115,
+  "price_usd": 231.54,
+  "fan_rpm": 2400,
+  "noise_level": 37,
+  "color": "Black / Silver",
+  "radiator_size": "240 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65f9"
+  },
+  "name": "ARCTIC Liquid Freezer II 280",
+  "rating": 4,
+  "rating_count": 20,
+  "price_usd": 111.76,
+  "fan_rpm": 1700,
+  "noise_level": null,
+  "color": "Black",
+  "radiator_size": "280 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65fa"
+  },
+  "name": "Scythe Mugen 5 Rev. B",
+  "rating": 4,
+  "rating_count": 42,
+  "price_usd": 49.99,
+  "fan_rpm": 1200,
+  "noise_level": 24.9,
+  "color": "Silver / Black",
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65fb"
+  },
+  "name": "Vetroo V5",
+  "rating": 4,
+  "rating_count": 4,
+  "price_usd": 29.99,
+  "fan_rpm": 1700,
+  "noise_level": 30.8,
+  "color": "Black",
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65fc"
+  },
+  "name": "Noctua NH-D15S chromax.black",
+  "rating": 4,
+  "rating_count": 16,
+  "price_usd": 99.95,
+  "fan_rpm": 1500,
+  "noise_level": 24.6,
+  "color": "Black",
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65fd"
+  },
+  "name": "be quiet! Pure Rock 2 Black",
+  "rating": 4,
+  "rating_count": 14,
+  "price_usd": 44.9,
+  "fan_rpm": 1500,
+  "noise_level": 26.8,
+  "color": "Black",
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65fe"
+  },
+  "name": "Lian Li GALAHAD AIO 240 RGB",
+  "rating": 4,
+  "rating_count": 3,
+  "price_usd": 116.66,
+  "fan_rpm": 1900,
+  "noise_level": null,
+  "color": "White / Silver",
+  "radiator_size": "240 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba65ff"
+  },
+  "name": "Corsair iCUE H115i ELITE CAPELLIX",
+  "rating": 4,
+  "rating_count": 9,
+  "price_usd": 169.99,
+  "fan_rpm": 2000,
+  "noise_level": 36,
+  "color": "Black",
+  "radiator_size": "280 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba6600"
+  },
+  "name": "ARCTIC Freezer 7 X",
+  "rating": 5,
+  "rating_count": 1,
+  "price_usd": 23.49,
+  "fan_rpm": 2000,
+  "noise_level": 22.5,
+  "color": "Black / White",
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba6601"
+  },
+  "name": "Corsair H100i v2",
+  "rating": 4,
+  "rating_count": 310,
+  "price_usd": 129.99,
+  "fan_rpm": 2435,
+  "noise_level": 37.7,
+  "color": null,
+  "radiator_size": "240 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba6602"
+  },
+  "name": "Corsair H150i PRO",
+  "rating": 4,
+  "rating_count": 90,
+  "price_usd": 289.99,
+  "fan_rpm": 1600,
+  "noise_level": 25,
+  "color": null,
+  "radiator_size": "360 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba6603"
+  },
+  "name": "NZXT Kraken X63 RGB",
+  "rating": 4,
+  "rating_count": 4,
+  "price_usd": 171.1,
+  "fan_rpm": 1500,
+  "noise_level": 33,
+  "color": "Black",
+  "radiator_size": "280 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba6604"
+  },
+  "name": "NZXT Kraken X73 RGB",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 219.99,
+  "fan_rpm": 1500,
+  "noise_level": 33,
+  "color": "Black",
+  "radiator_size": "360 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba6605"
+  },
+  "name": "be quiet! Pure Rock Slim",
+  "rating": 4,
+  "rating_count": 38,
+  "price_usd": 82.36,
+  "fan_rpm": 2000,
+  "noise_level": 25.4,
+  "color": null,
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba6606"
+  },
+  "name": "Corsair H115i RGB PLATINUM",
+  "rating": 4,
+  "rating_count": 52,
+  "price_usd": 119.99,
+  "fan_rpm": 2000,
+  "noise_level": 37,
+  "color": "Black / Silver",
+  "radiator_size": "280 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba6607"
+  },
+  "name": "Cooler Master MasterLiquid ML360R RGB",
+  "rating": 4,
+  "rating_count": 32,
+  "price_usd": 120,
+  "fan_rpm": 2000,
+  "noise_level": 34,
+  "color": "Black",
+  "radiator_size": "360 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba6608"
+  },
+  "name": "Noctua NH-U12S redux",
+  "rating": 5,
+  "rating_count": 2,
+  "price_usd": 49.95,
+  "fan_rpm": 1700,
+  "noise_level": 25.1,
+  "color": "Gray / Silver",
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba6609"
+  },
+  "name": "Deepcool GAMMAXX 400 Blue",
+  "rating": 4,
+  "rating_count": 18,
+  "price_usd": 24.99,
+  "fan_rpm": 1500,
+  "noise_level": 30,
+  "color": "Blue / Silver",
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba660a"
+  },
+  "name": "Noctua NH-U12A",
+  "rating": 4,
+  "rating_count": 35,
+  "price_usd": 109.95,
+  "fan_rpm": 2000,
+  "noise_level": 22.6,
+  "color": "Brown",
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba660b"
+  },
+  "name": "Cooler Master Hyper 212 EVO V2",
+  "rating": 4,
+  "rating_count": 3,
+  "price_usd": 44.99,
+  "fan_rpm": 1800,
+  "noise_level": 27,
+  "color": "Black / Silver",
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba660c"
+  },
+  "name": "Noctua NH-U9S chromax.black",
+  "rating": 5,
+  "rating_count": 8,
+  "price_usd": 69.95,
+  "fan_rpm": 2000,
+  "noise_level": 22.8,
+  "color": "Black",
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba660d"
+  },
+  "name": "Corsair H60 (2018)",
+  "rating": 4,
+  "rating_count": 47,
+  "price_usd": 79.88,
+  "fan_rpm": 1700,
+  "noise_level": 28.3,
+  "color": "Black",
+  "radiator_size": "120 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba660e"
+  },
+  "name": "Deepcool GAMMAXX GTE V2",
+  "rating": 5,
+  "rating_count": 2,
+  "price_usd": 34.99,
+  "fan_rpm": 1650,
+  "noise_level": 27.8,
+  "color": "White",
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba660f"
+  },
+  "name": "Asus ROG STRIX LC 360 RGB",
+  "rating": 3,
+  "rating_count": 1,
+  "price_usd": 217.99,
+  "fan_rpm": 2500,
+  "noise_level": 37.6,
+  "color": "Black",
+  "radiator_size": "360 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba6610"
+  },
+  "name": "Zalman CNPS80F",
+  "rating": 4,
+  "rating_count": 1,
+  "price_usd": 12.08,
+  "fan_rpm": 2500,
+  "noise_level": 23.8,
+  "color": null,
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba6611"
+  },
+  "name": "Gigabyte AORUS LIQUID COOLER 360",
+  "rating": 4,
+  "rating_count": 8,
+  "price_usd": 287.99,
+  "fan_rpm": 2500,
+  "noise_level": 39.5,
+  "color": "Black",
+  "radiator_size": "360 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba6612"
+  },
+  "name": "Lian Li GALAHAD AIO 360 RGB",
+  "rating": 4,
+  "rating_count": 8,
+  "price_usd": 159.99,
+  "fan_rpm": 1900,
+  "noise_level": null,
+  "color": "Black / Silver",
+  "radiator_size": "360 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba6613"
+  },
+  "name": "Cooler Master MasterLiquid ML120L RGB",
+  "rating": 4,
+  "rating_count": 31,
+  "price_usd": 34.99,
+  "fan_rpm": 2000,
+  "noise_level": 30,
+  "color": null,
+  "radiator_size": "120 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba6614"
+  },
+  "name": "NZXT Kraken X52 Rev 2",
+  "rating": 4,
+  "rating_count": 65,
+  "price_usd": 118.29,
+  "fan_rpm": 2000,
+  "noise_level": 36,
+  "color": null,
+  "radiator_size": "240 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba6615"
+  },
+  "name": "Deepcool CASTLE 360EX",
+  "rating": 4,
+  "rating_count": 28,
+  "price_usd": 135.99,
+  "fan_rpm": 1800,
+  "noise_level": 32.1,
+  "color": "Black",
+  "radiator_size": "360 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba6616"
+  },
+  "name": "Cooler Master MasterLiquid ML360 RGB TR4 Edition",
+  "rating": 5,
+  "rating_count": 4,
+  "price_usd": 329.99,
+  "fan_rpm": 2000,
+  "noise_level": 30,
+  "color": "Black",
+  "radiator_size": "360 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba6617"
+  },
+  "name": "ID-COOLING PINKFLOW 240",
+  "rating": 4,
+  "rating_count": 7,
+  "price_usd": 119.99,
+  "fan_rpm": 2000,
+  "noise_level": 33.5,
+  "color": "White / Pink",
+  "radiator_size": "240 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba6618"
+  },
+  "name": "Corsair H60",
+  "rating": 4,
+  "rating_count": 250,
+  "price_usd": 69.99,
+  "fan_rpm": 2000,
+  "noise_level": 30.85,
+  "color": null,
+  "radiator_size": "120 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba6619"
+  },
+  "name": "EK EK-AIO 240 D-RGB",
+  "rating": 4,
+  "rating_count": 16,
+  "price_usd": 119.99,
+  "fan_rpm": 2600,
+  "noise_level": 36.4,
+  "color": "Black",
+  "radiator_size": "240 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba661a"
+  },
+  "name": "be quiet! Pure Rock 2",
+  "rating": 4,
+  "rating_count": 4,
+  "price_usd": 39.9,
+  "fan_rpm": 1500,
+  "noise_level": 26.8,
+  "color": "Silver / Black",
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba661b"
+  },
+  "name": "ID-COOLING SE-224-XT",
+  "rating": 4,
+  "rating_count": 6,
+  "price_usd": 29.99,
+  "fan_rpm": 1800,
+  "noise_level": 32.5,
+  "color": "White",
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba661c"
+  },
+  "name": "be quiet! Pure Rock Slim 2",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 32.99,
+  "fan_rpm": 2000,
+  "noise_level": 25.4,
+  "color": "Black / Silver",
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba661d"
+  },
+  "name": "Asus ROG STRIX LC 240 RGB White",
+  "rating": 4,
+  "rating_count": 3,
+  "price_usd": 185.1,
+  "fan_rpm": 2500,
+  "noise_level": 37.6,
+  "color": "White",
+  "radiator_size": "240 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba661e"
+  },
+  "name": "ARCTIC Freezer 34 eSports DUO",
+  "rating": 4,
+  "rating_count": 13,
+  "price_usd": 44.99,
+  "fan_rpm": 2100,
+  "noise_level": 24.4,
+  "color": "Red / Black",
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba661f"
+  },
+  "name": "Corsair iCUE H115i RGB Pro XT",
+  "rating": 4,
+  "rating_count": 14,
+  "price_usd": 131.99,
+  "fan_rpm": 2200,
+  "noise_level": 36,
+  "color": "Black",
+  "radiator_size": "280 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba6620"
+  },
+  "name": "ID-COOLING SE-224-XT",
+  "rating": 5,
+  "rating_count": 9,
+  "price_usd": 29.99,
+  "fan_rpm": 1800,
+  "noise_level": 32.5,
+  "color": "Black",
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba6621"
+  },
+  "name": "EK EK-AIO Basic 360",
+  "rating": 4,
+  "rating_count": 3,
+  "price_usd": 119.99,
+  "fan_rpm": 2200,
+  "noise_level": 33.5,
+  "color": "Black",
+  "radiator_size": "360 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba6622"
+  },
+  "name": "Lian Li GALAHAD AIO 240 RGB",
+  "rating": 4,
+  "rating_count": 8,
+  "price_usd": 116.42,
+  "fan_rpm": 1900,
+  "noise_level": null,
+  "color": "Black / Silver",
+  "radiator_size": "240 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba6623"
+  },
+  "name": "ARCTIC Alpine 12",
+  "rating": 4,
+  "rating_count": 2,
+  "price_usd": 11.19,
+  "fan_rpm": 2000,
+  "noise_level": null,
+  "color": "Black / White",
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba6624"
+  },
+  "name": "Noctua NH-L9a-AM4",
+  "rating": 4,
+  "rating_count": 43,
+  "price_usd": 44.95,
+  "fan_rpm": 2500,
+  "noise_level": 23.6,
+  "color": "Brown",
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba6625"
+  },
+  "name": "Noctua NH-L9a-AM4 chromax.black",
+  "rating": 4,
+  "rating_count": 21,
+  "price_usd": 54.95,
+  "fan_rpm": 2500,
+  "noise_level": 23.6,
+  "color": "Black",
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba6626"
+  },
+  "name": "ID-COOLING ZOOMFLOW 240X SNOW",
+  "rating": 4,
+  "rating_count": 3,
+  "price_usd": 84.99,
+  "fan_rpm": 1500,
+  "noise_level": 26.4,
+  "color": "White",
+  "radiator_size": "240 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba6627"
+  },
+  "name": "EK EK-AIO Basic 240",
+  "rating": 4,
+  "rating_count": 7,
+  "price_usd": 89.99,
+  "fan_rpm": 2200,
+  "noise_level": 33.5,
+  "color": "Black",
+  "radiator_size": "240 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba6628"
+  },
+  "name": "Noctua NH-U9S",
+  "rating": 4,
+  "rating_count": 60,
+  "price_usd": 59.95,
+  "fan_rpm": 2000,
+  "noise_level": 22.8,
+  "color": null,
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba6629"
+  },
+  "name": "ARCTIC Liquid Freezer II 420",
+  "rating": 4,
+  "rating_count": 5,
+  "price_usd": 142.97,
+  "fan_rpm": 1700,
+  "noise_level": null,
+  "color": "Black",
+  "radiator_size": "420 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba662a"
+  },
+  "name": "Enermax ETS-T50 AXE ARGB",
+  "rating": 4,
+  "rating_count": 6,
+  "price_usd": 51.99,
+  "fan_rpm": 1600,
+  "noise_level": 24,
+  "color": "White",
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba662b"
+  },
+  "name": "EK EK-AIO 360 D-RGB",
+  "rating": 4,
+  "rating_count": 20,
+  "price_usd": 154.99,
+  "fan_rpm": 2600,
+  "noise_level": 36.4,
+  "color": "Black",
+  "radiator_size": "360 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba662c"
+  },
+  "name": "Deepcool Castle 240 RGB V2",
+  "rating": 4,
+  "rating_count": 5,
+  "price_usd": 169.72,
+  "fan_rpm": 1800,
+  "noise_level": 30,
+  "color": "Black",
+  "radiator_size": "240 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba662d"
+  },
+  "name": "Noctua NH-D15S",
+  "rating": 4,
+  "rating_count": 78,
+  "price_usd": 89.95,
+  "fan_rpm": 1500,
+  "noise_level": 24.6,
+  "color": null,
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba662e"
+  },
+  "name": "Noctua NH-U14S TR4-SP3",
+  "rating": 4,
+  "rating_count": 5,
+  "price_usd": 89.95,
+  "fan_rpm": 1500,
+  "noise_level": 24.6,
+  "color": null,
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba662f"
+  },
+  "name": "Cooler Master i71C RGB",
+  "rating": 4,
+  "rating_count": 9,
+  "price_usd": 19.99,
+  "fan_rpm": 1800,
+  "noise_level": null,
+  "color": "Black",
+  "radiator_size": null
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba6630"
+  },
+  "name": "Cooler Master MasterLiquid ML240L V2 RGB",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 211.99,
+  "fan_rpm": 1800,
+  "noise_level": 27,
+  "color": "White / Black",
+  "radiator_size": "240 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba6631"
+  },
+  "name": "EVGA CLC 280",
+  "rating": 4,
+  "rating_count": 33,
+  "price_usd": 90,
+  "fan_rpm": 2200,
+  "noise_level": 39.5,
+  "color": null,
+  "radiator_size": "280 mm"
+},
+{
+  "_id": {
+    "$oid": "643d64c1339364bb8bba6632"
+  },
+  "name": "CRYORIG H7",
+  "rating": 4,
+  "rating_count": 265,
+  "price_usd": 53.99,
+  "fan_rpm": 1600,
+  "noise_level": 25,
+  "color": null,
+  "radiator_size": null
+}]

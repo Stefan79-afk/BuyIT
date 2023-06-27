@@ -1,0 +1,1167 @@
+[{
+  "_id": 31,
+  "question": "Do you need to be able to render or export your work quickly?",
+  "filterProp": "pcCreativeNoLoadingTimes",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Yes, I want to export and / or render as quickly as possible",
+      "value": true,
+      "branch": 32
+    },
+    {
+      "choice": 2,
+      "answer": "If it saves me some money, I would be willing to wait for my work to render / export",
+      "value": false,
+      "branch": 32
+    },
+    {
+      "choice": 3,
+      "answer": "I'm not sure",
+      "value": null,
+      "branch": 32
+    }
+  ]
+},
+{
+  "_id": 5,
+  "question": "What budget would you be comfortable in spending? (enter your desired sum below)",
+  "filterProp": "pcPrice",
+  "value": "",
+  "branch": 6
+},
+{
+  "_id": 9,
+  "question": "Is power efficiency important for you?",
+  "filterProp": "pcPowerEfficiency",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Yes",
+      "value": true,
+      "branch": 10
+    },
+    {
+      "choice": 2,
+      "answer": "It's not important",
+      "value": false,
+      "branch": 10
+    },
+    {
+      "choice": 3,
+      "answer": "I'm not sure",
+      "value": null,
+      "branch": 10
+    }
+  ]
+},
+{
+  "_id": 2,
+  "question": "What size do you want your PC to have?",
+  "filterProp": "pcSize",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Small (Mini ITX Tower) ",
+      "value": "small",
+      "branch": 3
+    },
+    {
+      "choice": 2,
+      "answer": "Medium Sized (MicroATX Mini Tower)",
+      "value": "medium",
+      "branch": 3
+    },
+    {
+      "choice": 3,
+      "answer": "Big (ATX Mid Tower)",
+      "value": "big",
+      "branch": 3
+    },
+    {
+      "choice": 4,
+      "answer": "Large (ATX Full Tower)",
+      "value": "large",
+      "branch": 3
+    },
+    {
+      "choice": 5,
+      "answer": "I'm not sure",
+      "value": null,
+      "branch": 3
+    }
+  ]
+},
+{
+  "_id": 35,
+  "question": "These kinds of tasks would benefit from multiple video cards. Would you be willing to buy a system that has more (will obviously cost more)?",
+  "filterProp": "pcIntensiveMultipleGPUs",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Yes, I'm willing to buy multiple cards",
+      "value": true,
+      "branch": 36
+    },
+    {
+      "choice": 2,
+      "answer": "No, I only want one card",
+      "value": true,
+      "branch": 36
+    }
+  ]
+},
+{
+  "_id": 12,
+  "question": "Do you need to have a lot of programs open at the same time (multitask)?",
+  "filterProp": "pcWorkMultitask",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Yes",
+      "value": true,
+      "branch": 13
+    },
+    {
+      "choice": 2,
+      "answer": "No",
+      "value": false,
+      "branch": 13
+    },
+    {
+      "choice": 3,
+      "answer": "I'm not sure",
+      "value": null,
+      "branch": 13
+    }
+  ]
+},
+{
+  "_id": 13,
+  "question": "Will you frequently need to work with files and / or install many programs locally?",
+  "filterProp": "pcWorkLargeStorage",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Yes",
+      "value": true,
+      "branch": 14
+    },
+    {
+      "choice": 2,
+      "answer": "No",
+      "value": false,
+      "branch": 14
+    },
+    {
+      "choice": 3,
+      "answer": "I'm not sure",
+      "value": null,
+      "branch": 14
+    }
+  ]
+},
+{
+  "_id": 28,
+  "question": "Will you be creating and working with a lot of media files (images, audio, video, 3D)?",
+  "filterProp": "pcCreativeLargeStorage",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Yes",
+      "value": true,
+      "branch": 29
+    },
+    {
+      "choice": 2,
+      "answer": "No",
+      "value": false,
+      "branch": 29
+    },
+    {
+      "choice": 3,
+      "answer": "I'm not sure",
+      "value": null,
+      "branch": 29
+    }
+  ]
+},
+{
+  "_id": 29,
+  "question": "Will you be frequently moving these files around and copying them?",
+  "filterProp": "pcCreativeStorageSpeed",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Yes, I will need to frequently move and copy these files",
+      "value": true,
+      "branch": 30
+    },
+    {
+      "choice": 2,
+      "answer": "No, I don't need to move them very much. When I do, I won't mind it taking longer",
+      "value": false,
+      "branch": 30
+    },
+    {
+      "choice": 3,
+      "answer": "I will sometimes need to do it, but I can accept some loading times",
+      "value": null,
+      "branch": 30
+    }
+  ]
+},
+{
+  "_id": 3,
+  "question": "What color would you like your PC to be?",
+  "filterProp": "pcCaseColor",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "White",
+      "value": "white",
+      "branch": 4
+    },
+    {
+      "choice": 2,
+      "answer": "Black",
+      "value": "black",
+      "branch": 4
+    },
+    {
+      "choice": 3,
+      "answer": "White / Black",
+      "value": "white/black",
+      "branch": 4
+    },
+    {
+      "choice": 4,
+      "answer": "White / Gray",
+      "value": "white/gray",
+      "branch": 4
+    },
+    {
+      "choice": 5,
+      "answer": "Black / Red",
+      "value": "black/red",
+      "branch": 4
+    },
+    {
+      "choice": 6,
+      "answer": "Not important",
+      "value": null,
+      "branch": 4
+    }
+  ]
+},
+{
+  "_id": 4,
+  "question": "What type of panel window do you want your PC to have?",
+  "filterProp": "pcCasePanel",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Tinted Tempered Glass",
+      "value": "Tinted Tempered Glass",
+      "branch": 5
+    },
+    {
+      "choice": 2,
+      "answer": "Tempered Glass",
+      "value": "Tempered Glass",
+      "branch": 5
+    },
+    {
+      "choice": 3,
+      "answer": "Acrylic",
+      "value": "Acrylic",
+      "branch": 5
+    },
+    {
+      "choice": 4,
+      "answer": "I don't want a panel window",
+      "value": "None",
+      "branch": 5
+    },
+    {
+      "choice": 5,
+      "answer": "I don't care",
+      "value": null,
+      "branch": 5
+    }
+  ]
+},
+{
+  "_id": 14,
+  "question": "Will you need to move and copy files a lot?",
+  "filterProp": "pcWorkFastStorage",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Yes",
+      "value": true,
+      "branch": 15
+    },
+    {
+      "choice": 2,
+      "answer": "No",
+      "value": false,
+      "branch": 15
+    },
+    {
+      "choice": 3,
+      "answer": "I'm not sure",
+      "value": null,
+      "branch": 15
+    }
+  ]
+},
+{
+  "_id": 7,
+  "question": "How many speakers do you want to have? (if you're using headphones, the answer is 2)",
+  "filterProp": "pcSoundChannel",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "2",
+      "value": "2.0",
+      "branch": 8
+    },
+    {
+      "choice": 2,
+      "answer": "4",
+      "value": "4.0",
+      "branch": 8
+    },
+    {
+      "choice": 3,
+      "answer": "5 plus woofer",
+      "value": "5.1",
+      "branch": 8
+    },
+    {
+      "choice": 4,
+      "answer": "7 plus woofer",
+      "value": "7.1",
+      "branch": 8
+    }
+  ]
+},
+{
+  "_id": 18,
+  "question": "Do you want to play the latest titles at a good performance?",
+  "filterProp": "pcGamingLatestGames",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Yes, I want to play the latest games at a good performance",
+      "value": true,
+      "branch": 19
+    },
+    {
+      "choice": 2,
+      "answer": "No, I don't want really seek to play the latest games",
+      "value": false,
+      "branch": 19
+    }
+  ]
+},
+{
+  "_id": 37,
+  "question": "Do you need the absolute best performance for your tasks? Or are you willing to accept some slower performance every now and then",
+  "filterProp": "pcIntensiveBestPerformance",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Yes, I need the best possible performance, and I can't afford slow performance at all",
+      "value": true,
+      "branch": 38
+    },
+    {
+      "choice": 2,
+      "answer": "No, I can accept some less than absolute best performance, on ocassion",
+      "value": false,
+      "branch": 38
+    },
+    {
+      "choice": 3,
+      "answer": "I'm not sure. I'm open to the recommendations",
+      "value": null,
+      "branch": 38
+    }
+  ]
+},
+{
+  "_id": 41,
+  "question": "Do you want your computer to be as silent as possible?",
+  "filterProp": "pcFanNoise",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Yes, I want it to always be silent",
+      "value": "silent",
+      "branch": 42
+    },
+    {
+      "choice": 2,
+      "answer": "I don't mind if it's loud sometimes",
+      "value": null,
+      "branch": 42
+    },
+    {
+      "choice": 3,
+      "answer": "As long as it's only loud during intensive use, I'm okay with that",
+      "value": "quiet",
+      "branch": 42
+    }
+  ]
+},
+{
+  "_id": 43,
+  "question": "Do you need a Network card as well?",
+  "filterProp": "pcNeedNetworkCard",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Yes",
+      "value": true,
+      "branch": 44
+    },
+    {
+      "choice": 2,
+      "answer": "No",
+      "value": false,
+      "branch": 44
+    }
+  ]
+},
+{
+  "_id": 1,
+  "question": "First of all, are you knowledgable about PCs in general?",
+  "filterProp": "isKnowledgeable",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "No",
+      "value": false,
+      "branch": 2
+    },
+    {
+      "choice": 2,
+      "answer": "Yes",
+      "value": true,
+      "branch": 2
+    }
+  ]
+},
+{
+  "_id": 34,
+  "question": "Is 24/7 use important for you?",
+  "filterProp": "pcIntensiveConstantUse",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Yes, it's important for me for my machine to be up at all times",
+      "value": true,
+      "branch": 35
+    },
+    {
+      "choice": 2,
+      "answer": "No, It doesn't always need to be on",
+      "value": false,
+      "branch": 35
+    },
+    {
+      "choice": 3,
+      "answer": "I'm not sure",
+      "value": null,
+      "branch": 35
+    }
+  ]
+},
+{
+  "_id": 20,
+  "question": "Do you prefer having the highest settings or are you comfortable playing at lower settings, as long as the performance is good?",
+  "filterProp": "pcGamingGraphicsOrPerformance",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "I prefer having the highest settings on, at a reduced performance",
+      "value": "graphics",
+      "branch": 21
+    },
+    {
+      "choice": 2,
+      "answer": "I prefer playing at lower settings, as long as the performance is high",
+      "value": "performance",
+      "branch": 21
+    },
+    {
+      "choice": 3,
+      "answer": "I want the best of both worlds, even if it costs me more",
+      "value": "both",
+      "branch": 21
+    },
+    {
+      "choice": 4,
+      "answer": "I'm not sure",
+      "value": null,
+      "branch": 21
+    }
+  ]
+},
+{
+  "_id": 22,
+  "question": "Do you want to play with Ray Tracing enabled?",
+  "filterProp": "pcGamingRayTracingGPU",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Yes, I would like to play games with ray tracing",
+      "value": true,
+      "branch": 23
+    },
+    {
+      "choice": 2,
+      "answer": "I'm okay with not playing with ray tracing on",
+      "value": false,
+      "branch": 23
+    },
+    {
+      "choice": 3,
+      "answer": "I'm not sure",
+      "value": null,
+      "branch": 23
+    }
+  ]
+},
+{
+  "_id": 39,
+  "question": "Will you be frequently multitasking while doing your specific work?",
+  "filterProp": "pcIntensiveMultitask",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Yes, I will be frequently multitasking",
+      "value": true,
+      "branch": 40
+    },
+    {
+      "choice": 2,
+      "answer": "No, I won't be multitasking",
+      "value": false,
+      "branch": 40
+    },
+    {
+      "choice": 3,
+      "answer": "I'm not sure",
+      "value": null,
+      "branch": 40
+    }
+  ]
+},
+{
+  "_id": 40,
+  "question": "How important is power efficiency for you?",
+  "filterProp": "pcPowerEfficiency",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Very important",
+      "value": true,
+      "branch": 41
+    },
+    {
+      "choice": 2,
+      "answer": "It's not important",
+      "value": false,
+      "branch": 41
+    },
+    {
+      "choice": 3,
+      "answer": "I'm not sure",
+      "value": null,
+      "branch": 41
+    }
+  ]
+},
+{
+  "_id": 27,
+  "question": "Do you need to multitask? (edit a photo while a video is being rendered; have a photo and video editing program, as well as a web browser open at the same time)",
+  "filterProp": "pcCreativeMultitask",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Yes",
+      "value": true,
+      "branch": 28
+    },
+    {
+      "choice": 2,
+      "answer": "No",
+      "value": false,
+      "branch": 28
+    },
+    {
+      "choice": 3,
+      "answer": "I'm not sure",
+      "value": null,
+      "branch": 28
+    }
+  ]
+},
+{
+  "_id": 15,
+  "question": "Will you need to work a lot on the internet? Or attend meetings frequently?",
+  "filterProp": "pcWorkFastInternet",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Yes",
+      "value": true,
+      "branch": 16
+    },
+    {
+      "choice": 2,
+      "answer": "No",
+      "value": false,
+      "branch": 16
+    },
+    {
+      "choice": 3,
+      "answer": "I'm not sure",
+      "value": null,
+      "branch": 16
+    }
+  ]
+},
+{
+  "_id": 10,
+  "question": "Does the noise of a computer's fans bother you? Would you like yours to be silent?",
+  "filterProp": "pcFanNoise",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Yes, it does bother me. I would like mine to be as silent as possible, even under load (when the fans become louder)",
+      "value": "silent",
+      "branch": 11
+    },
+    {
+      "choice": 2,
+      "answer": "It doesn't bother me very much. As long as I only hear it during intensive tasks, it's ok for me",
+      "value": "quiet",
+      "branch": 11
+    },
+    {
+      "choice": 3,
+      "answer": "It doesn't matter much to me",
+      "value": null,
+      "branch": 11
+    }
+  ]
+},
+{
+  "_id": 6,
+  "question": "What do you want to use this PC for?",
+  "filterProp": "pcUseCase",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Basic Office Work and / or Software Development ",
+      "value": "work",
+      "branch": 12
+    },
+    {
+      "choice": 2,
+      "answer": "Gaming and / or Recording / Streaming",
+      "value": "gaming",
+      "branch": 18
+    },
+    {
+      "choice": 3,
+      "answer": "Content Creation (Video and Photo Editing, Music Production, Game Development, Animation)",
+      "value": "studio",
+      "branch": 26
+    },
+    {
+      "choice": 4,
+      "answer": "High Performance Computing (Crypto Mining, Scientific Simulations, Machine Learning, Complex Data Analysis, Server)",
+      "value": "power",
+      "branch": 33
+    }
+  ]
+},
+{
+  "_id": 19,
+  "question": "Do you want to record and / or stream?",
+  "filterProp": "pcGamingWantStreaming",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Yes, I want to stream regularly",
+      "value": true,
+      "branch": 20
+    },
+    {
+      "choice": 2,
+      "answer": "No, I don't want to stream",
+      "value": false,
+      "branch": 20
+    },
+    {
+      "choice": 3,
+      "answer": "I'm not sure",
+      "value": null,
+      "branch": 20
+    }
+  ]
+},
+{
+  "_id": 8,
+  "question": "Do you need to connect your PC to the internet with a cable?",
+  "filterProp": "pcNeedNetworkCard",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Yes",
+      "value": true,
+      "branch": 9
+    },
+    {
+      "choice": 2,
+      "answer": "No",
+      "value": false,
+      "branch": 9
+    }
+  ]
+},
+{
+  "_id": 17,
+  "question": "Do you need to run virtual machines and / or emulators for your work?",
+  "filterProp": "pcWorkVirtualization",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Yes",
+      "value": true,
+      "branch": 40
+    },
+    {
+      "choice": 2,
+      "answer": "No",
+      "value": false,
+      "branch": 40
+    },
+    {
+      "choice": 3,
+      "answer": "I'm not sure",
+      "value": null,
+      "branch": 40
+    }
+  ]
+},
+{
+  "_id": 42,
+  "question": "What audio channel do you want for your sound card?",
+  "filterProp": "pcSoundChannel",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "2.0",
+      "value": "2.0",
+      "branch": 43
+    },
+    {
+      "choice": 2,
+      "answer": "4.0",
+      "value": "4.0",
+      "branch": 43
+    },
+    {
+      "choice": 3,
+      "answer": "5.1",
+      "value": "5.1",
+      "branch": 43
+    },
+    {
+      "choice": 4,
+      "answer": "7.1",
+      "value": "7.1",
+      "branch": 43
+    }
+  ]
+},
+{
+  "_id": 45,
+  "question": "Do you need an optical drive?",
+  "filterProp": "pcNeedOpticalDrive",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Yes",
+      "value": true,
+      "branch": 0
+    },
+    {
+      "choice": 2,
+      "answer": "No",
+      "value": false,
+      "branch": 0
+    }
+  ]
+},
+{
+  "_id": 26,
+  "question": "Please select the most demanding task from the answers below. Note that they are ordered top down from least to most demanding. If you want to do multiple, please select the most demanding one:",
+  "filterProp": "pcCreativeMostDemandingTask",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "1) Photo editing",
+      "value": "photo",
+      "branch": 27
+    },
+    {
+      "choice": 2,
+      "answer": "2) Music Production and / or Audio Editing",
+      "value": "audio",
+      "branch": 27
+    },
+    {
+      "choice": 3,
+      "answer": "3) Video editing and / or 2D animation / 2D Game Development",
+      "value": "video",
+      "branch": 27
+    },
+    {
+      "choice": 4,
+      "answer": "4) 3D Rendering and Animation / 3D Game Development",
+      "value": "3D",
+      "branch": 27
+    }
+  ]
+},
+{
+  "_id": 30,
+  "question": "Will you be frequently be uploading your work to the internet? Or do you need to download a lot of assets?",
+  "filterProp": "pcCreativeFastInternet",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Yes",
+      "value": true,
+      "branch": 31
+    },
+    {
+      "choice": 2,
+      "answer": "No",
+      "value": false,
+      "branch": 31
+    },
+    {
+      "choice": 3,
+      "answer": "I'm not sure",
+      "value": null,
+      "branch": 31
+    }
+  ]
+},
+{
+  "_id": 36,
+  "question": "Will you need a lot of storage for your tasks?",
+  "filterProp": "pcIntensiveLargeStorage",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Yes, I will need a lot of storage (for keeping large amounts of data for analysis / simulations / testing)",
+      "value": true,
+      "branch": 37
+    },
+    {
+      "choice": 2,
+      "answer": "No, I won't need huge amounts of storage (I won't need to store immense amounts of data)",
+      "value": false,
+      "branch": 37
+    },
+    {
+      "choice": 3,
+      "answer": "I'm not sure how much I need",
+      "value": null,
+      "branch": 37
+    }
+  ]
+},
+{
+  "_id": 25,
+  "question": "What refresh rate do you want to game at?",
+  "filterProp": "pcGamingRefreshRate",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "60-90 Hz",
+      "value": "60-90",
+      "branch": 40
+    },
+    {
+      "choice": 2,
+      "answer": "120-144 Hz",
+      "value": "120-165",
+      "branch": 40
+    },
+    {
+      "choice": 3,
+      "answer": "240 - 360 Hz",
+      "value": "240 - 360 Hz",
+      "branch": 40
+    }
+  ]
+},
+{
+  "_id": 32,
+  "question": "Will you be working with popular software like Adobe Suite, Autodesk, Corel, and so on?",
+  "filterProp": "pcCreativeGPUAcceleration",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Yes, I will be frequently working with popular studio software like the ones mentioned above",
+      "value": true,
+      "branch": 40
+    },
+    {
+      "choice": 2,
+      "answer": "No, I will be working with less popoular software (open source, and so on)",
+      "value": false,
+      "branch": 40
+    },
+    {
+      "choice": 3,
+      "answer": "I'm not sure",
+      "value": null,
+      "branch": 40
+    }
+  ]
+},
+{
+  "_id": 33,
+  "question": "Please select the most demanding task from the answers below. Note that they are ordered top down from least to most demanding. If you want to do multiple, please select the most demanding one:",
+  "filterProp": "pcIntensiveMostDemandingTask",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Server Service",
+      "filterProp": "server",
+      "branch": 34
+    },
+    {
+      "choice": 2,
+      "answer": "Crypto Mining",
+      "filterProp": "crypto_mining",
+      "branch": 34
+    },
+    {
+      "choice": 3,
+      "answer": "Complex Data Analysis / Data Science",
+      "filterProp": "data",
+      "branch": 34
+    },
+    {
+      "choice": 4,
+      "answer": "Machine Learning",
+      "filterProp": "ai",
+      "branch": 34
+    },
+    {
+      "choice": 5,
+      "answer": "Scientific Simulations",
+      "filterProp": "science",
+      "branch": 34
+    }
+  ]
+},
+{
+  "_id": 24,
+  "question": "At what resolution do you want to game at?",
+  "filterProp": "pcMonitorResolution",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "1920x1080 (Full HD)",
+      "value": "1920x1080",
+      "branch": 25
+    },
+    {
+      "choice": 2,
+      "answer": "2560x1440 (Quad HD)",
+      "value": "2560x1440",
+      "branch": 25
+    },
+    {
+      "choice": 3,
+      "answer": "3840x2160 (4K)",
+      "value": "3840x2160",
+      "branch": 25
+    },
+    {
+      "choice": 4,
+      "answer": "I'm not sure",
+      "value": null,
+      "branch": 25
+    }
+  ]
+},
+{
+  "_id": 44,
+  "question": "How many fans do you want for your PC? (excluding your CPU fan)",
+  "filterProp": "pcFanAmount",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "1",
+      "value": 1,
+      "branch": 45
+    },
+    {
+      "choice": 2,
+      "answer": "2",
+      "value": 2,
+      "branch": 45
+    },
+    {
+      "choice": 3,
+      "answer": "3",
+      "value": 3,
+      "branch": 45
+    },
+    {
+      "choice": 4,
+      "answer": "4",
+      "value": 4,
+      "branch": 45
+    },
+    {
+      "choice": 5,
+      "answer": "5",
+      "value": 5,
+      "branch": 45
+    },
+    {
+      "choice": 6,
+      "answer": "6",
+      "value": 6,
+      "branch": 45
+    }
+  ]
+},
+{
+  "_id": 11,
+  "question": "Will you need an optical drive (for working with CDs, DVDs, BluRays)?",
+  "filterProp": "pcNeedOpticalDrive",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Yes",
+      "value": true,
+      "branch": 0
+    },
+    {
+      "choice": 2,
+      "answer": "No",
+      "value": false,
+      "branch": 0
+    }
+  ]
+},
+{
+  "_id": 16,
+  "question": "Will you be programming and developing software a lot?",
+  "filterProp": "pcWorkProgramming",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Yes",
+      "value": true,
+      "branch": 17
+    },
+    {
+      "choice": 2,
+      "answer": "No",
+      "value": false,
+      "branch": 17
+    },
+    {
+      "choice": 3,
+      "answer": "I'm not sure",
+      "value": null,
+      "branch": 17
+    }
+  ]
+},
+{
+  "_id": 38,
+  "question": "Will you be frequently overclocking your system?",
+  "filterProp": "pcIntensiveOverclock",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Yes, I will be frequently overclocking my system",
+      "value": true,
+      "branch": 39
+    },
+    {
+      "choice": 2,
+      "answer": "No, I don't want to overclock my system",
+      "value": false,
+      "branch": 39
+    },
+    {
+      "choice": 3,
+      "answer": "I'm not sure",
+      "value": null,
+      "branch": 39
+    }
+  ]
+},
+{
+  "_id": 21,
+  "question": "Will you be playing a lot of games? Or just a few?",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Yes, I will be playing a lot of games",
+      "value": true,
+      "branch": 22
+    },
+    {
+      "choice": 2,
+      "answer": "No, I only want to play a few games",
+      "value": false,
+      "branch": 22
+    },
+    {
+      "choice": 1,
+      "answer": "I'm not sure",
+      "value": null,
+      "branch": 22
+    }
+  ],
+  "filterProp": "pcGamingLargeStorage"
+},
+{
+  "_id": 23,
+  "question": "Will you be playing a lot of multiplayer games?",
+  "filterProp": "pcGamingFastInternet",
+  "answers": [
+    {
+      "choice": 1,
+      "answer": "Yes",
+      "value": true,
+      "branch": 24
+    },
+    {
+      "choice": 2,
+      "answer": "No",
+      "value": false,
+      "branch": 24
+    }
+  ]
+}]

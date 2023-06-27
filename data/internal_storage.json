@@ -1,0 +1,1500 @@
+[{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8321"
+  },
+  "name": "Seagate Barracuda Compute",
+  "rating": 4,
+  "rating_count": 516,
+  "price_usd": 55.49,
+  "capacity": 2000,
+  "price_/_gb": "$0.028",
+  "type": "7200RPM",
+  "cache": 256,
+  "form_factor": "3.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8322"
+  },
+  "name": "Western Digital Blue SN550",
+  "rating": 4,
+  "rating_count": 139,
+  "price_usd": 104.99,
+  "capacity": 1000,
+  "price_/_gb": "$0.105",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8323"
+  },
+  "name": "Samsung 970 Evo Plus",
+  "rating": 4,
+  "rating_count": 176,
+  "price_usd": 159.9,
+  "capacity": 1000,
+  "price_/_gb": "$0.160",
+  "type": "SSD",
+  "cache": 1024,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8324"
+  },
+  "name": "Samsung 860 Evo",
+  "rating": 4,
+  "rating_count": 268,
+  "price_usd": 141.07,
+  "capacity": 1000,
+  "price_/_gb": "$0.141",
+  "type": "SSD",
+  "cache": 1024,
+  "form_factor": "2.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8325"
+  },
+  "name": "Samsung 980 Pro",
+  "rating": 4,
+  "rating_count": 43,
+  "price_usd": 199.99,
+  "capacity": 1000,
+  "price_/_gb": "$0.200",
+  "type": "SSD",
+  "cache": 1024,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8326"
+  },
+  "name": "Samsung 970 Evo",
+  "rating": 4,
+  "rating_count": 405,
+  "price_usd": 140,
+  "capacity": 500,
+  "price_/_gb": "$0.280",
+  "type": "SSD",
+  "cache": 512,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8327"
+  },
+  "name": "Western Digital Blue",
+  "rating": 4,
+  "rating_count": 124,
+  "price_usd": 58.99,
+  "capacity": 500,
+  "price_/_gb": "$0.118",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (B+M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8328"
+  },
+  "name": "Samsung 970 EVO Plus",
+  "rating": 4,
+  "rating_count": 44,
+  "price_usd": 310.08,
+  "capacity": 2000,
+  "price_/_gb": "$0.155",
+  "type": "SSD",
+  "cache": 1024,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8329"
+  },
+  "name": "Western Digital Caviar Blue",
+  "rating": 4,
+  "rating_count": 2332,
+  "price_usd": 39.99,
+  "capacity": 1000,
+  "price_/_gb": "$0.040",
+  "type": "7200RPM",
+  "cache": 64,
+  "form_factor": "3.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba832a"
+  },
+  "name": "Samsung 980 Pro",
+  "rating": 4,
+  "rating_count": 8,
+  "price_usd": 397.44,
+  "capacity": 2000,
+  "price_/_gb": "$0.199",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba832b"
+  },
+  "name": "Seagate BarraCuda",
+  "rating": 4,
+  "rating_count": 206,
+  "price_usd": 44.99,
+  "capacity": 1000,
+  "price_/_gb": "$0.045",
+  "type": "7200RPM",
+  "cache": 64,
+  "form_factor": "3.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba832c"
+  },
+  "name": "Kingston A400",
+  "rating": 4,
+  "rating_count": 98,
+  "price_usd": 34.99,
+  "capacity": 240,
+  "price_/_gb": "$0.146",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "2.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba832d"
+  },
+  "name": "Western Digital Blue SN550",
+  "rating": 4,
+  "rating_count": 84,
+  "price_usd": 59.99,
+  "capacity": 500,
+  "price_/_gb": "$0.120",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba832e"
+  },
+  "name": "Samsung 980",
+  "rating": 4,
+  "rating_count": 6,
+  "price_usd": 119.99,
+  "capacity": 1000,
+  "price_/_gb": "$0.120",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba832f"
+  },
+  "name": "Intel SSDPEDMD020T401",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 10860.53,
+  "capacity": 2000,
+  "price_/_gb": "$5.430",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "PCI-E",
+  "interface": "PCIe x4"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8330"
+  },
+  "name": "Western Digital SN750",
+  "rating": 4,
+  "rating_count": 99,
+  "price_usd": 146.88,
+  "capacity": 1000,
+  "price_/_gb": "$0.147",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8331"
+  },
+  "name": "Samsung 970 Evo Plus",
+  "rating": 4,
+  "rating_count": 154,
+  "price_usd": 94.99,
+  "capacity": 500,
+  "price_/_gb": "$0.190",
+  "type": "SSD",
+  "cache": 512,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8332"
+  },
+  "name": "Seagate BarraCuda",
+  "rating": 4,
+  "rating_count": 54,
+  "price_usd": 83.99,
+  "capacity": 4000,
+  "price_/_gb": "$0.021",
+  "type": "5400RPM",
+  "cache": 256,
+  "form_factor": "3.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8333"
+  },
+  "name": "Crucial P2",
+  "rating": 4,
+  "rating_count": 48,
+  "price_usd": 59.99,
+  "capacity": 500,
+  "price_/_gb": "$0.120",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8334"
+  },
+  "name": "Samsung 860 Evo",
+  "rating": 4,
+  "rating_count": 301,
+  "price_usd": 73.98,
+  "capacity": 500,
+  "price_/_gb": "$0.148",
+  "type": "SSD",
+  "cache": 512,
+  "form_factor": "2.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8335"
+  },
+  "name": "Samsung 970 Evo",
+  "rating": 4,
+  "rating_count": 284,
+  "price_usd": 65.47,
+  "capacity": 1000,
+  "price_/_gb": null,
+  "type": "SSD",
+  "cache": 1024,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8336"
+  },
+  "name": "Samsung 870 Evo",
+  "rating": 5,
+  "rating_count": 3,
+  "price_usd": 249.99,
+  "capacity": 2000,
+  "price_/_gb": "$0.125",
+  "type": "SSD",
+  "cache": 2048,
+  "form_factor": "2.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8337"
+  },
+  "name": "Western Digital Blue",
+  "rating": 4,
+  "rating_count": 70,
+  "price_usd": 104.99,
+  "capacity": 1000,
+  "price_/_gb": "$0.105",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (B+M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8338"
+  },
+  "name": "Crucial MX500",
+  "rating": 4,
+  "rating_count": 94,
+  "price_usd": 109.99,
+  "capacity": 1000,
+  "price_/_gb": "$0.110",
+  "type": "SSD",
+  "cache": 1024,
+  "form_factor": "2.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8339"
+  },
+  "name": "Sabrent Rocket Q",
+  "rating": 5,
+  "rating_count": 1,
+  "price_usd": 1399.99,
+  "capacity": 8000,
+  "price_/_gb": "$0.175",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba833a"
+  },
+  "name": "Samsung 980",
+  "rating": 5,
+  "rating_count": 3,
+  "price_usd": 59.99,
+  "capacity": 500,
+  "price_/_gb": "$0.120",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba833b"
+  },
+  "name": "Samsung 870 Evo",
+  "rating": 5,
+  "rating_count": 5,
+  "price_usd": 119.99,
+  "capacity": 1000,
+  "price_/_gb": "$0.120",
+  "type": "SSD",
+  "cache": 1024,
+  "form_factor": "2.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba833c"
+  },
+  "name": "Western Digital SN750",
+  "rating": 4,
+  "rating_count": 97,
+  "price_usd": 73.61,
+  "capacity": 500,
+  "price_/_gb": "$0.147",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba833d"
+  },
+  "name": "Samsung 970 Evo Plus",
+  "rating": 4,
+  "rating_count": 69,
+  "price_usd": 64.98,
+  "capacity": 250,
+  "price_/_gb": "$0.260",
+  "type": "SSD",
+  "cache": 512,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba833e"
+  },
+  "name": "Samsung 980 Pro",
+  "rating": 4,
+  "rating_count": 24,
+  "price_usd": 119.99,
+  "capacity": 500,
+  "price_/_gb": "$0.240",
+  "type": "SSD",
+  "cache": 512,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba833f"
+  },
+  "name": "Western Digital Blue",
+  "rating": 4,
+  "rating_count": 20,
+  "price_usd": 49.99,
+  "capacity": 2000,
+  "price_/_gb": "$0.025",
+  "type": "5400RPM",
+  "cache": 256,
+  "form_factor": "3.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8340"
+  },
+  "name": "Crucial P2",
+  "rating": 4,
+  "rating_count": 17,
+  "price_usd": 119.99,
+  "capacity": 1000,
+  "price_/_gb": "$0.120",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8341"
+  },
+  "name": "Western Digital Gold",
+  "rating": 5,
+  "rating_count": 1,
+  "price_usd": 599,
+  "capacity": 18000,
+  "price_/_gb": "$0.033",
+  "type": "7200RPM",
+  "cache": 512,
+  "form_factor": "3.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8342"
+  },
+  "name": "Western Digital Black SN850",
+  "rating": 4,
+  "rating_count": 16,
+  "price_usd": 129.99,
+  "capacity": 1000,
+  "price_/_gb": null,
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8343"
+  },
+  "name": "Sabrent Rocket 4.0",
+  "rating": 4,
+  "rating_count": 82,
+  "price_usd": 159.97,
+  "capacity": 1000,
+  "price_/_gb": "$0.160",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8344"
+  },
+  "name": "Team QX",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 3299.99,
+  "capacity": 15300,
+  "price_/_gb": "$0.216",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "2.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8345"
+  },
+  "name": "Western Digital Blue",
+  "rating": 4,
+  "rating_count": 75,
+  "price_usd": 106.99,
+  "capacity": 1000,
+  "price_/_gb": "$0.107",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "2.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8346"
+  },
+  "name": "Western Digital Blue",
+  "rating": 4,
+  "rating_count": 20,
+  "price_usd": 210.71,
+  "capacity": 2000,
+  "price_/_gb": "$0.105",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (B+M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8347"
+  },
+  "name": "Western Digital Black",
+  "rating": 4,
+  "rating_count": 19,
+  "price_usd": 149.99,
+  "capacity": 4000,
+  "price_/_gb": "$0.037",
+  "type": "7200RPM",
+  "cache": 256,
+  "form_factor": "3.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8348"
+  },
+  "name": "Kingston A400",
+  "rating": 4,
+  "rating_count": 117,
+  "price_usd": 27.99,
+  "capacity": 120,
+  "price_/_gb": "$0.233",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "2.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8349"
+  },
+  "name": "Team MP33",
+  "rating": 4,
+  "rating_count": 9,
+  "price_usd": 52.99,
+  "capacity": 512,
+  "price_/_gb": "$0.103",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba834a"
+  },
+  "name": "Team MP33",
+  "rating": 4,
+  "rating_count": 3,
+  "price_usd": 99.99,
+  "capacity": 1000,
+  "price_/_gb": "$0.100",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba834b"
+  },
+  "name": "Samsung 870 Evo",
+  "rating": 5,
+  "rating_count": 1,
+  "price_usd": 479.99,
+  "capacity": 4000,
+  "price_/_gb": "$0.120",
+  "type": "SSD",
+  "cache": 4096,
+  "form_factor": "2.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba834c"
+  },
+  "name": "Samsung 870 QVO",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 699.99,
+  "capacity": 8000,
+  "price_/_gb": "$0.087",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "2.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba834d"
+  },
+  "name": "Crucial P1",
+  "rating": 4,
+  "rating_count": 85,
+  "price_usd": 69.28,
+  "capacity": 500,
+  "price_/_gb": "$0.139",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba834e"
+  },
+  "name": "Seagate Barracuda Compute",
+  "rating": 4,
+  "rating_count": 9,
+  "price_usd": 84.99,
+  "capacity": 4000,
+  "price_/_gb": "$0.021",
+  "type": "5400RPM",
+  "cache": 256,
+  "form_factor": "3.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba834f"
+  },
+  "name": "Kingston A400",
+  "rating": 4,
+  "rating_count": 49,
+  "price_usd": 49.49,
+  "capacity": 480,
+  "price_/_gb": "$0.103",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "2.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8350"
+  },
+  "name": "Western Digital Blue",
+  "rating": 4,
+  "rating_count": 69,
+  "price_usd": 59.99,
+  "capacity": 500,
+  "price_/_gb": "$0.120",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "2.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8351"
+  },
+  "name": "Crucial P1",
+  "rating": 4,
+  "rating_count": 171,
+  "price_usd": 131.32,
+  "capacity": 1000,
+  "price_/_gb": "$0.131",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8352"
+  },
+  "name": "Samsung 870 QVO",
+  "rating": 5,
+  "rating_count": 3,
+  "price_usd": 179.99,
+  "capacity": 2000,
+  "price_/_gb": "$0.090",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "2.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8353"
+  },
+  "name": "Kingston A2000",
+  "rating": 4,
+  "rating_count": 36,
+  "price_usd": 116.98,
+  "capacity": 1000,
+  "price_/_gb": "$0.117",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8354"
+  },
+  "name": "Seagate Barracuda",
+  "rating": 4,
+  "rating_count": 1020,
+  "price_usd": 37.99,
+  "capacity": 1000,
+  "price_/_gb": "$0.038",
+  "type": "7200RPM",
+  "cache": 64,
+  "form_factor": "3.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8355"
+  },
+  "name": "Sabrent Rocket Q",
+  "rating": 4,
+  "rating_count": 31,
+  "price_usd": 110,
+  "capacity": 1000,
+  "price_/_gb": "$0.110",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8356"
+  },
+  "name": "Crucial MX500",
+  "rating": 4,
+  "rating_count": 87,
+  "price_usd": 69.95,
+  "capacity": 500,
+  "price_/_gb": "$0.140",
+  "type": "SSD",
+  "cache": 512,
+  "form_factor": "2.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8357"
+  },
+  "name": "Samsung 870 Evo",
+  "rating": 5,
+  "rating_count": 1,
+  "price_usd": 64.98,
+  "capacity": 500,
+  "price_/_gb": "$0.130",
+  "type": "SSD",
+  "cache": 512,
+  "form_factor": "2.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8358"
+  },
+  "name": "Corsair MP600 Force Series Gen4",
+  "rating": 4,
+  "rating_count": 40,
+  "price_usd": 159.99,
+  "capacity": 1000,
+  "price_/_gb": "$0.160",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8359"
+  },
+  "name": "Corsair MP400",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 1454.99,
+  "capacity": 8000,
+  "price_/_gb": "$0.182",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba835a"
+  },
+  "name": "Western Digital Black SN850",
+  "rating": 5,
+  "rating_count": 2,
+  "price_usd": 399.99,
+  "capacity": 2000,
+  "price_/_gb": "$0.200",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba835b"
+  },
+  "name": "Kingston A2000",
+  "rating": 4,
+  "rating_count": 34,
+  "price_usd": 61.49,
+  "capacity": 500,
+  "price_/_gb": "$0.123",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba835c"
+  },
+  "name": "Seagate IronWolf Pro",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 624.99,
+  "capacity": 18000,
+  "price_/_gb": "$0.035",
+  "type": "7200RPM",
+  "cache": null,
+  "form_factor": "3.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba835d"
+  },
+  "name": "Samsung 980 Pro",
+  "rating": 4,
+  "rating_count": 12,
+  "price_usd": 79.98,
+  "capacity": 250,
+  "price_/_gb": "$0.320",
+  "type": "SSD",
+  "cache": 512,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba835e"
+  },
+  "name": "Crucial P5",
+  "rating": 4,
+  "rating_count": 13,
+  "price_usd": 139.99,
+  "capacity": 1000,
+  "price_/_gb": "$0.140",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba835f"
+  },
+  "name": "ADATA XPG SX8200 Pro",
+  "rating": 4,
+  "rating_count": 97,
+  "price_usd": 109.99,
+  "capacity": 1000,
+  "price_/_gb": "$0.110",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8360"
+  },
+  "name": "Samsung 870 QVO",
+  "rating": 4,
+  "rating_count": 7,
+  "price_usd": 99.99,
+  "capacity": 1000,
+  "price_/_gb": "$0.100",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "2.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8361"
+  },
+  "name": "Crucial BX500",
+  "rating": 4,
+  "rating_count": 12,
+  "price_usd": 99.99,
+  "capacity": 1000,
+  "price_/_gb": "$0.100",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "2.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8362"
+  },
+  "name": "Western Digital WD Blue",
+  "rating": 5,
+  "rating_count": 5,
+  "price_usd": 195,
+  "capacity": 2000,
+  "price_/_gb": "$0.098",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "2.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8363"
+  },
+  "name": "Seagate IronWolf Pro",
+  "rating": 5,
+  "rating_count": 1,
+  "price_usd": 139.99,
+  "capacity": 4000,
+  "price_/_gb": "$0.035",
+  "type": "7200RPM",
+  "cache": 128,
+  "form_factor": "3.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8364"
+  },
+  "name": "Samsung 960 Pro",
+  "rating": 5,
+  "rating_count": 3,
+  "price_usd": 1999.99,
+  "capacity": 2000,
+  "price_/_gb": "$1.000",
+  "type": "SSD",
+  "cache": 2048,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8365"
+  },
+  "name": "Intel 660p Series",
+  "rating": 4,
+  "rating_count": 123,
+  "price_usd": 116.49,
+  "capacity": 1020,
+  "price_/_gb": "$0.114",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8366"
+  },
+  "name": "Crucial MX500",
+  "rating": 4,
+  "rating_count": 30,
+  "price_usd": 205,
+  "capacity": 2000,
+  "price_/_gb": "$0.102",
+  "type": "SSD",
+  "cache": 2048,
+  "form_factor": "2.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8367"
+  },
+  "name": "Sabrent Rocket 4 Plus",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 900,
+  "capacity": 4000,
+  "price_/_gb": "$0.225",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8368"
+  },
+  "name": "Samsung 860 Evo",
+  "rating": 4,
+  "rating_count": 78,
+  "price_usd": 58.41,
+  "capacity": 250,
+  "price_/_gb": "$0.234",
+  "type": "SSD",
+  "cache": 512,
+  "form_factor": "2.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8369"
+  },
+  "name": "Team GX2",
+  "rating": 4,
+  "rating_count": 18,
+  "price_usd": 82.49,
+  "capacity": 1000,
+  "price_/_gb": "$0.082",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "2.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba836a"
+  },
+  "name": "Kingston A2000",
+  "rating": 4,
+  "rating_count": 18,
+  "price_usd": 39.99,
+  "capacity": 250,
+  "price_/_gb": "$0.160",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba836b"
+  },
+  "name": "Western Digital Black SN850",
+  "rating": 5,
+  "rating_count": 10,
+  "price_usd": 119.99,
+  "capacity": 500,
+  "price_/_gb": "$0.240",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba836c"
+  },
+  "name": "Intel DC P3608",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 2700,
+  "capacity": 4000,
+  "price_/_gb": null,
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "PCI-E",
+  "interface": "PCIe x8"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba836d"
+  },
+  "name": "Angelbird ED381",
+  "rating": 0,
+  "rating_count": 0,
+  "price_usd": 6399.9,
+  "capacity": 7680,
+  "price_/_gb": "$0.833",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "2.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba836e"
+  },
+  "name": "Crucial P5",
+  "rating": 5,
+  "rating_count": 7,
+  "price_usd": 79.97,
+  "capacity": 500,
+  "price_/_gb": "$0.160",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba836f"
+  },
+  "name": "Western Digital Blue SN550",
+  "rating": 4,
+  "rating_count": 8,
+  "price_usd": 49.99,
+  "capacity": 250,
+  "price_/_gb": "$0.200",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8370"
+  },
+  "name": "SK hynix Gold P31",
+  "rating": 4,
+  "rating_count": 18,
+  "price_usd": 134.99,
+  "capacity": 1000,
+  "price_/_gb": "$0.135",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8371"
+  },
+  "name": "Team GX2",
+  "rating": 4,
+  "rating_count": 19,
+  "price_usd": 53.99,
+  "capacity": 512,
+  "price_/_gb": "$0.105",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "2.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8372"
+  },
+  "name": "Seagate Barracuda",
+  "rating": 4,
+  "rating_count": 109,
+  "price_usd": 21.15,
+  "capacity": 500,
+  "price_/_gb": "$0.042",
+  "type": "7200RPM",
+  "cache": 16,
+  "form_factor": "3.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8373"
+  },
+  "name": "Seagate IronWolf NAS",
+  "rating": 5,
+  "rating_count": 2,
+  "price_usd": 209.99,
+  "capacity": 8000,
+  "price_/_gb": "$0.026",
+  "type": "7200RPM",
+  "cache": 256,
+  "form_factor": "3.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8374"
+  },
+  "name": "Kingston A400",
+  "rating": 4,
+  "rating_count": 7,
+  "price_usd": 32.99,
+  "capacity": 120,
+  "price_/_gb": "$0.275",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (B+M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8375"
+  },
+  "name": "Western Digital Blue",
+  "rating": 4,
+  "rating_count": 40,
+  "price_usd": 79.99,
+  "capacity": 4000,
+  "price_/_gb": "$0.020",
+  "type": "5400RPM",
+  "cache": 64,
+  "form_factor": "3.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8376"
+  },
+  "name": "ADATA XPG SX8200 Pro",
+  "rating": 4,
+  "rating_count": 44,
+  "price_usd": 67.98,
+  "capacity": 512,
+  "price_/_gb": "$0.133",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8377"
+  },
+  "name": "Western Digital Blue",
+  "rating": 4,
+  "rating_count": 31,
+  "price_usd": 45.05,
+  "capacity": 1000,
+  "price_/_gb": "$0.045",
+  "type": "5400RPM",
+  "cache": 64,
+  "form_factor": "3.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8378"
+  },
+  "name": "Samsung 870 QVO",
+  "rating": 5,
+  "rating_count": 1,
+  "price_usd": 359.99,
+  "capacity": 4000,
+  "price_/_gb": "$0.090",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "2.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8379"
+  },
+  "name": "Seagate Barracuda",
+  "rating": 4,
+  "rating_count": 339,
+  "price_usd": 185,
+  "capacity": 2000,
+  "price_/_gb": "$0.092",
+  "type": "7200RPM",
+  "cache": 64,
+  "form_factor": "3.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba837a"
+  },
+  "name": "Kingston A400",
+  "rating": 4,
+  "rating_count": 15,
+  "price_usd": 34.99,
+  "capacity": 240,
+  "price_/_gb": "$0.146",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (B+M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba837b"
+  },
+  "name": "Western Digital BLACK SERIES",
+  "rating": 4,
+  "rating_count": 163,
+  "price_usd": 104.99,
+  "capacity": 2000,
+  "price_/_gb": "$0.052",
+  "type": "7200RPM",
+  "cache": 64,
+  "form_factor": "3.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba837c"
+  },
+  "name": "Samsung 870 Evo",
+  "rating": 5,
+  "rating_count": 2,
+  "price_usd": 44.99,
+  "capacity": 250,
+  "price_/_gb": "$0.180",
+  "type": "SSD",
+  "cache": 512,
+  "form_factor": "2.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba837d"
+  },
+  "name": "Sabrent Rocket Q",
+  "rating": 5,
+  "rating_count": 7,
+  "price_usd": 249.98,
+  "capacity": 2000,
+  "price_/_gb": "$0.125",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba837e"
+  },
+  "name": "Seagate Enterprise Capacity",
+  "rating": 4,
+  "rating_count": 1,
+  "price_usd": 209,
+  "capacity": 10000,
+  "price_/_gb": "$0.021",
+  "type": "7200RPM",
+  "cache": 256,
+  "form_factor": "3.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba837f"
+  },
+  "name": "Sabrent Rocket 4.0",
+  "rating": 4,
+  "rating_count": 20,
+  "price_usd": 89.98,
+  "capacity": 500,
+  "price_/_gb": "$0.180",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8380"
+  },
+  "name": "ADATA SU635",
+  "rating": 4,
+  "rating_count": 12,
+  "price_usd": 31.99,
+  "capacity": 240,
+  "price_/_gb": "$0.133",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "2.5\"",
+  "interface": "SATA 6 Gb/s"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8381"
+  },
+  "name": "Team MP33",
+  "rating": 4,
+  "rating_count": 2,
+  "price_usd": 37.99,
+  "capacity": 256,
+  "price_/_gb": "$0.148",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8382"
+  },
+  "name": "Western Digital Blue SN550",
+  "rating": 5,
+  "rating_count": 2,
+  "price_usd": 245.35,
+  "capacity": 2000,
+  "price_/_gb": "$0.123",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8383"
+  },
+  "name": "ADATA XPG SX8200 Pro",
+  "rating": 4,
+  "rating_count": 29,
+  "price_usd": 249.99,
+  "capacity": 2000,
+  "price_/_gb": "$0.125",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+},
+{
+  "_id": {
+    "$oid": "643d6635339364bb8bba8384"
+  },
+  "name": "Mushkin Enhanced Helix-L",
+  "rating": 5,
+  "rating_count": 3,
+  "price_usd": 95.99,
+  "capacity": 1000,
+  "price_/_gb": "$0.096",
+  "type": "SSD",
+  "cache": null,
+  "form_factor": "M.2-2280",
+  "interface": "M.2 (M)"
+}]
