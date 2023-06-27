@@ -33,7 +33,7 @@ Assuming that the MongoDB connection was correctly written, the app should be
 connected properly to the database
 
 Now, to actually properly run your application, you will need to add data to your
-database (the database has be called **buy_it**). In the data directory located in the root project’s directory, you will find
+database (the database has to be called **buy_it**). In the data directory located in the root project’s directory, you will find
 a bunch of .json files, each labeled by the collection name. Go ahead and create a
 collection for each, and then import the data into the respective collection.
 After this, you are good to go!
